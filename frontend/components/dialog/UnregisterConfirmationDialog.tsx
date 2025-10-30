@@ -8,7 +8,11 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { EventCategory } from '@/types';
+=======
+import { EventCategory } from '@/types/type';
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
 interface UnregisterConfirmationDialog {
   open: boolean;

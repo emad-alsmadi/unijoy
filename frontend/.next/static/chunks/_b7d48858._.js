@@ -1035,7 +1035,11 @@ const AuthProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/context/AuthContext.tsx",
+<<<<<<< HEAD
         lineNumber: 69,
+=======
+        lineNumber: 70,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };
@@ -2098,6 +2102,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$Header
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$MobileMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/home/MobileMenu.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$logo$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$logo$2e$jpg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/public/images/logo.jpg.mjs { IMAGE => "[project]/public/images/logo.jpg (static in ecmascript)" } [app-client] (structured image object, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/search.js [app-client] (ecmascript) <export default as Search>");
+<<<<<<< HEAD
+=======
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/hooks/use-toast.ts [app-client] (ecmascript)");
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$ProfileDropdown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.tsx [app-client] (ecmascript)");
 ;
@@ -2112,9 +2121,45 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+<<<<<<< HEAD
 const Header = ()=>{
     _s();
     const { token, userRole } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+=======
+;
+;
+const Header = ()=>{
+    _s();
+    const [profileInfo, setProfileInfo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
+    const { token, userRole } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    const fetchProfileInfo = async ()=>{
+        try {
+            const response = await fetch(`http://localhost:8080/profile`, {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            setProfileInfo(data);
+        } catch (error) {
+            toast({
+                title: 'Error',
+                description: error.message || 'An unexpected error occurred.',
+                variant: 'destructive'
+            });
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Header.useEffect": ()=>{
+        //fetchProfileInfo();
+        }
+    }["Header.useEffect"], [
+        profileInfo
+    ]);
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bg-white border-b border-b-gray-400 pb-2 relative z-999",
@@ -2127,12 +2172,20 @@ const Header = ()=>{
                                 className: "w-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 21,
+=======
+                                lineNumber: 48,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 20,
+=======
+                            lineNumber: 47,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         !token && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2141,7 +2194,11 @@ const Header = ()=>{
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 24,
+=======
+                            lineNumber: 51,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this),
                         userRole == 'admin' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2150,7 +2207,11 @@ const Header = ()=>{
                             children: "Dashboard Admin"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 32,
+=======
+                            lineNumber: 59,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this),
                         userRole == 'host' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2159,7 +2220,11 @@ const Header = ()=>{
                             children: "Dashboard Host"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 40,
+=======
+                            lineNumber: 67,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this),
                         userRole == 'user' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2168,7 +2233,11 @@ const Header = ()=>{
                             children: "Dashboard User"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 48,
+=======
+                            lineNumber: 75,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2176,7 +2245,11 @@ const Header = ()=>{
                             children: "Booke an event now"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 55,
+=======
+                            lineNumber: 82,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -2192,19 +2265,31 @@ const Header = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 60,
+=======
+                                    lineNumber: 87,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 58,
+=======
+                            lineNumber: 85,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                     lineNumber: 19,
+=======
+                    lineNumber: 46,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Container$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2220,7 +2305,11 @@ const Header = ()=>{
                                     alt: "logo"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 71,
+=======
+                                    lineNumber: 98,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -2229,43 +2318,71 @@ const Header = ()=>{
                                         "UniJoy",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                             lineNumber: 79,
+=======
+                                            lineNumber: 106,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 77,
+=======
+                                    lineNumber: 104,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 70,
+=======
+                            lineNumber: 97,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "w-full md:w-auto flex flex-1 justify-center md:justify-end lg:gap-4",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$HeaderMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 85,
+=======
+                                lineNumber: 112,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 84,
+=======
+                            lineNumber: 111,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "block md:hidden",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$MobileMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 90,
+=======
+                                lineNumber: 117,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 89,
+=======
+                            lineNumber: 116,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2277,7 +2394,11 @@ const Header = ()=>{
                                 userRole: `${userRole}`
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 95,
+=======
+                                lineNumber: 122,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
@@ -2287,7 +2408,11 @@ const Header = ()=>{
                                         children: "Login"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                         lineNumber: 102,
+=======
+                                        lineNumber: 129,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2296,32 +2421,54 @@ const Header = ()=>{
                                         children: "Register User"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                         lineNumber: 108,
+=======
+                                        lineNumber: 135,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 93,
+=======
+                            lineNumber: 120,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                     lineNumber: 68,
+=======
+                    lineNumber: 95,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
             lineNumber: 18,
+=======
+            lineNumber: 45,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this)
     }, void 0, false);
 };
+<<<<<<< HEAD
 _s(Header, "WJ1C9CdvlCvFyG/+ObRC4aoGjYY=", false, function() {
     return [
+=======
+_s(Header, "eCL+jWWsxerIfPJiQKOUyl9TE2M=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"],
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];
 });

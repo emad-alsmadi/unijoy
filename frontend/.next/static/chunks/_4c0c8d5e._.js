@@ -103,6 +103,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>EditProfilePage)
 });
+<<<<<<< HEAD
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@hookform/resolvers/zod/dist/zod.mjs [app-client] (ecmascript)");
@@ -114,6 +115,16 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.tsx [app-client] (ecmascript)");
+=======
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/input.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/hooks/use-toast.ts [app-client] (ecmascript)");
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -123,6 +134,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+<<<<<<< HEAD
 ;
 ;
 ;
@@ -142,10 +154,30 @@ function EditProfilePage() {
             email: ''
         }
     });
+=======
+function EditProfilePage() {
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
+    const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        name: "Sarah Johnson",
+        email: "sarah.johnson@uni.edu",
+        university: "Oxford University",
+        bio: ""
+    });
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const handleChange = (e)=>{
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        });
+    };
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setLoading(true);
         try {
+<<<<<<< HEAD
             const res = await fetch(`http://localhost:8080/profile`, {
                 method: 'PUT',
                 headers: {
@@ -163,6 +195,29 @@ function EditProfilePage() {
                 title: 'Error',
                 description: error.message || 'Something went wrong.',
                 variant: 'destructive'
+=======
+            const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL}/api/user/update`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                credentials: "include",
+                body: JSON.stringify(form)
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                throw new Error(data.message || "Failed to update profile");
+            }
+            toast({
+                title: "Success",
+                description: "Profile updated successfully."
+            });
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: error.message || "Something went wrong.",
+                variant: "destructive"
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             });
         } finally{
             setLoading(false);
@@ -190,6 +245,7 @@ function EditProfilePage() {
                     children: "Edit Profile"
                 }, void 0, false, {
                     fileName: "[project]/app/profile/edit/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 70,
                     columnNumber: 9
                 }, this),
@@ -366,6 +422,52 @@ function EditProfilePage() {
                     fileName: "[project]/app/profile/edit/page.tsx",
                     lineNumber: 73,
                     columnNumber: 9
+=======
+                    lineNumber: 71,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
+                    name: "name",
+                    placeholder: "Name",
+                    value: form.name,
+                    onChange: handleChange
+                }, void 0, false, {
+                    fileName: "[project]/app/profile/edit/page.tsx",
+                    lineNumber: 72,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
+                    name: "email",
+                    placeholder: "Email",
+                    value: form.email,
+                    onChange: handleChange
+                }, void 0, false, {
+                    fileName: "[project]/app/profile/edit/page.tsx",
+                    lineNumber: 73,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
+                    name: "university",
+                    placeholder: "University",
+                    value: form.university,
+                    onChange: handleChange
+                }, void 0, false, {
+                    fileName: "[project]/app/profile/edit/page.tsx",
+                    lineNumber: 74,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                    name: "bio",
+                    placeholder: "Short bio...",
+                    className: "w-full p-2 rounded-md border border-gray-300",
+                    rows: 3,
+                    value: form.bio,
+                    onChange: handleChange
+                }, void 0, false, {
+                    fileName: "[project]/app/profile/edit/page.tsx",
+                    lineNumber: 75,
+                    columnNumber: 17
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                     type: "submit",
@@ -373,12 +475,18 @@ function EditProfilePage() {
                     children: "Save Changes"
                 }, void 0, false, {
                     fileName: "[project]/app/profile/edit/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 149,
                     columnNumber: 9
+=======
+                    lineNumber: 83,
+                    columnNumber: 17
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/profile/edit/page.tsx",
+<<<<<<< HEAD
             lineNumber: 63,
             columnNumber: 7
         }, this)
@@ -393,6 +501,21 @@ _s(EditProfilePage, "y0DGnpcFWQLHw7VOjpPwkKek7Gw=", false, function() {
         __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"]
+=======
+            lineNumber: 64,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/app/profile/edit/page.tsx",
+        lineNumber: 63,
+        columnNumber: 9
+    }, this);
+}
+_s(EditProfilePage, "sq9YpRrqJUBgfU78bTJRud0FMWA=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"]
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     ];
 });
 _c = EditProfilePage;

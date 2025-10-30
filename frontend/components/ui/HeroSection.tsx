@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
 import dynamic from "next/dynamic";
 const SearchFilter = dynamic(() => import("@/components/ui/SearchFilter"), {
   loading: () => <div className="w-full h-14" />,
@@ -12,6 +13,15 @@ import ImgSrc from "@/public/bg-home.png";
 import { useAuth } from "@/context/AuthContext";
 
 export const HeroSection =()=> {
+=======
+import SearchFilter from "@/components/ui/SearchFilter";
+import Slider from "../home/Slider";
+import { Stars, MoveRight, Ticket } from "lucide-react";
+import ImgSrc from "@/public/bg-home.png";
+import { useAuth } from "@/context/AuthContext";
+
+export default function HeroSection() {
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     const { userRole } = useAuth();
     return (
         <section className="relative h-auto min-h-screen md:h-[80vh] overflow-hidden">
@@ -53,6 +63,7 @@ export const HeroSection =()=> {
                     className="object-cover"
                     priority
                 />
+<<<<<<< HEAD
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-indigo-900/50 to-blue-900/40" />
                 {/* Subtle animated blobs */}
                 <motion.div
@@ -67,6 +78,9 @@ export const HeroSection =()=> {
                     transition={{ duration: 8, repeat: Infinity, repeatType: "mirror" }}
                     className="absolute right-10 bottom-10 w-72 h-72 rounded-full bg-indigo-600/20 blur-3xl"
                 />
+=======
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-blue-900/40" />
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             </div>
 
             {/* Main Content Container */}
@@ -96,11 +110,19 @@ export const HeroSection =()=> {
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.5 }}
+<<<<<<< HEAD
                                 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight"
                             >
                                 Create Unforgettable
                                 <span className="bg-gradient-to-r from-purple-300 via-indigo-300 to-blue-300 bg-clip-text text-transparent">
                                     {" "}University Events
+=======
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+                            >
+                                Create Unforgettable
+                                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                                    {" "}Event Experiences
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 </span>
                             </motion.h1>
 
@@ -108,9 +130,15 @@ export const HeroSection =()=> {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.7 }}
+<<<<<<< HEAD
                                 className="text-base sm:text-lg md:text-xl text-indigo-100/90 max-w-2xl"
                             >
                                 Discover, host, and celebrate campus life. From concerts and hackathons to cultural nights — UniJoy brings your university together.
+=======
+                                className="text-base sm:text-lg md:text-xl text-gray-200 max-w-xl"
+                            >
+                                Discover and organize the most exciting university events. From concerts to workshops - we make event planning magical.
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             </motion.p>
 
                             {/* CTA Buttons */}
@@ -122,7 +150,11 @@ export const HeroSection =()=> {
                             >
                                 <Link
                                     href="/events"
+<<<<<<< HEAD
                                     className="flex items-center justify-center px-2 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full text-white transition-all duration-300 group text-sm sm:text-base shadow-lg shadow-purple-900/20"
+=======
+                                    className="flex items-center justify-center px-2 py-3 sm:px-8 sm:py-4 bg-purple-600 hover:bg-purple-700 rounded-full text-white transition-all duration-300 group text-sm sm:text-base"
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 >
                                     <Ticket className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                                     Explore Events
@@ -131,7 +163,11 @@ export const HeroSection =()=> {
                                 {userRole === "host" ?
                                     <Link
                                         href="/host/events/create"
+<<<<<<< HEAD
                                         className="flex items-center justify-center px-2 py-3 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/15 border border-white/30 rounded-full text-white backdrop-blur-md transition-all duration-300 group text-sm sm:text-base"
+=======
+                                        className="flex items-center justify-center px-2 py-3 sm:px-8 sm:py-4 bg-transparent border rounded-full text-white transition-all duration-300 group text-sm sm:text-base"
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     >                                        
                                         Create Event                                        
                                     </Link> :<></>}
@@ -162,6 +198,7 @@ export const HeroSection =()=> {
                     <SearchFilter className="w-full max-w-4xl mx-auto bg-white/90 backdrop-blur-sm shadow-xl rounded-full" />
                 </div>
             </motion.div>
+<<<<<<< HEAD
 
             {/* Curved Bottom Divider */}
             <div className="absolute bottom-0 left-0 right-0 z-[5] pointer-events-none">
@@ -176,6 +213,8 @@ export const HeroSection =()=> {
                     </defs>
                 </svg>
             </div>
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         </section>
     );
 }

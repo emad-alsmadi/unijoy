@@ -77,8 +77,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 ;
 const EventDetails = ({ event, userRole })=>{
+<<<<<<< HEAD
     const baseURL = 'http://localhost:8080';
     const src = encodeURI(`${baseURL}/${event?.image?.replace(/\\/g, '/')}`);
+=======
+    const src = `/${event?.image?.replace(/\\/g, '/')}`;
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-white",
         children: [
@@ -99,7 +103,11 @@ const EventDetails = ({ event, userRole })=>{
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                     lineNumber: 22,
+=======
+                                    lineNumber: 21,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 !event.price && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -107,13 +115,21 @@ const EventDetails = ({ event, userRole })=>{
                                     children: "FREE"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                     lineNumber: 31,
+=======
+                                    lineNumber: 30,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                             lineNumber: 21,
+=======
+                            lineNumber: 20,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -124,7 +140,11 @@ const EventDetails = ({ event, userRole })=>{
                                     children: event.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                     lineNumber: 37,
+=======
+                                    lineNumber: 36,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -132,7 +152,11 @@ const EventDetails = ({ event, userRole })=>{
                                     children: event.description
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                     lineNumber: 38,
+=======
+                                    lineNumber: 37,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -145,7 +169,11 @@ const EventDetails = ({ event, userRole })=>{
                                                     className: "w-4 h-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 41,
+=======
+                                                    lineNumber: 40,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this),
                                                 "Location: ",
@@ -153,7 +181,11 @@ const EventDetails = ({ event, userRole })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                             lineNumber: 40,
+=======
+                                            lineNumber: 39,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -163,7 +195,11 @@ const EventDetails = ({ event, userRole })=>{
                                                     className: "w-4 h-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 45,
+=======
+                                                    lineNumber: 44,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this),
                                                 "Date: ",
@@ -171,7 +207,11 @@ const EventDetails = ({ event, userRole })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                             lineNumber: 44,
+=======
+                                            lineNumber: 43,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -181,7 +221,11 @@ const EventDetails = ({ event, userRole })=>{
                                                     className: "w-4 h-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 49,
+=======
+                                                    lineNumber: 48,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this),
                                                 "Entry:",
@@ -190,13 +234,21 @@ const EventDetails = ({ event, userRole })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                             lineNumber: 48,
+=======
+                                            lineNumber: 47,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                     lineNumber: 39,
+=======
+                                    lineNumber: 38,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 userRole === 'user' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -207,7 +259,11 @@ const EventDetails = ({ event, userRole })=>{
                                             children: "Register Event"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                             lineNumber: 57,
+=======
+                                            lineNumber: 56,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -215,30 +271,50 @@ const EventDetails = ({ event, userRole })=>{
                                             children: "Learn More"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                             lineNumber: 58,
+=======
+                                            lineNumber: 57,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                                     lineNumber: 56,
+=======
+                                    lineNumber: 55,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                             lineNumber: 36,
+=======
+                            lineNumber: 35,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                     lineNumber: 20,
+=======
+                    lineNumber: 19,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                 lineNumber: 19,
+=======
+                lineNumber: 18,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -248,18 +324,30 @@ const EventDetails = ({ event, userRole })=>{
                     children: "More Details"
                 }, void 0, false, {
                     fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                     lineNumber: 68,
+=======
+                    lineNumber: 67,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
                 lineNumber: 67,
+=======
+                lineNumber: 66,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/eventDetials.tsx",
+<<<<<<< HEAD
         lineNumber: 17,
+=======
+        lineNumber: 16,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };

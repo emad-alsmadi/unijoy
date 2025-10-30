@@ -8,6 +8,10 @@ import { useAuth } from '@/context/AuthContext';
 
 export default function ResetPasswordPage() {
   const { toast } = useToast();
+<<<<<<< HEAD
+=======
+  const { token } = useAuth();
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -48,6 +52,7 @@ export default function ResetPasswordPage() {
   };
 
   return (
+<<<<<<< HEAD
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 px-4 py-10'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -75,5 +80,31 @@ export default function ResetPasswordPage() {
         </motion.button>
       </motion.div>
     </div>
+=======
+    <motion.div
+      className='max-w-md mx-auto my-20 bg-white p-8 rounded-lg shadow-xl border'
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h1 className='text-2xl font-bold mb-6 text-center text-purple-700'>
+        Reset Your Password
+      </h1>
+      <Input
+        type='email'
+        placeholder='Enter your email'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className='mb-4'
+      />
+      <Button
+        onClick={handleReset}
+        disabled={loading || !email}
+        className='w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+      >
+        {loading ? 'Sending...' : 'Send Reset Email'}
+      </Button>
+    </motion.div>
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   );
 }

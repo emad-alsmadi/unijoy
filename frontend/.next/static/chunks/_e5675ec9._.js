@@ -799,7 +799,11 @@ const FloatingBlobs = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                 rounded-full`
             }, i, false, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 47,
+=======
+                lineNumber: 51,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this))
     }, void 0, false);
@@ -849,6 +853,14 @@ const AllEventsPage = ({ className })=>{
             console.log(data.totalItems);
             const calculatedPages = Math.ceil(data.totalItems / eventsPerPage);
             setTotalPages(calculatedPages);
+<<<<<<< HEAD
+=======
+            toast({
+                title: 'Fetch successfully',
+                description: data.message,
+                className: 'bg-green-500 text-white'
+            });
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         } catch (error) {
             // Handle connection errors or unexpected errors.
             toast({
@@ -956,16 +968,27 @@ const AllEventsPage = ({ className })=>{
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex items-center justify-center h-[70vh]",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+<<<<<<< HEAD
                 className: "animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500",
                 children: "Loading ..."
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
                 lineNumber: 261,
+=======
+                className: "animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500"
+            }, void 0, false, {
+                fileName: "[project]/app/(auth)/events/page.tsx",
+                lineNumber: 270,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
             lineNumber: 260,
+=======
+            lineNumber: 269,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this);
     }
@@ -986,25 +1009,41 @@ const AllEventsPage = ({ className })=>{
                                 className: "brightness-75"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 270,
+=======
+                                lineNumber: 279,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 bg-gradient-to-br from-purple-900/80 via-indigo-900/60 to-pink-900/40"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 277,
+=======
+                                lineNumber: 286,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingBlobs, {}, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 278,
+=======
+                                lineNumber: 287,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 269,
+=======
+                        lineNumber: 278,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1037,7 +1076,11 @@ const AllEventsPage = ({ className })=>{
                                 children: "All Events"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 287,
+=======
+                                lineNumber: 296,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -1054,7 +1097,11 @@ const AllEventsPage = ({ className })=>{
                                 children: "Discover curated events blending education, networking, and entertainment. Explore unique experiences tailored for modern enthusiasts."
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 301,
+=======
+                                lineNumber: 310,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1070,24 +1117,40 @@ const AllEventsPage = ({ className })=>{
                                     className: "text-cyan-400 animate-pulse"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 318,
+=======
+                                    lineNumber: 327,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 313,
+=======
+                                lineNumber: 322,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 281,
+=======
+                        lineNumber: 290,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 268,
+=======
+                lineNumber: 277,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1102,12 +1165,20 @@ const AllEventsPage = ({ className })=>{
                                     className: "h-5 w-5 text-purple-400"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 330,
+=======
+                                    lineNumber: 339,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 329,
+=======
+                                lineNumber: 338,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1120,13 +1191,21 @@ const AllEventsPage = ({ className })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 332,
+=======
+                                lineNumber: 341,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 328,
+=======
+                        lineNumber: 337,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1154,7 +1233,11 @@ const AllEventsPage = ({ className })=>{
                                         className: "text-cyan-400"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 368,
+=======
+                                        lineNumber: 377,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1162,7 +1245,11 @@ const AllEventsPage = ({ className })=>{
                                         children: label
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 372,
+=======
+                                        lineNumber: 381,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this),
                                     activeFilter === filterKey && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1179,19 +1266,31 @@ const AllEventsPage = ({ className })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 376,
+=======
+                                        lineNumber: 385,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, label, true, {
                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 346,
+=======
+                                lineNumber: 355,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 342,
+=======
+                        lineNumber: 351,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1201,12 +1300,20 @@ const AllEventsPage = ({ className })=>{
                             children: "Total events 100"
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 388,
+=======
+                            lineNumber: 397,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 387,
+=======
+                        lineNumber: 396,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1262,7 +1369,11 @@ const AllEventsPage = ({ className })=>{
                                                                         className: "w-4 h-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 429,
+=======
+                                                                        lineNumber: 438,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1270,13 +1381,21 @@ const AllEventsPage = ({ className })=>{
                                                                         children: event.category?.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 430,
+=======
+                                                                        lineNumber: 439,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 428,
+=======
+                                                                lineNumber: 437,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1291,7 +1410,11 @@ const AllEventsPage = ({ className })=>{
                                                                                     className: "w-4 h-4 text-purple-600"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 439,
+=======
+                                                                                    lineNumber: 448,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1299,18 +1422,30 @@ const AllEventsPage = ({ className })=>{
                                                                                     children: event.title
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 440,
+=======
+                                                                                    lineNumber: 449,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 438,
+=======
+                                                                            lineNumber: 447,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 437,
+=======
+                                                                        lineNumber: 446,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1321,7 +1456,11 @@ const AllEventsPage = ({ className })=>{
                                                                                 children: "Time"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 446,
+=======
+                                                                                lineNumber: 455,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1329,19 +1468,31 @@ const AllEventsPage = ({ className })=>{
                                                                                 children: event.time
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 447,
+=======
+                                                                                lineNumber: 456,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 445,
+=======
+                                                                        lineNumber: 454,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 436,
+=======
+                                                                lineNumber: 445,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1349,7 +1500,11 @@ const AllEventsPage = ({ className })=>{
                                                                 children: event.description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 454,
+=======
+                                                                lineNumber: 463,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1359,20 +1514,32 @@ const AllEventsPage = ({ className })=>{
                                                                         className: "w-4 h-4 text-purple-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 460,
+=======
+                                                                        lineNumber: 469,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         children: event.date
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 461,
+=======
+                                                                        lineNumber: 470,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 459,
+=======
+                                                                lineNumber: 468,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1382,7 +1549,11 @@ const AllEventsPage = ({ className })=>{
                                                                         className: "w-4 h-4 text-purple-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 465,
+=======
+                                                                        lineNumber: 474,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1392,7 +1563,11 @@ const AllEventsPage = ({ className })=>{
                                                                                 children: "Name Hall :"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 467,
+=======
+                                                                                lineNumber: 476,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             ' ',
@@ -1400,13 +1575,21 @@ const AllEventsPage = ({ className })=>{
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 466,
+=======
+                                                                        lineNumber: 475,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 464,
+=======
+                                                                lineNumber: 473,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1416,7 +1599,11 @@ const AllEventsPage = ({ className })=>{
                                                                         className: "w-4 h-4 text-purple-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 473,
+=======
+                                                                        lineNumber: 482,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1426,7 +1613,11 @@ const AllEventsPage = ({ className })=>{
                                                                                 children: "Hall Capacity:"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 475,
+=======
+                                                                                lineNumber: 484,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             ' ',
@@ -1435,13 +1626,21 @@ const AllEventsPage = ({ className })=>{
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 474,
+=======
+                                                                        lineNumber: 483,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 472,
+=======
+                                                                lineNumber: 481,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1451,26 +1650,42 @@ const AllEventsPage = ({ className })=>{
                                                                         className: "w-4 h-4 text-purple-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 483,
+=======
+                                                                        lineNumber: 492,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         children: event.location
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 484,
+=======
+                                                                        lineNumber: 493,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 482,
+=======
+                                                                lineNumber: 491,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 426,
+=======
+                                                        lineNumber: 435,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1490,7 +1705,11 @@ const AllEventsPage = ({ className })=>{
                                                                 children: event.isRegistered ? 'Unregister' : 'Register'
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 489,
+=======
+                                                                lineNumber: 498,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             event.price && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1503,12 +1722,20 @@ const AllEventsPage = ({ className })=>{
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 510,
+=======
+                                                                    lineNumber: 519,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 509,
+=======
+                                                                lineNumber: 518,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             event.price ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1526,12 +1753,20 @@ const AllEventsPage = ({ className })=>{
                                                                     children: "PAID"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 522,
+=======
+                                                                    lineNumber: 531,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 516,
+=======
+                                                                lineNumber: 525,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                                                 initial: {
@@ -1548,29 +1783,49 @@ const AllEventsPage = ({ className })=>{
                                                                     children: "FREE"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 533,
+=======
+                                                                    lineNumber: 542,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 527,
+=======
+                                                                lineNumber: 536,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 487,
+=======
+                                                        lineNumber: 496,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 425,
+=======
+                                                lineNumber: 434,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 419,
+=======
+                                            lineNumber: 428,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1586,28 +1841,48 @@ const AllEventsPage = ({ className })=>{
                                                 className: "text-cyan-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 547,
+=======
+                                                lineNumber: 556,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 541,
+=======
+                                            lineNumber: 550,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, event._id, true, {
                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 407,
+=======
+                                    lineNumber: 416,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 405,
+=======
+                            lineNumber: 414,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 390,
+=======
+                        lineNumber: 399,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     currentEvents?.length >= eventsPerPage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1623,12 +1898,20 @@ const AllEventsPage = ({ className })=>{
                                         className: "text-purple-400"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 570,
+=======
+                                        lineNumber: 579,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 561,
+=======
+                                    lineNumber: 570,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this),
                                 Array.from({
@@ -1640,7 +1923,11 @@ const AllEventsPage = ({ className })=>{
                                         children: index + 1
                                     }, index, false, {
                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 574,
+=======
+                                        lineNumber: 583,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1651,34 +1938,58 @@ const AllEventsPage = ({ className })=>{
                                         className: "text-purple-400"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 597,
+=======
+                                        lineNumber: 606,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 588,
+=======
+                                    lineNumber: 597,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 560,
+=======
+                            lineNumber: 569,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 559,
+=======
+                        lineNumber: 568,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 326,
+=======
+                lineNumber: 335,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Decorations$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 605,
+=======
+                lineNumber: 614,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$dialog$2f$RegisterConfirmationDialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1688,7 +1999,11 @@ const AllEventsPage = ({ className })=>{
                 event: selectedEvent
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 606,
+=======
+                lineNumber: 615,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$dialog$2f$UnregisterConfirmationDialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1698,13 +2013,21 @@ const AllEventsPage = ({ className })=>{
                 event: selectedEvent
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 612,
+=======
+                lineNumber: 621,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(auth)/events/page.tsx",
+<<<<<<< HEAD
         lineNumber: 267,
+=======
+        lineNumber: 276,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };

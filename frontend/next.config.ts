@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 
+<<<<<<< HEAD
 import { EventEmitter } from 'events';
 EventEmitter.defaultMaxListeners = 20;
 
@@ -45,6 +46,11 @@ const nextConfig: NextConfig = {
     }
     // In development, avoid aggressive caching to ensure HMR works reliably
     return [];
+=======
+const nextConfig: NextConfig = {
+  images: {
+    domains: ['localhost'],
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   },
 };
 

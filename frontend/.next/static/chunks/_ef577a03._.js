@@ -346,7 +346,11 @@ const Login = ()=>{
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
+<<<<<<< HEAD
     const { login } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+=======
+    const { login } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])(); // استخدام دالة login من سياق المصادقة
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])({
         resolver: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["zodResolver"])(formSchema),
@@ -356,6 +360,10 @@ const Login = ()=>{
         }
     });
     const onSubmit = async (values)=>{
+<<<<<<< HEAD
+=======
+        console.log(values);
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         try {
             const response = await fetch(`http://localhost:8080/auth/login`, {
                 method: 'POST',
@@ -401,12 +409,20 @@ const Login = ()=>{
                 className: "animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500"
             }, void 0, false, {
                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 87,
+=======
+                lineNumber: 88,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
             lineNumber: 86,
+=======
+            lineNumber: 87,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this);
     }
@@ -460,7 +476,11 @@ const Login = ()=>{
                                 children: "Welcome Back"
                             }, void 0, false, {
                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 117,
+=======
+                                lineNumber: 118,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Form"], {
@@ -478,7 +498,11 @@ const Login = ()=>{
                                                             children: "Email"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 132,
+=======
+                                                            lineNumber: 133,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, void 0),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -492,7 +516,11 @@ const Login = ()=>{
                                                                         className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-400"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 138,
+=======
+                                                                        lineNumber: 139,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -501,34 +529,58 @@ const Login = ()=>{
                                                                         ...field
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 139,
+=======
+                                                                        lineNumber: 140,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 134,
+=======
+                                                                lineNumber: 135,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 133,
+=======
+                                                            lineNumber: 134,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, void 0),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 146,
+=======
+                                                            lineNumber: 147,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, void 0)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 131,
+=======
+                                                    lineNumber: 132,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 21
                                                 }, void 0)
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 127,
+=======
+                                            lineNumber: 128,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -540,7 +592,11 @@ const Login = ()=>{
                                                             children: "Password"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 157,
+=======
+                                                            lineNumber: 158,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, void 0),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -554,7 +610,11 @@ const Login = ()=>{
                                                                         className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-400"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 163,
+=======
+                                                                        lineNumber: 164,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -564,34 +624,58 @@ const Login = ()=>{
                                                                         ...field
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 164,
+=======
+                                                                        lineNumber: 165,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 159,
+=======
+                                                                lineNumber: 160,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 158,
+=======
+                                                            lineNumber: 159,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, void 0),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 172,
+=======
+                                                            lineNumber: 173,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, void 0)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 156,
+=======
+                                                    lineNumber: 157,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 21
                                                 }, void 0)
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 152,
+=======
+                                            lineNumber: 153,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -611,30 +695,50 @@ const Login = ()=>{
                                                         className: "animate-spin mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 190,
+=======
+                                                        lineNumber: 191,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this),
                                                     "Signing in..."
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 189,
+=======
+                                                lineNumber: 190,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 21
                                             }, this) : 'Sign In'
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 177,
+=======
+                                            lineNumber: 178,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 122,
+=======
+                                    lineNumber: 123,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 121,
+=======
+                                lineNumber: 122,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -655,18 +759,30 @@ const Login = ()=>{
                                                     children: "Reset it here"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 204,
+=======
+                                                    lineNumber: 205,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 202,
+=======
+                                            lineNumber: 203,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 201,
+=======
+                                        lineNumber: 202,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -684,35 +800,59 @@ const Login = ()=>{
                                                     children: "Register now"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 218,
+=======
+                                                    lineNumber: 219,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 213,
+=======
+                                            lineNumber: 214,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 212,
+=======
+                                        lineNumber: 213,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 200,
+=======
+                                lineNumber: 201,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 112,
+=======
+                        lineNumber: 113,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 106,
+=======
+                    lineNumber: 107,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -745,12 +885,20 @@ const Login = ()=>{
                                 className: "brightness-90 object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 242,
+=======
+                                lineNumber: 243,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 234,
+=======
+                            lineNumber: 235,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -760,7 +908,11 @@ const Login = ()=>{
                             className: "absolute inset-0 bg-gradient-to-br from-purple-900/70 to-indigo-800/70"
                         }, void 0, false, {
                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 249,
+=======
+                            lineNumber: 250,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -785,7 +937,11 @@ const Login = ()=>{
                                         children: "Welcome"
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 262,
+=======
+                                        lineNumber: 263,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -796,35 +952,59 @@ const Login = ()=>{
                                         children: "Sign in to discover exciting events"
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 270,
+=======
+                                        lineNumber: 271,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 261,
+=======
+                                lineNumber: 262,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 255,
+=======
+                            lineNumber: 256,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 226,
+=======
+                    lineNumber: 227,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
             lineNumber: 99,
+=======
+            lineNumber: 100,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/auth/login/page.tsx",
+<<<<<<< HEAD
         lineNumber: 93,
+=======
+        lineNumber: 94,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };
