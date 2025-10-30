@@ -1,0 +1,74 @@
+{
+  "[project]/components/ui/Loading.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/Loading.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_ui_Loading_tsx_353ece46._.js",
+      "static/chunks/components_ui_Loading_tsx_bec50807._.js"
+    ]
+  },
+  "[project]/components/dialog/DeleteConfirmationDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/dialog/DeleteConfirmationDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_dialog_DeleteConfirmationDialog_tsx_39ba4f13._.js",
+      "static/chunks/components_dialog_DeleteConfirmationDialog_tsx_bec50807._.js"
+    ]
+  },
+  "[project]/components/ui/NotFound.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/NotFound.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_27bf90b1._.js",
+      "static/chunks/components_ui_NotFound_tsx_bec50807._.js"
+    ]
+  },
+  "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_9f8b82ea._.js",
+      "static/chunks/components_ui_Pagination_tsx_bec50807._.js"
+    ]
+  },
+  "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_bc6fa98d._.js",
+      "static/chunks/components_ui_e25e5df9._.js",
+      "static/chunks/components_ui_ProfileDropdown_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_7a9afa78._.js",
+      "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/dialog/EditHallDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/dialog/EditHallDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_dialog_EditHallDialog_tsx_2dfe2542._.js",
+      "static/chunks/components_dialog_EditHallDialog_tsx_bec50807._.js"
+    ]
+  },
+  "[project]/components/ui/HallCard.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/HallCard.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_ui_99154507._.js",
+      "static/chunks/components_ui_HallCard_tsx_bec50807._.js"
+    ]
+  },
+  "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_3536744b._.js",
+      "static/chunks/_3b5268af._.js",
+      "static/chunks/components_home_MobileMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/ui/SearchInput.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/SearchInput.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_ui_SearchInput_tsx_bd137e9b._.js",
+      "static/chunks/components_ui_SearchInput_tsx_bec50807._.js"
+    ]
+  }
+}

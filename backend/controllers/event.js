@@ -64,7 +64,7 @@ exports.getHostEvents = (req, res, next) => {
 };
 
 exports.createEvent = (req, res, next) => {
-  console.log("Boday =>>>>>>>>>>", req.body)
+  console.log('Boday =>>>>>>>>>>', req.body);
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     if (req.file) {
@@ -406,7 +406,7 @@ exports.deleteEvent = (req, res, next) => {
     })
     .then(() => {
       // Delete associated hall reservation if it exists
-      return HallReservation.findOneAndDelete({ event: event._id });
+      return HallReservation.findOneAndDelete({ event: eventDoc._id });
     })
     .then((reservation) => {
       if (reservation) {
