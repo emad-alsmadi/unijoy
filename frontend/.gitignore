@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Environment variables
 .env*.local
 
@@ -12,6 +12,4 @@
 
 # Production builds
 /.build
-=======
 /node_modules
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40

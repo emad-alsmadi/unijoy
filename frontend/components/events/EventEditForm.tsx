@@ -69,9 +69,7 @@ export default function EventEditForm({
   const hall = halls.map((h: HallType) => {
     (initialEvent as any)?.hall?._id === h._id ? String(h.name) : '';
   });
-  console.log('category', category);
-  console.log('hall', hall);
-
+  
   type FormValues = z.infer<typeof eventSchema>;
   const form = useForm<FormValues>({
     resolver: zodResolver(eventSchema),

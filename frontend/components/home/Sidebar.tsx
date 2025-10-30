@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 "use client"
-=======
-"use clinet"
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 import { motion } from 'framer-motion';
 import { X } from 'lucide-react';
 import Link from "next/link"
@@ -10,6 +7,8 @@ import { links } from "@/constants/index";
 import SocialMedia from '../ui/SocialMedia';
 import { useOutSidClick } from '@/hooks/useOutsideClick';
 import { useAuth } from '@/context/AuthContext'
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 interface Props {
   isOpen: boolean;
@@ -18,41 +17,56 @@ interface Props {
 const Sidebar = ({ isOpen, onClose }: Props) => {
   const { userRole, isAuthenticated } = useAuth();
   const sidebarRef = useOutSidClick<HTMLDivElement>(onClose);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Lock body scroll when sidebar is open
+  useEffect(() => {
+    if (!mounted) return;
+    const previous = document.body.style.overflow;
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [isOpen, mounted]);
 
 
 
-  return (
-<<<<<<< HEAD
-    <div className={`fixed inset-0 z-[1000] bg-purple-900/80 shadow-xl hoverEffect
-    cursor-auto w-full ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
-=======
-    <div className={`fixed inset-y-0 left-0 z-50 bg-darkColor/50 shadow-xl hoverEffect
-    cursor-auto  w-full ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
+  if (!mounted) return null;
+
+  return createPortal(
+    <div
+      className={`fixed inset-0 z-[2147483647] flex items-stretch bg-gradient-to-br from-black/80 via-purple-900/60 to-black/60 backdrop-blur-sm transition-opacity duration-300 cursor-auto w-screen h-screen ${
+        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}
+      onClick={onClose}
+    >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.3 }}
+        initial={{ x: -320, opacity: 1 }}
+        animate={{ x: isOpen ? 0 : -320, opacity: 1 }}
+        transition={{ duration: 0.3 }}
         ref={sidebarRef}
-<<<<<<< HEAD
-        className="min-w-60 max-w-72 md:min-w-72 md:max-w-96 bg-purple-700/95 text-white/80
-        h-full p-10 border-r border-white/20 flex flex-col gap-6">
-=======
-        className="min-w-60 max-w-72 md:min-w-72 md:max-w-96 bg-purple-700 text-white/70
-        h-full p-10 border-r border-r-white-500 flex flex-col gap-6">
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
+        onClick={(e) => e.stopPropagation()}
+        className="w-72 md:w-96 bg-purple-700/95 text-white/90 h-full p-10 border-r border-white/20 flex flex-col gap-6 shadow-xl"
+      >
         <div className="flex items-center justify-between">
           <button className='hover:text-red-500 hoverEffect' onClick={onClose}>
             <X />
           </button>
         </div>
-        <div className="flex flex-col gap-3.5 text-base font-semibold tracking-wide">
+        <div className="flex flex-col gap-2 text-base font-semibold tracking-wide">
           {links.map(link =>
-<<<<<<< HEAD
-            <Link className='hover:text-white hoverEffect w-28 text-white/80' key={link.id} href={link.url}>
-=======
-            <Link className={`hover:text-white hoverEffect w-28 text-white}`} key={link.id} href={link.url}>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
+
+            <Link
+              className='block w-full rounded-lg px-3 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors'
+              key={link.id}
+              href={link.url}
+            >
               {link?.title}
             </Link>
           )}
@@ -93,7 +107,8 @@ const Sidebar = ({ isOpen, onClose }: Props) => {
           )}
         </div>
       </motion.div>
-    </div>
+    </div>,
+    document.body
   )
 }
 

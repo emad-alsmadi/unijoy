@@ -20,13 +20,6 @@
       "static/chunks/components_ui_CategorieCard_tsx_dca0a6d2._.js"
     ]
   },
-  "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
-    "files": [
-      "static/chunks/_e4e10b5b._.js",
-      "static/chunks/components_ui_Pagination_tsx_dca0a6d2._.js"
-    ]
-  },
   "[project]/components/dialog/EditCategoryDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/dialog/EditCategoryDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
@@ -47,6 +40,13 @@
     "files": [
       "static/chunks/_7a9afa78._.js",
       "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/ui/pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_5fe91130._.js",
+      "static/chunks/components_ui_pagination_tsx_dca0a6d2._.js"
     ]
   },
   "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {

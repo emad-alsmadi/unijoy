@@ -1,12 +1,8 @@
-'use client';
-<<<<<<< HEAD
+﻿'use client';
+
 import { useToast } from '@/hooks/use-toast';
 import { UserProfile } from '@/types/type';
 import Cookies from 'js-cookie';
-=======
-import Cookies from 'js-cookie';
-import { useToast } from '@/hooks/use-toast';
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 import { useRouter } from 'next/navigation';
 import {
   createContext,
@@ -25,10 +21,8 @@ interface AuthContextType {
   setUserId: (userId: string) => void;
   login: (role: Exclude<UserRole, null>, token: string, userId: string) => void;
   logout: () => void;
-<<<<<<< HEAD
+
   detailsProfile?: UserProfile;
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -36,30 +30,18 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
 
-<<<<<<< HEAD
+
   const { toast } = useToast();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userRole, setUserRole] = useState<UserRole>(null);
   const [token, setToken] = useState('');
   const [detailsProfile, setDetailsProfile] = useState<UserProfile>();
-=======
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [userRole, setUserRole] = useState<UserRole>(null);
-  const [token, setToken] = useState('');
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
   const setUserId = (userId: string) => {
     Cookies.set('userId', userId);
   };
-<<<<<<< HEAD
+
   const login = (role: UserRole, token: string, userId: string) => {
-=======
-  const login = (
-    role: Exclude<UserRole, null>,
-    token: string,
-    userId: string
-  ) => {
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     setToken(token);
     Cookies.set('token', token, { expires: 7 }); // expires after 7 days
     Cookies.set('userId', userId, { expires: 7 });
@@ -78,7 +60,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-<<<<<<< HEAD
+
   const fetchDetailsProfile = async () => {
     try {
       const res = await fetch(`http://localhost:8080/profile`, {
@@ -106,8 +88,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [token]);
 
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   const logout = () => {
     Cookies.remove('token');
     Cookies.remove('userId');
@@ -127,10 +107,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         login,
         logout,
         setUserId,
-<<<<<<< HEAD
+
         detailsProfile,
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
       }}
     >
       {children}

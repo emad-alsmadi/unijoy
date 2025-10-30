@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "[project]/components/ui/Loading.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/ui/Loading.tsx [app-client] (ecmascript, next/dynamic entry)",
@@ -21,13 +20,6 @@
       "static/chunks/components_ui_NotFound_tsx_bec50807._.js"
     ]
   },
-  "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
-    "files": [
-      "static/chunks/_9f8b82ea._.js",
-      "static/chunks/components_ui_Pagination_tsx_bec50807._.js"
-    ]
-  },
   "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
@@ -43,11 +35,11 @@
       "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
     ]
   },
-  "[project]/components/dialog/EditHallDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/components/dialog/EditHallDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+  "[project]/components/ui/pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/components_dialog_EditHallDialog_tsx_2dfe2542._.js",
-      "static/chunks/components_dialog_EditHallDialog_tsx_bec50807._.js"
+      "static/chunks/_ae1207d4._.js",
+      "static/chunks/components_ui_pagination_tsx_bec50807._.js"
     ]
   },
   "[project]/components/ui/HallCard.tsx [app-client] (ecmascript, next/dynamic entry)": {
@@ -71,8 +63,12 @@
       "static/chunks/components_ui_SearchInput_tsx_bd137e9b._.js",
       "static/chunks/components_ui_SearchInput_tsx_bec50807._.js"
     ]
+  },
+  "[project]/components/dialog/EditHallDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/dialog/EditHallDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_dialog_EditHallDialog_tsx_2dfe2542._.js",
+      "static/chunks/components_dialog_EditHallDialog_tsx_bec50807._.js"
+    ]
   }
 }
-=======
-{}
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40

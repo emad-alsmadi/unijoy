@@ -4,66 +4,96 @@ import './globals.css';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/layout/Footer';
 import { AuthProvider } from '@/context/AuthContext';
-<<<<<<< HEAD
 import { ThemeProvider } from '@/context/ThemeContext';
 import Providers from './providers';
-=======
-import ClientHeader from '@/components/layout/ClientHeader';
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
 export const metadata: Metadata = {
-  title: 'UniJoy',
-  description:
-    'احجز موعدك الآن في أفضل عيادة أسنان مع أطباء محترفين وبأحدث التقنيات.',
-  keywords:
-    'طب الأسنان, حجز موعد, عيادة أسنان, تبييض الأسنان, تقويم الأسنان , رعاية طبية , زرع الأسنان , إزالة التصبغ بالليزر , جراحة الزرع',
-  openGraph: {
-    title: ' | أفضل عيادة أسنان',
-    description:
-      'احجز موعدك الآن في أفضل عيادة أسنان مع أطباء محترفين وبأح  التقنيات.',
-    url: 'https://odental.com',
-    type: 'website',
-    images: [
-      {
-        url: 'https://odental.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: '',
-      },
-    ],
+  title: {
+    default: 'UniJoy — University Events',
+    template: '%s | UniJoy',
   },
-  robots: 'index, follow',
+  description:
+    'Discover, host, and manage university events across campuses. Find concerts, workshops, hackathons, and more with UniJoy.',
+  keywords: [
+    'university events',
+    'campus events',
+    'event management',
+    'student life',
+    'Yarmouk University',
+    'UniJoy',
+  ],
+  openGraph: {
+    title: 'UniJoy — University Events Platform',
+    description:
+      'Explore and manage campus events at Yarmouk Private University and beyond.',
+    url: 'https://unijoy.com',
+    siteName: 'UniJoy',
+    images: [
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'UniJoy Open Graph Image' },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UniJoy — University Events',
+    description: 'Discover and manage campus events with UniJoy.',
+    creator: '@unijoy',
+    images: ['/twitter-image.jpg'],
+  },
+  authors: [{ name: 'UniJoy Team' }],
+  creator: 'UniJoy',
+  publisher: 'UniJoy',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google-site-verification-code',
+    yandex: 'yandex-verification-code',
+    yahoo: 'yahoo-site-verification',
+    other: {
+      me: ['your-email@domain.com'],
+    },
+  },
+  alternates: {
+    canonical: 'https://unijoy.com',
+    languages: {
+      'en-US': 'https://unijoy.com/en-US',
+      'ar-SA': 'https://unijoy.com/ar-SA',
+    },
+  },
+  appLinks: {
+    ios: {
+      url: 'https://unijoy.com/ios',
+      app_store_id: 'app_store_id',
+    },
+    android: {
+      package: 'com.unijoy.app',
+      app_name: 'UniJoy',
+    },
+    web: {
+      url: 'https://unijoy.com',
+      should_fallback: true,
+    },
+  },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-<<<<<<< HEAD
     <html lang='en' suppressHydrationWarning>
-=======
-    <html lang='en'>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
-      <head>
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1.0'
-        />
-<<<<<<< HEAD
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){
-                try{
-                  var stored = localStorage.getItem('theme');
-                  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  var theme = stored === 'light' || stored === 'dark' ? stored : (prefersDark ? 'dark' : 'light');
-                  var root = document.documentElement;
-                  if(theme === 'dark') root.classList.add('dark'); else root.classList.remove('dark');
-                }catch(e){}
-              })();
-            `,
-          }}
-        />
-      </head>
       <body className='scrollbar-thin'>
         <Providers>
           <ThemeProvider>
@@ -75,16 +105,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             </AuthProvider>
           </ThemeProvider>
         </Providers>
-=======
-      </head>
-      <body>
-        <AuthProvider>
-          <ClientHeader />
-          {children}
-          <Toaster />
-          <Footer />
-        </AuthProvider>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
       </body>
     </html>
   );

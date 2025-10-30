@@ -25,7 +25,7 @@ const EditHallDialog = dynamic(
   { ssr: false }
 );
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
-const Pagination = dynamic(() => import('@/components/ui/Pagination'));
+const Pagination = dynamic(() => import('@/components/ui/pagination'));
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
   { ssr: false }

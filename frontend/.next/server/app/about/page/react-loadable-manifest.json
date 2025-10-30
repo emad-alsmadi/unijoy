@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)",
@@ -8,6 +7,21 @@
       "static/chunks/components_ui_ProfileDropdown_tsx_9a447c75._.js"
     ]
   },
+  "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_7a9afa78._.js",
+      "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/layout/About.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/layout/About.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_dc350d78._.js",
+      "static/chunks/_4b511c2f._.js",
+      "static/chunks/components_layout_About_tsx_5c990594._.js"
+    ]
+  },
   "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
@@ -15,15 +29,5 @@
       "static/chunks/_3b5268af._.js",
       "static/chunks/components_home_MobileMenu_tsx_9a447c75._.js"
     ]
-  },
-  "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
-    "files": [
-      "static/chunks/_7a9afa78._.js",
-      "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
-    ]
   }
 }
-=======
-{}
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40

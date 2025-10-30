@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
 
 "[project]/components/ui/Card.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -314,11 +314,8 @@ const sidebarItems = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
             lineNumber: 21,
-=======
-            lineNumber: 40,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 36
         }, this),
         tab: 'dashboard'
@@ -329,11 +326,8 @@ const sidebarItems = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
             lineNumber: 22,
-=======
-            lineNumber: 41,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 33
         }, this),
         tab: 'events'
@@ -344,11 +338,8 @@ const sidebarItems = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
             lineNumber: 23,
-=======
-            lineNumber: 42,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 32
         }, this),
         tab: 'users'
@@ -359,11 +350,8 @@ const sidebarItems = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
             lineNumber: 24,
-=======
-            lineNumber: 43,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 35
         }, this),
         tab: 'settings'
@@ -380,53 +368,37 @@ const AdminDashboard = ()=>{
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                 lineNumber: 31,
-=======
-                lineNumber: 50,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 71
             }, this)
         },
         {
-<<<<<<< HEAD
+
             title: 'Number All Events',
-=======
-            title: 'Events This Month',
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             value: '84',
             change: '+23%',
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                 lineNumber: 32,
-=======
-                lineNumber: 51,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 74
             }, this)
         },
         {
-<<<<<<< HEAD
+
             title: 'Number All Host',
-=======
-            title: 'Universities',
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             value: '12',
             change: '+2',
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$school$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__School$3e$__["School"], {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                 lineNumber: 33,
                 columnNumber: 70
-=======
-                lineNumber: 52,
-                columnNumber: 67
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             }, this)
         },
         {
@@ -437,11 +409,8 @@ const AdminDashboard = ()=>{
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                 lineNumber: 34,
-=======
-                lineNumber: 53,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 72
             }, this)
         }
@@ -523,11 +492,8 @@ const AdminDashboard = ()=>{
                                                         children: "Welcome back, Admin!"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                         lineNumber: 72,
-=======
-                                                        lineNumber: 91,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 49
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -535,39 +501,27 @@ const AdminDashboard = ()=>{
                                                         children: "Here's what's happening with your platform today."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                         lineNumber: 73,
-=======
-                                                        lineNumber: 92,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 49
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                 lineNumber: 71,
-=======
-                                                lineNumber: 90,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                             lineNumber: 70,
-=======
-                                            lineNumber: 89,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 41
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                         lineNumber: 65,
-=======
-                                        lineNumber: 84,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -589,20 +543,14 @@ const AdminDashboard = ()=>{
                                                 delay: index * 0.1
                                             }, stat.title, false, {
                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                 lineNumber: 85,
-=======
-                                                lineNumber: 104,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 45
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                         lineNumber: 78,
-=======
-                                        lineNumber: 97,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -630,59 +578,41 @@ const AdminDashboard = ()=>{
                                                                 children: "Event Registrations"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                                 lineNumber: 105,
-=======
-                                                                lineNumber: 124,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 53
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "h-64",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LineChartComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LineChartComponent"], {}, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                                     lineNumber: 107,
-=======
-                                                                    lineNumber: 126,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 57
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                                 lineNumber: 106,
-=======
-                                                                lineNumber: 125,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 53
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                         lineNumber: 104,
-=======
-                                                        lineNumber: 123,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 49
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                     lineNumber: 103,
-=======
-                                                    lineNumber: 122,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 45
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                 lineNumber: 97,
-=======
-                                                lineNumber: 116,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 41
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -706,11 +636,8 @@ const AdminDashboard = ()=>{
                                                                 children: "Recent Events"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                                 lineNumber: 120,
-=======
-                                                                lineNumber: 139,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 53
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$DataTable$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DataTable"], {
@@ -724,104 +651,71 @@ const AdminDashboard = ()=>{
                                                                 loading: isLoading
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                                 lineNumber: 121,
-=======
-                                                                lineNumber: 140,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 53
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                         lineNumber: 119,
-=======
-                                                        lineNumber: 138,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 49
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                     lineNumber: 118,
-=======
-                                                    lineNumber: 137,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 45
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                                 lineNumber: 113,
-=======
-                                                lineNumber: 132,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 41
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                         lineNumber: 96,
-=======
-                                        lineNumber: 115,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 37
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                                 lineNumber: 64,
-=======
-                                lineNumber: 83,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 33
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                             lineNumber: 58,
-=======
-                            lineNumber: 77,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 29
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                         lineNumber: 57,
-=======
-                        lineNumber: 76,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                     lineNumber: 56,
-=======
-                    lineNumber: 75,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
                 lineNumber: 55,
-=======
-                lineNumber: 74,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/(auth)/admin/dashboard/page.tsx",
-<<<<<<< HEAD
+
             lineNumber: 54,
-=======
-            lineNumber: 73,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 13
         }, this)
     }, void 0, false);

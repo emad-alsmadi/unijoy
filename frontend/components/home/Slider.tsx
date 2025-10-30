@@ -39,7 +39,7 @@ const Slider = () => {
                         width={900}
                         height={600}
                         className="z-20 border border-transparent h-[400px] rounded-xl mx-auto my-10"
-                        priority // أولوية التحميل
+                        priority={index === 0} // أولوية التحميل
                     />
                 </div>
             ))}

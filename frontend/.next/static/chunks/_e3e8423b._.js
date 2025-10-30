@@ -771,10 +771,7 @@ const HostDashboard = ()=>{
                 description: error?.message || 'Failed to download invoice',
                 className: 'bg-red-600 text-white border-0'
             });
-<<<<<<< HEAD
-=======
             console.log(error.message);
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         } finally{
             setdownloadingReportPdfPdf(null);
         }
@@ -795,8 +792,6 @@ const HostDashboard = ()=>{
             setEvents(data.events);
             setTotalPages(data.totalPages);
             setTotalItems(data.totalItems);
-<<<<<<< HEAD
-=======
             if (response.ok) {
                 toast({
                     title: 'Fetch event Successfully',
@@ -804,7 +799,6 @@ const HostDashboard = ()=>{
                     className: 'bg-green-500 text-white'
                 });
             }
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         } catch (err) {
             toast({
                 title: 'Fetch Error',
@@ -845,10 +839,7 @@ const HostDashboard = ()=>{
     const paginate = (pageNumber)=>setCurrentPage(pageNumber);
     // إحصائيات الأحداث
     const stats = {
-<<<<<<< HEAD
-=======
         totalEvents: events?.length || 0,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         upcomingEvents: events?.filter((e)=>new Date(e.date) > new Date()).length || 0,
         pendingEvents: events?.filter((e)=>e.status === 'pending').length || 0
     };
@@ -893,20 +884,12 @@ const HostDashboard = ()=>{
                 className: "animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                lineNumber: 283,
-=======
                 lineNumber: 291,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-            lineNumber: 282,
-=======
             lineNumber: 290,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this);
     }
@@ -928,11 +911,7 @@ const HostDashboard = ()=>{
                                 children: "Welcome back, Host!"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 299,
-=======
                                 lineNumber: 307,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -940,39 +919,23 @@ const HostDashboard = ()=>{
                                 children: "Here's what's happening with your events today."
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 302,
-=======
                                 lineNumber: 310,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 298,
-=======
                         lineNumber: 306,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                    lineNumber: 297,
-=======
                     lineNumber: 305,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                lineNumber: 296,
-=======
                 lineNumber: 304,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -981,11 +944,7 @@ const HostDashboard = ()=>{
                 children: [
                     {
                         title: 'Total Events',
-<<<<<<< HEAD
-                        value: totalItems,
-=======
                         value: stats.totalEvents,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ticket$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Ticket$3e$__["Ticket"],
                         trend: '+12%'
                     },
@@ -1019,32 +978,20 @@ const HostDashboard = ()=>{
                                             children: stat.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 345,
-=======
                                             lineNumber: 353,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(stat.icon, {
                                             className: "h-5 w-5 text-purple-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 348,
-=======
                                             lineNumber: 356,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 344,
-=======
                                     lineNumber: 352,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1054,11 +1001,7 @@ const HostDashboard = ()=>{
                                             children: stat.value
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 351,
-=======
                                             lineNumber: 359,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1069,49 +1012,29 @@ const HostDashboard = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 352,
-=======
                                             lineNumber: 360,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 350,
-=======
                                     lineNumber: 358,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                            lineNumber: 343,
-=======
                             lineNumber: 351,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this)
                     }, stat.title, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 339,
-=======
                         lineNumber: 347,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                lineNumber: 310,
-=======
                 lineNumber: 318,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1127,20 +1050,12 @@ const HostDashboard = ()=>{
                                     className: "h-5 w-5 text-purple-400"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 369,
-=======
                                     lineNumber: 377,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 368,
-=======
                                 lineNumber: 376,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1153,21 +1068,13 @@ const HostDashboard = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 371,
-=======
                                 lineNumber: 379,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 367,
-=======
                         lineNumber: 375,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1191,58 +1098,34 @@ const HostDashboard = ()=>{
                                                     className: "h-3 w-3 md:h-4 md:w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                    lineNumber: 400,
-=======
                                                     lineNumber: 408,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 21
                                                 }, this),
                                                 label
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 399,
-=======
                                             lineNumber: 407,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this)
                                     }, value, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                        lineNumber: 394,
-=======
                                         lineNumber: 402,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 392,
-=======
                                 lineNumber: 400,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                            lineNumber: 384,
-=======
                             lineNumber: 392,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 383,
-=======
                         lineNumber: 391,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Popover"], {
@@ -1259,41 +1142,25 @@ const HostDashboard = ()=>{
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 419,
-=======
                                             lineNumber: 427,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "Select Date"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                            lineNumber: 420,
-=======
                                             lineNumber: 428,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 415,
-=======
                                     lineNumber: 423,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 414,
-=======
                                 lineNumber: 422,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -1309,30 +1176,18 @@ const HostDashboard = ()=>{
                                     initialFocus: true
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 427,
-=======
                                     lineNumber: 435,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 423,
-=======
                                 lineNumber: 431,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 410,
-=======
                         lineNumber: 418,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1342,11 +1197,7 @@ const HostDashboard = ()=>{
                                 className: "text-white"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 441,
-=======
                                 lineNumber: 449,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1354,31 +1205,19 @@ const HostDashboard = ()=>{
                                 children: "Create Events"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                lineNumber: 442,
-=======
                                 lineNumber: 450,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 440,
-=======
                         lineNumber: 448,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                lineNumber: 362,
-=======
                 lineNumber: 370,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             currentEvents?.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1404,11 +1243,7 @@ const HostDashboard = ()=>{
                                                             children: event.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                            lineNumber: 464,
-=======
                                                             lineNumber: 472,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1416,30 +1251,18 @@ const HostDashboard = ()=>{
                                                             children: event.status
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                            lineNumber: 467,
-=======
                                                             lineNumber: 475,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                    lineNumber: 463,
-=======
                                                     lineNumber: 471,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                lineNumber: 462,
-=======
                                                 lineNumber: 470,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1452,43 +1275,27 @@ const HostDashboard = ()=>{
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 484,
-=======
                                                                 lineNumber: 492,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: event.date
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 485,
-=======
                                                                 lineNumber: 493,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: event.time
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 486,
-=======
                                                                 lineNumber: 494,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                        lineNumber: 483,
-=======
                                                         lineNumber: 491,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1498,32 +1305,20 @@ const HostDashboard = ()=>{
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 489,
-=======
                                                                 lineNumber: 497,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: event.location
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 490,
-=======
                                                                 lineNumber: 498,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                        lineNumber: 488,
-=======
                                                         lineNumber: 496,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1541,31 +1336,19 @@ const HostDashboard = ()=>{
                                                                             className: "h-4 w-4 mr-2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                            lineNumber: 502,
-=======
                                                                             lineNumber: 510,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         "View"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                    lineNumber: 501,
-=======
                                                                     lineNumber: 509,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 495,
-=======
                                                                 lineNumber: 503,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1579,31 +1362,19 @@ const HostDashboard = ()=>{
                                                                             className: "h-4 w-4 mr-2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                            lineNumber: 513,
-=======
                                                                             lineNumber: 521,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         "Edit"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                    lineNumber: 512,
-=======
                                                                     lineNumber: 520,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 507,
-=======
                                                                 lineNumber: 515,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this),
                                                             event.status === 'approved' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1617,11 +1388,7 @@ const HostDashboard = ()=>{
                                                                             className: "h-4 w-4 mr-2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                            lineNumber: 530,
-=======
                                                                             lineNumber: 538,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 33
                                                                         }, this),
                                                                         "Report"
@@ -1629,11 +1396,7 @@ const HostDashboard = ()=>{
                                                                 }, void 0, true)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 520,
-=======
                                                                 lineNumber: 528,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -1650,31 +1413,19 @@ const HostDashboard = ()=>{
                                                                                     className: "h-4 w-4 mr-2"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                    lineNumber: 549,
-=======
                                                                                     lineNumber: 557,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 "Delete"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                            lineNumber: 544,
-=======
                                                                             lineNumber: 552,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                        lineNumber: 543,
-=======
                                                                         lineNumber: 551,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogContent"], {
@@ -1685,11 +1436,7 @@ const HostDashboard = ()=>{
                                                                                 children: "Confirm deletion"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                lineNumber: 555,
-=======
                                                                                 lineNumber: 563,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -1704,21 +1451,13 @@ const HostDashboard = ()=>{
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                        lineNumber: 560,
-=======
                                                                                         lineNumber: 568,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 31
                                                                                     }, this),
                                                                                     " ?",
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                        lineNumber: 561,
-=======
                                                                                         lineNumber: 569,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 31
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1726,21 +1465,13 @@ const HostDashboard = ()=>{
                                                                                         children: "This action cannot be undone once executed ⚠️"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                        lineNumber: 562,
-=======
                                                                                         lineNumber: 570,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 31
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                lineNumber: 558,
-=======
                                                                                 lineNumber: 566,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1753,20 +1484,12 @@ const HostDashboard = ()=>{
                                                                                             children: "Cancel"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                            lineNumber: 569,
-=======
                                                                                             lineNumber: 577,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                        lineNumber: 568,
-=======
                                                                                         lineNumber: 576,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 31
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1776,98 +1499,58 @@ const HostDashboard = ()=>{
                                                                                         children: loading ? 'Deleting...' : 'Confirm deletion'
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                        lineNumber: 571,
-=======
                                                                                         lineNumber: 579,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 31
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                                lineNumber: 567,
-=======
                                                                                 lineNumber: 575,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                        lineNumber: 554,
-=======
                                                                         lineNumber: 562,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                                lineNumber: 538,
-=======
                                                                 lineNumber: 546,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                        lineNumber: 494,
-=======
                                                         lineNumber: 502,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                                lineNumber: 481,
-=======
                                                 lineNumber: 489,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                        lineNumber: 461,
-=======
                                         lineNumber: 469,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 19
                                     }, this)
                                 }, event._id, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 455,
-=======
                                     lineNumber: 463,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                            lineNumber: 453,
-=======
                             lineNumber: 461,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 449,
-=======
                         lineNumber: 457,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this),
                     totalItems >= eventsPerPage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1884,20 +1567,12 @@ const HostDashboard = ()=>{
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                        lineNumber: 599,
-=======
                                         lineNumber: 607,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 593,
-=======
                                     lineNumber: 601,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 17
                                 }, this),
                                 Array.from({
@@ -1911,11 +1586,7 @@ const HostDashboard = ()=>{
                                         children: pageNumber
                                     }, pageNumber, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                        lineNumber: 614,
-=======
                                         lineNumber: 622,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 23
                                     }, this);
                                 }),
@@ -1924,11 +1595,7 @@ const HostDashboard = ()=>{
                                     children: "..."
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 629,
-=======
                                     lineNumber: 637,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 19
                                 }, this),
                                 totalPages > 5 && currentPage < totalPages - 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1938,11 +1605,7 @@ const HostDashboard = ()=>{
                                     children: totalPages
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 633,
-=======
                                     lineNumber: 641,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1954,39 +1617,23 @@ const HostDashboard = ()=>{
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                        lineNumber: 650,
-=======
                                         lineNumber: 658,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                                    lineNumber: 642,
-=======
                                     lineNumber: 650,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                            lineNumber: 592,
-=======
                             lineNumber: 600,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 591,
-=======
                         lineNumber: 599,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 13
                     }, this)
                 ]
@@ -2004,11 +1651,7 @@ const HostDashboard = ()=>{
                         children: "No events found"
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 662,
-=======
                         lineNumber: 670,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2016,11 +1659,7 @@ const HostDashboard = ()=>{
                         children: searchQuery ? 'Try a different search term' : 'Create your first event to get started'
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 663,
-=======
                         lineNumber: 671,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2030,40 +1669,24 @@ const HostDashboard = ()=>{
                             children: "Create New Event"
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                            lineNumber: 669,
-=======
                             lineNumber: 677,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                        lineNumber: 668,
-=======
                         lineNumber: 676,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-                lineNumber: 657,
-=======
                 lineNumber: 665,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(auth)/host/dashboard/page.tsx",
-<<<<<<< HEAD
-        lineNumber: 289,
-=======
         lineNumber: 297,
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };

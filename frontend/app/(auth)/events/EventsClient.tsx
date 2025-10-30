@@ -27,7 +27,7 @@ const EventCard = dynamic(() => import('@/components/ui/EventCard'), {
     <div className='h-64 rounded-xl bg-purple-100/40 animate-pulse' />
   ),
 });
-const Pagination = dynamic(() => import('@/components/ui/Pagination'), {
+const Pagination = dynamic(() => import('@/components/ui/pagination'), {
   ssr: false,
   loading: () => <div className='h-10' />,
 });
@@ -187,10 +187,9 @@ export default function EventsClient({
 
   const unregisterMutation = useMutation({
     mutationFn: async (eventId: string) =>
-      del<{ message?: string }>(
-        `/users/me/events/${eventId}/unregister`,
-        { token }
-      ),
+      del<{ message?: string }>(`/users/me/events/${eventId}/unregister`, {
+        token,
+      }),
     onSuccess: (data, eventId) => {
       toast({
         title: 'Unregistration successful',

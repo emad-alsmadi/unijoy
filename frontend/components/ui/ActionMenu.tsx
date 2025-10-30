@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ActionMenuProps {
   role: 'admin' | 'host' | 'user';
@@ -82,7 +83,10 @@ export function ActionMenu({
         Manage
       </button>
         {open && (
-          <ul
+          <motion.ul
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
             role='menu'
             className='absolute right-0 mt-2 w-44 rounded-lg border border-purple-100 bg-white shadow-xl z-30 p-1'
           >
@@ -100,7 +104,7 @@ export function ActionMenu({
                 </button>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         )}
     </div>
   );

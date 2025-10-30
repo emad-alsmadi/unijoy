@@ -1,14 +1,13 @@
 {
-<<<<<<< HEAD
-  "/(auth)/admin/categories/page": "app/(auth)/admin/categories/page.js",
-  "/(auth)/admin/events/page": "app/(auth)/admin/events/page.js",
-  "/(auth)/admin/hall/page": "app/(auth)/admin/hall/page.js",
-  "/(auth)/admin/settings/page": "app/(auth)/admin/settings/page.js",
-  "/(auth)/admin/users/page": "app/(auth)/admin/users/page.js",
+  "/(auth)/create/page": "app/(auth)/create/page.js",
+  "/(auth)/host/dashboard/page": "app/(auth)/host/dashboard/page.js",
+  "/(auth)/host/events/page": "app/(auth)/host/events/page.js",
+  "/(auth)/host/registered-users/page": "app/(auth)/host/registered-users/page.js",
+  "/(auth)/profile/edit/page": "app/(auth)/profile/edit/page.js",
+  "/(auth)/profile/page": "app/(auth)/profile/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
   "/auth/login/page": "app/auth/login/page.js",
-  "/categories/page": "app/categories/page.js",
-  "/halls/page": "app/halls/page.js",
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }

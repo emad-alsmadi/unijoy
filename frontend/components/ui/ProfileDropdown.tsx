@@ -1,4 +1,4 @@
-import {
+﻿import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -16,14 +16,8 @@ export function ProfileDropdown({
   userRole: string;
 }) {
   const router = useRouter();
-<<<<<<< HEAD
+
   const { logout, detailsProfile } = useAuth();
-=======
-  const {logout} = useAuth();
-  const handleLogout = () => {
-    logout();
-  };
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
   return (
     <DropdownMenu>
@@ -35,11 +29,8 @@ export function ProfileDropdown({
 
       <DropdownMenuContent className='z-[999] w-48 mt-2 shadow-lg bg-white border border-gray-200 rounded-xl text-sm'>
         <div className='px-3 py-2'>
-<<<<<<< HEAD
+
           <p className='font-medium text-gray-800'>{detailsProfile?.name}</p>
-=======
-          <p className='font-medium text-gray-800'>{user?.name || 'Guest'}</p>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem
@@ -50,22 +41,16 @@ export function ProfileDropdown({
         </DropdownMenuItem>
         <DropdownMenuItem
           className='cursor-pointer hover:bg-gray-100'
-<<<<<<< HEAD
+
           onClick={() => router.push(`/${userRole}/events`)}
-=======
-          onClick={() => router.push(`/${userRole}/dashboard`)}
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         >
           <Settings className='w-4 h-4 mr-2 text-purple-600' /> Dashboard
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
           className='cursor-pointer text-red-600 hover:bg-red-50'
-<<<<<<< HEAD
+
           onClick={logout}
-=======
-          onClick={handleLogout}
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         >
           <LogOut className='w-4 h-4 mr-2' /> Logout
         </DropdownMenuItem>
