@@ -1,5 +1,5 @@
 'use client';
-<<<<<<< HEAD
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
@@ -57,18 +57,27 @@ const EventCard = ({
   const {userRole} = useAuth();
 
   return (
-    <article
+    <motion.article
       role='article'
       aria-labelledby={`event-${event._id}-title`}
       aria-label={ariaLabel || event.title}
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -6, scale: 1.005 }}
+      whileTap={{ scale: 0.995 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
       className={cn(
-        'group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-[1px] border border-purple-100/60 shadow-sm',
+        'group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-[1px] border border-purple-100/60 shadow-sm hover:shadow-xl transition-all',
         className
       )}
     >
       {/* Role-based Controls */}
       {(role === 'admin' || role === 'host' || onDownloadInvoice) && (
-        <div className='absolute z-20 top-2 right-2'>
+        <motion.div
+          initial={{ opacity: 0, y: -6 }}
+          animate={{ opacity: 1, y: 0 }}
+          className='absolute z-20 top-2 right-2'
+        >
           {actionsMode === 'menu' ? (
             <ActionMenu
               role={role || 'user'}
@@ -137,7 +146,7 @@ const EventCard = ({
               </button>
             </div>
           )}
-        </div>
+        </motion.div>
       )}
       {/* Image */}
       <div className='relative h-44 sm:h-52 w-full overflow-hidden'>
@@ -146,7 +155,7 @@ const EventCard = ({
           alt={event.title || 'Event image'}
           fill
           sizes='(max-width: 640px) 100vw, 33vw'
-          className='object-cover'
+          className='object-cover transition-transform duration-500 group-hover:scale-105'
           priority={false}
         />
         <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent' />
@@ -222,54 +231,15 @@ const EventCard = ({
         <div className='mt-4 flex items-center justify-between'>
           <Link
             href={detailsHref}
-            className='inline-flex items-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400'
+            className='inline-flex items-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 transition-all'
           >
             View Details
           </Link>
           {footer}
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
 
 export default memo(EventCard);
-=======
-import { motion } from 'framer-motion';
-import { EventCategory } from '@/types/type';
-import Image from 'next/image';
-import { ReactNode } from 'react';
-
-const EventCard = ({
-  event,
-  children,
-  className,
-}: {
-  event: EventCategory;
-  children: ReactNode;
-  className: string;
-}) => {
-  const baseURL = 'http://localhost:8080';
-  const src = encodeURI(`${baseURL}/${event?.image?.replace(/\\/g, '/')}`);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow ${className}`}
-    >
-      <div className='w-full'>
-        <Image
-          src={src}
-          alt={event?.title}
-          className='w-full h-48 object-cover'
-          width={400}
-          height={300}
-        />
-      </div>
-      {children}
-    </motion.div>
-  );
-};
-export default EventCard;
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40

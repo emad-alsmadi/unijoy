@@ -30,7 +30,7 @@ const Loading = dynamic(
 );
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const EventCard = dynamic(() => import('@/components/ui/EventCard'));
-const Pagination = dynamic(() => import('@/components/ui/Pagination'));
+const Pagination = dynamic(() => import('@/components/ui/pagination'));
 const DeleteConfirmationDialog = dynamic(
   () => import('@/components/dialog/DeleteConfirmationDialog'),
   { ssr: false }

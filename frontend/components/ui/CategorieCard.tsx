@@ -1,5 +1,6 @@
 'use client';
 import { HostCategory } from '@/types';
+import { motion } from 'framer-motion';
 import { Layers, ScrollText, Pencil, Trash2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/button';
@@ -19,8 +20,14 @@ const CategorieCard = ({
   onDelete,
 }: CategorieCardProps) => {
   return (
-    <div key={categorie._id}>
-      <Card className='relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-[1px] border border-purple-200/70 shadow-sm'>
+    <motion.div
+      key={categorie._id}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05 }}
+      whileHover={{ y: -4, scale: 1.01 }}
+    >
+      <Card className='relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-[1px] border border-purple-200/70 shadow-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300'>
         <div className='absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-purple-600 via-pink-600 to-fuchsia-500' />
         <CardContent className='p-5 sm:p-6 space-y-4'>
           <div className='flex items-start justify-between'>
@@ -47,7 +54,7 @@ const CategorieCard = ({
                   variant='outline'
                   size='sm'
                   onClick={onEdit}
-                  className='inline-flex items-center gap-1.5 rounded-full text-purple-700 border-purple-200'
+                  className='inline-flex items-center gap-1.5 rounded-full text-purple-700 border-purple-200 hover:bg-purple-50 hover:border-purple-300 transition-colors'
                 >
                   <Pencil size={16} />
                   Edit
@@ -58,7 +65,7 @@ const CategorieCard = ({
                   variant='destructive'
                   size='sm'
                   onClick={onDelete}
-                  className='inline-flex items-center gap-1.5 rounded-full shadow-sm'
+                  className='inline-flex items-center gap-1.5 rounded-full shadow-sm hover:brightness-[1.05] active:scale-[0.98] transition-all'
                 >
                   <Trash2 size={16} />
                   Delete
@@ -68,7 +75,7 @@ const CategorieCard = ({
           )}
         </CardContent>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 

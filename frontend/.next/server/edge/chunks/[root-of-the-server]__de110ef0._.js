@@ -42,7 +42,6 @@ function middleware(request) {
             role: 'admin'
         },
         {
-<<<<<<< HEAD
             path: '/create',
             role: [
                 'admin',
@@ -50,8 +49,6 @@ function middleware(request) {
             ]
         },
         {
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             path: '/host',
             role: 'host'
         },

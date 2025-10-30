@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)",
@@ -13,6 +12,13 @@
     "files": [
       "static/chunks/_7a9afa78._.js",
       "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/ui/pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_ae1207d4._.js",
+      "static/chunks/components_ui_pagination_tsx_ff464c2c._.js"
     ]
   },
   "[project]/components/ui/HallCard.tsx [app-client] (ecmascript, next/dynamic entry)": {
@@ -30,13 +36,6 @@
       "static/chunks/components_home_MobileMenu_tsx_9a447c75._.js"
     ]
   },
-  "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
-    "files": [
-      "static/chunks/_9f8b82ea._.js",
-      "static/chunks/components_ui_Pagination_tsx_ff464c2c._.js"
-    ]
-  },
   "[project]/components/ui/NotFound.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/ui/NotFound.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
@@ -52,6 +51,3 @@
     ]
   }
 }
-=======
-{}
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40

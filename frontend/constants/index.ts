@@ -1,4 +1,4 @@
-interface LinksType {
+﻿interface LinksType {
   id: number;
   title: string;
   url: string;
@@ -21,13 +21,9 @@ export const links = [
   },
   {
     id: 4,
-<<<<<<< HEAD
+
     title: 'Categories',
     url: '/categories',
-=======
-    title: 'Host Categories',
-    url: '/categoriesHost',
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   },
   {
     id: 5,

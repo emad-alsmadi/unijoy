@@ -70,20 +70,20 @@ const HeaderMenu = ()=>{
                         className: `absolute -bottom-0.5 left-1/2 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 transition-all duration-300 group-hover:w-1/2 group-hover:left-0 ${pathname === link?.url && "w-1/2"}`
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeaderMenu.tsx",
-                        lineNumber: 12,
+                        lineNumber: 13,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: `absolute -bottom-0.5 right-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-500 transition-all duration-300 group-hover:w-1/2 group-hover:right-0 ${pathname === link?.url && "w-1/2"}`
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeaderMenu.tsx",
-                        lineNumber: 13,
+                        lineNumber: 14,
                         columnNumber: 21
                     }, this)
                 ]
             }, link.id, true, {
                 fileName: "[project]/components/home/HeaderMenu.tsx",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 17
             }, this))
     }, void 0, false, {

@@ -186,6 +186,7 @@ __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils.tsx [app-client] (ecmascript)");
@@ -213,18 +214,47 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, role, actionsMode = 'buttons', onEdit, onDelete, onStatusChange, onDownloadInvoice, onApprove, onReject })=>{
     _s();
     const src = encodeURI(`${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2f$base$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_BASE_URL"]}/${event?.image?.replace(/\\/g, '/')}`);
     const detailsHref = href || `/events/${event._id}`;
     const { userRole } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].article, {
         role: "article",
         "aria-labelledby": `event-${event._id}-title`,
         "aria-label": ariaLabel || event.title,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-[1px] border border-purple-100/60 shadow-sm', className),
+        initial: {
+            opacity: 0,
+            y: 18
+        },
+        animate: {
+            opacity: 1,
+            y: 0
+        },
+        whileHover: {
+            y: -6,
+            scale: 1.005
+        },
+        whileTap: {
+            scale: 0.995
+        },
+        transition: {
+            type: 'spring',
+            stiffness: 260,
+            damping: 22
+        },
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('group relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-[1px] border border-purple-100/60 shadow-sm hover:shadow-xl transition-all', className),
         children: [
-            (role === 'admin' || role === 'host' || onDownloadInvoice) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            (role === 'admin' || role === 'host' || onDownloadInvoice) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                initial: {
+                    opacity: 0,
+                    y: -6
+                },
+                animate: {
+                    opacity: 1,
+                    y: 0
+                },
                 className: "absolute z-20 top-2 right-2",
                 children: actionsMode === 'menu' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$ActionMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ActionMenu"], {
                     role: role || 'user',
@@ -236,7 +266,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                     onDownloadInvoice: onDownloadInvoice
                 }, void 0, false, {
                     fileName: "[project]/components/ui/EventCard.tsx",
-                    lineNumber: 72,
+                    lineNumber: 82,
                     columnNumber: 13
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-center gap-1 sm:gap-2",
@@ -252,12 +282,12 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 101,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/EventCard.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 95,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -269,12 +299,12 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4 rotate-180"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 109,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/EventCard.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 103,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -286,12 +316,12 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 117,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/EventCard.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 111,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -304,20 +334,20 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ui/EventCard.tsx",
-                                            lineNumber: 115,
+                                            lineNumber: 125,
                                             columnNumber: 23
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: `${userRole}/events/${event._id}/edit`
                                         }, void 0, false, {
                                             fileName: "[project]/components/ui/EventCard.tsx",
-                                            lineNumber: 116,
+                                            lineNumber: 126,
                                             columnNumber: 23
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/EventCard.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 119,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -329,12 +359,12 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 135,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/EventCard.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 129,
                                     columnNumber: 19
                                 }, this)
                             ]
@@ -348,23 +378,23 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                 className: "h-4 w-4"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 135,
+                                lineNumber: 145,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/EventCard.tsx",
-                            lineNumber: 129,
+                            lineNumber: 139,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/EventCard.tsx",
-                    lineNumber: 82,
+                    lineNumber: 92,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/EventCard.tsx",
-                lineNumber: 70,
+                lineNumber: 76,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -375,18 +405,18 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                         alt: event.title || 'Event image',
                         fill: true,
                         sizes: "(max-width: 640px) 100vw, 33vw",
-                        className: "object-cover",
+                        className: "object-cover transition-transform duration-500 group-hover:scale-105",
                         priority: false
                     }, void 0, false, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 143,
+                        lineNumber: 153,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 151,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -397,7 +427,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                 children: event.price === 0 ? 'FREE' : `${event.price} UE`
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 156,
+                                lineNumber: 166,
                                 columnNumber: 13
                             }, this) : null,
                             event.category?.name ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -407,7 +437,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-3 w-3"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 162,
+                                        lineNumber: 172,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -415,7 +445,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 161,
+                                lineNumber: 171,
                                 columnNumber: 13
                             }, this) : null,
                             event.status ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -423,19 +453,19 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                 children: String(event.status).toUpperCase()
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 166,
+                                lineNumber: 176,
                                 columnNumber: 13
                             }, this) : null
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 154,
+                        lineNumber: 164,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ui/EventCard.tsx",
-                lineNumber: 142,
+                lineNumber: 152,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -450,12 +480,12 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                             children: event.title
                         }, void 0, false, {
                             fileName: "[project]/components/ui/EventCard.tsx",
-                            lineNumber: 189,
+                            lineNumber: 199,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 185,
+                        lineNumber: 195,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -463,7 +493,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                         children: event.description
                     }, void 0, false, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 196,
+                        lineNumber: 206,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -476,20 +506,20 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4 text-purple-600"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 212,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: event.date ? event.date : `${event.startDate} - ${event.endDate}`
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 213,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 201,
+                                lineNumber: 211,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -499,7 +529,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4 text-purple-600"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 210,
+                                        lineNumber: 220,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -507,13 +537,13 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         children: event.location
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 211,
+                                        lineNumber: 221,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 209,
+                                lineNumber: 219,
                                 columnNumber: 11
                             }, this),
                             event.host ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -523,7 +553,7 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         className: "h-4 w-4 text-purple-600"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 225,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -531,19 +561,19 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                                         children: String(event.host)
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/EventCard.tsx",
-                                        lineNumber: 216,
+                                        lineNumber: 226,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 214,
+                                lineNumber: 224,
                                 columnNumber: 13
                             }, this) : null
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 200,
+                        lineNumber: 210,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -551,30 +581,30 @@ const EventCard = ({ event, href, footer, className, 'aria-label': ariaLabel, ro
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: detailsHref,
-                                className: "inline-flex items-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400",
+                                className: "inline-flex items-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 transition-all",
                                 children: "View Details"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/EventCard.tsx",
-                                lineNumber: 222,
+                                lineNumber: 232,
                                 columnNumber: 11
                             }, this),
                             footer
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/EventCard.tsx",
-                        lineNumber: 221,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ui/EventCard.tsx",
-                lineNumber: 184,
+                lineNumber: 194,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/EventCard.tsx",
-        lineNumber: 59,
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 };

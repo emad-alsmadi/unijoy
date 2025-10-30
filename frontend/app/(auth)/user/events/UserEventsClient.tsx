@@ -26,7 +26,7 @@ const EventCard = dynamic(() => import('@/components/ui/EventCard'), {
     <div className='h-64 rounded-xl bg-purple-100/40 animate-pulse' />
   ),
 });
-const Pagination = dynamic(() => import('@/components/ui/Pagination'), {
+const Pagination = dynamic(() => import('@/components/ui/pagination'), {
   ssr: false,
   loading: () => <div className='h-10' />,
 });

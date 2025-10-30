@@ -22,7 +22,7 @@ import {
 } from '@tanstack/react-query';
 
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
-const Pagination = dynamic(() => import('@/components/ui/Pagination'), {
+const Pagination = dynamic(() => import('@/components/ui/pagination'), {
   ssr: false,
   loading: () => <div className='h-10' />,
 });

@@ -22,10 +22,7 @@
     "@radix-ui/react-tabs": "^1.1.11",
     "@radix-ui/react-toast": "^1.2.11",
     "@radix-ui/react-tooltip": "^1.2.7",
-<<<<<<< HEAD
     "@tanstack/react-query": "^5.90.5",
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     "@types/jsonwebtoken": "^9.0.9",
     "badge": "^1.0.3",
     "class-variance-authority": "^0.7.1",
@@ -48,10 +45,7 @@
     "react-select": "^5.10.1",
     "swr": "^2.3.3",
     "tailwind-merge": "^3.2.0",
-<<<<<<< HEAD
     "tailwind-scrollbar-hide": "^4.0.0",
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     "use-debounce": "^10.0.4",
     "zod": "^3.25.51"
   },

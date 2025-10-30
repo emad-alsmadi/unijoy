@@ -14,7 +14,7 @@ import SearchInput from '@/components/ui/SearchInput';
 import NotFound from '@/components/ui/NotFound';
 import { fetchCategories } from '@/lib/api/hostCategories';
 import CategorieCard from '@/components/ui/CategorieCard';
-import Pagination from '@/components/ui/Pagination';
+import Pagination from '@/components/ui/pagination';
 import { useToast } from '@/hooks/use-toast';
 import { Loading } from '@/components/ui/Loading';
 

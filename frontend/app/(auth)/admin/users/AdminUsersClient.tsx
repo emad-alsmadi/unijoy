@@ -77,7 +77,7 @@ const SignupTrendChart = dynamic(
     ),
   }
 );
-const Pagination = dynamic(() => import('@/components/ui/Pagination'), {
+const Pagination = dynamic(() => import('@/components/ui/pagination'), {
   ssr: false,
   loading: () => <div className='h-10' />,
 });

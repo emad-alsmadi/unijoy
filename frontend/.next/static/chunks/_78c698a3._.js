@@ -169,7 +169,7 @@ const Slider = ()=>{
                     width: 900,
                     height: 600,
                     className: "z-20 border border-transparent h-[400px] rounded-xl mx-auto my-10",
-                    priority: true
+                    priority: index === 0
                 }, void 0, false, {
                     fileName: "[project]/components/home/Slider.tsx",
                     lineNumber: 36,

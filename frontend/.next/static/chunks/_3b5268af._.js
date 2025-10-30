@@ -234,9 +234,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$SocialMedia$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/SocialMedia.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useOutsideClick$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/hooks/useOutsideClick.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$dom$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react-dom/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
+;
 ;
 ;
 ;
@@ -248,22 +252,49 @@ const Sidebar = ({ isOpen, onClose })=>{
     _s();
     const { userRole, isAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const sidebarRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useOutsideClick$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOutSidClick"])(onClose);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `fixed inset-0 z-[1000] bg-purple-900/80 shadow-xl hoverEffect
-    cursor-auto w-full ${isOpen ? "translate-x-0" : "-translate-x-full"}`,
+    const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Sidebar.useEffect": ()=>{
+            setMounted(true);
+        }
+    }["Sidebar.useEffect"], []);
+    // Lock body scroll when sidebar is open
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Sidebar.useEffect": ()=>{
+            if (!mounted) return;
+            const previous = document.body.style.overflow;
+            if (isOpen) {
+                document.body.style.overflow = 'hidden';
+            }
+            return ({
+                "Sidebar.useEffect": ()=>{
+                    document.body.style.overflow = previous;
+                }
+            })["Sidebar.useEffect"];
+        }
+    }["Sidebar.useEffect"], [
+        isOpen,
+        mounted
+    ]);
+    if (!mounted) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2d$dom$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createPortal"])(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `fixed inset-0 z-[2147483647] flex items-stretch bg-gradient-to-br from-black/80 via-purple-900/60 to-black/60 backdrop-blur-sm transition-opacity duration-300 cursor-auto w-screen h-screen ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`,
+        onClick: onClose,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
             initial: {
-                opacity: 0
+                x: -320,
+                opacity: 1
             },
             animate: {
+                x: isOpen ? 0 : -320,
                 opacity: 1
             },
             transition: {
-                duration: 0.4,
-                delay: 0.3
+                duration: 0.3
             },
             ref: sidebarRef,
-            className: "min-w-60 max-w-72 md:min-w-72 md:max-w-96 bg-purple-700/95 text-white/80   h-full p-10 border-r border-white/20 flex flex-col gap-6",
+            onClick: (e)=>e.stopPropagation(),
+            className: "w-72 md:w-96 bg-purple-700/95 text-white/90 h-full p-10 border-r border-white/20 flex flex-col gap-6 shadow-xl",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-center justify-between",
@@ -272,40 +303,40 @@ const Sidebar = ({ isOpen, onClose })=>{
                         onClick: onClose,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {}, void 0, false, {
                             fileName: "[project]/components/home/Sidebar.tsx",
-                            lineNumber: 32,
+                            lineNumber: 59,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/home/Sidebar.tsx",
-                        lineNumber: 31,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/home/Sidebar.tsx",
-                    lineNumber: 30,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex flex-col gap-3.5 text-base font-semibold tracking-wide",
+                    className: "flex flex-col gap-2 text-base font-semibold tracking-wide",
                     children: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["links"].map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            className: "hover:text-white hoverEffect w-28 text-white/80",
+                            className: "block w-full rounded-lg px-3 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors",
                             href: link.url,
                             children: link?.title
                         }, link.id, false, {
                             fileName: "[project]/components/home/Sidebar.tsx",
-                            lineNumber: 37,
+                            lineNumber: 65,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/home/Sidebar.tsx",
-                    lineNumber: 35,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$SocialMedia$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     className: "gap-2 md:gap-3.5"
                 }, void 0, false, {
                     fileName: "[project]/components/home/Sidebar.tsx",
-                    lineNumber: 42,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -316,7 +347,7 @@ const Sidebar = ({ isOpen, onClose })=>{
                         children: "Logout"
                     }, void 0, false, {
                         fileName: "[project]/components/home/Sidebar.tsx",
-                        lineNumber: 46,
+                        lineNumber: 78,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
@@ -326,7 +357,7 @@ const Sidebar = ({ isOpen, onClose })=>{
                                 children: "Login"
                             }, void 0, false, {
                                 fileName: "[project]/components/home/Sidebar.tsx",
-                                lineNumber: 55,
+                                lineNumber: 87,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -335,7 +366,7 @@ const Sidebar = ({ isOpen, onClose })=>{
                                 children: "Register Host"
                             }, void 0, false, {
                                 fileName: "[project]/components/home/Sidebar.tsx",
-                                lineNumber: 62,
+                                lineNumber: 94,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -344,29 +375,29 @@ const Sidebar = ({ isOpen, onClose })=>{
                                 children: "Register User"
                             }, void 0, false, {
                                 fileName: "[project]/components/home/Sidebar.tsx",
-                                lineNumber: 68,
+                                lineNumber: 100,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true)
                 }, void 0, false, {
                     fileName: "[project]/components/home/Sidebar.tsx",
-                    lineNumber: 44,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/home/Sidebar.tsx",
-            lineNumber: 23,
+            lineNumber: 49,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/home/Sidebar.tsx",
-        lineNumber: 21,
+        lineNumber: 43,
         columnNumber: 5
-    }, this);
+    }, this), document.body);
 };
-_s(Sidebar, "PbHJQT4XErd6Tbp81r8CpyrRky0=", false, function() {
+_s(Sidebar, "qVbRebsoJce7R/x8bsHeayQZyVg=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useOutsideClick$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOutSidClick"]

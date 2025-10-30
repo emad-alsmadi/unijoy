@@ -1,5 +1,4 @@
 'use client';
-import Head from "next/head";
 import { ArrowRight, ArrowLeft, Star, Users, Calendar, Ticket, Search, MoveRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -54,15 +53,6 @@ const About = () => {
 
     return (
         <>
-            <Head>
-                <title>UniJoy | About Us</title>
-                <meta name="description" content="Discover how UniJoy is transforming university event management across Syria." />
-                <meta name="keywords" content="university events, event management, Yarmouk Private University, UniJoy" />
-                <meta property="og:title" content="About Us | UniJoy" />
-                <meta property="og:description" content="Discover how UniJoy is transforming university event management across Syria." />
-                <meta property="og:url" content="https://unijoy.com/about" />
-            </Head>
-
             <main className="bg-white text-gray-800">
                 {/* Hero Section */}
                 <motion.section

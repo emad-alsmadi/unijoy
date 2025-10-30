@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -18,10 +18,8 @@ import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
-<<<<<<< HEAD
+
 import { post } from '@/lib/api/base';
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
 const studentSchema = z.object({
   name: z.string().min(3, 'Name must contain at least 3 characters'),
@@ -57,22 +55,9 @@ const UserRegisterForm = () => {
     setIsSubmitting(true);
     console.log(values);
     try {
-<<<<<<< HEAD
+
       const data = await post<any>(`/auth/signup`, { ...values, role: 'user' });
       if (data) {
-=======
-      const response = await fetch(`http://localhost:8080/auth/signup`, {
-        method: 'POST',
-        headers: { 
-          'Content-Type' : 'application/json',
-        },
-        body: JSON.stringify({ ...values, role: 'user' }),
-      });
-
-      const data = await response.json();
-    
-      if (response.ok) {
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         toast({
           title: '🎉 Registration Successful!',
           description: data.message,

@@ -1,10 +1,8 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -55,12 +53,9 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-<<<<<<< HEAD
+
   /* UniJoy brand palette: purple → indigo → blue */
   --primary: oklch(0.42 0.21 296); /* approx: #6d28d9 */
-=======
-  --primary: oklch(0.205 0 0);
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -71,21 +66,13 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-<<<<<<< HEAD
+
   --ring: oklch(0.6 0.18 270);
   --chart-1: oklch(0.6 0.22 300);
   --chart-2: oklch(0.62 0.18 270);
   --chart-3: oklch(0.58 0.2 250);
   --chart-4: oklch(0.72 0.16 320);
   --chart-5: oklch(0.68 0.18 230);
-=======
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -138,7 +125,7 @@
     @apply bg-background text-foreground;
   }
 }
-<<<<<<< HEAD
+
 
 /* globals.css */
 html {
@@ -214,8 +201,3 @@ html::-webkit-scrollbar-thumb:hover {
   .border-gray-300 { border-color: var(--border) !important; }
 }
 
-=======
-.hoverEffect {
-  transition: .3s ease-in-out;
-}
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40

@@ -1,4 +1,5 @@
 'use client';
+import { motion } from 'framer-motion';
 import { Building2, MapPin, Users, Image as ImageIcon } from 'lucide-react';
 import { Card, CardContent } from './Card';
 import { Button } from './button';
@@ -19,14 +20,23 @@ const HallCard = ({
   onDelete,
 }: HallCardProps) => {
   return (
-    <div className='group'>
-      <Card className='rounded-2xl overflow-hidden border border-purple-200 shadow-md bg-white/80 backdrop-blur'>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      whileHover={{ scale: 1.01 }}
+      className='group'
+    >
+      <Card className='rounded-2xl overflow-hidden border border-purple-200 shadow-md hover:shadow-purple-300 transition-shadow duration-300 bg-white/80 backdrop-blur'>
         {/* Media */}
         <div className='relative aspect-[16/9] overflow-hidden'>
-          <img
+          <motion.img
             src={'/bg-home.png'}
             alt={hall.name}
             className='w-full h-full object-cover'
+            initial={false}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
           />
           <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent pointer-events-none' />
           <div className='absolute bottom-3 left-3 right-3 flex items-center justify-between'>
@@ -86,7 +96,7 @@ const HallCard = ({
           )}
         </CardContent>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 

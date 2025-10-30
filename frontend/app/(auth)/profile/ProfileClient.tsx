@@ -3,8 +3,15 @@ import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/button';
 import { User, Mail, Calendar, Shield, ListChecks } from 'lucide-react';
+import Link from 'next/link';
+import { useAuth } from '@/context/AuthContext';
 
-export default function ProfileClient({ detailsProfile, userRole }: { detailsProfile: any; userRole: string; }) {
+export default function ProfileClient() {
+  const { detailsProfile, userRole } = useAuth();
+  const dataLink = [
+    { link: '/profile/edit', title: 'Edit Profile' },
+    { link: '/auth/reset-password', title: 'Reset Password' },
+  ];
   if (!detailsProfile) {
     return (
       <div className='text-center py-20 text-xl text-purple-600 animate-pulse'>
@@ -107,12 +114,15 @@ export default function ProfileClient({ detailsProfile, userRole }: { detailsPro
               transition={{ duration: 0.8 }}
               className='flex justify-between gap-8'
             >
-              <Button asChild className='mt-6 px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white shadow-lg transform hover:scale-105 transition-transform'>
-                <a href='/profile/edit'>Edit Profile</a>
-              </Button>
-              <Button asChild className='mt-6 px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white shadow-lg transform hover:scale-105 transition-transform'>
-                <a href='/auth/reset-password'>Reset Password</a>
-              </Button>
+              {dataLink.map((e, index) => (
+                <Link
+                  key={index}
+                  href={`${e.link}`}
+                  className='mt-6 px-6 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white shadow-lg transform hover:scale-105 transition-transform'
+                >
+                  {e.title}
+                </Link>
+              ))}
             </motion.div>
           </CardContent>
         </Card>

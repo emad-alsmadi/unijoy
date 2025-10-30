@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useToast } from "@/hooks/use-toast"
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -11,10 +11,7 @@ import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 // Define the form schema with Zod
 const formSchema = z.object({
     email: z.string().email("Invalid email address"),
@@ -40,15 +37,10 @@ const LoginAdmin = () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
-<<<<<<< HEAD
+
                 body: JSON.stringify({ email: form.getValues("email"), password: form.getValues("password") }),
             });
             if (response.ok) {
-=======
-                body: JSON.stringify({ email: form.email, password: form.password }),
-            });
-            if (response.status === 201) {
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 toast({
                     title: "Login Successful",
                     description: "You have been logged in successfully",
@@ -76,7 +68,7 @@ const LoginAdmin = () => {
         }
     };
     return (
-<<<<<<< HEAD
+
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 px-4 py-10">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -87,26 +79,6 @@ const LoginAdmin = () => {
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
                     <h1 className="text-3xl font-bold text-center text-white mb-2">Welcome, Admin</h1>
                     <p className="text-center text-white/80 mb-8">Sign in to manage the platform</p>
-=======
-        <motion.div
-            initial={{ scale: 0.95 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col mx-auto my-20 md:flex-row bg-gray-100 shadow-2xl rounded-2xl overflow-hidden w-full max-w-3xl h-[550px]"
-        >
-            <motion.div
-                initial={{ x: -50 }}
-                animate={{ x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="w-full p-10 flex flex-col justify-center"
-            >
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                >
-                    <h1 className="text-3xl font-bold text-center text-purple-600 mb-8">Welcome Admin</h1>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -116,7 +88,7 @@ const LoginAdmin = () => {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem>
-<<<<<<< HEAD
+
                                         <FormLabel className="text-white/90">Email</FormLabel>
                                         <FormControl>
                                             <motion.div whileHover={{ scale: 1.01 }} className="relative">
@@ -124,24 +96,12 @@ const LoginAdmin = () => {
                                                 <Input
                                                     placeholder="admin@email.com"
                                                     className="w-full rounded-xl p-3 pr-10 bg-white/10 border-white/20 text-white placeholder-white/60 focus-visible:ring-4 focus-visible:ring-white/30"
-=======
-                                        <FormLabel>Email</FormLabel>
-                                        <FormControl>
-                                            <motion.div whileHover={{ scale: 1.02 }} className="relative">
-                                                <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-400" />
-                                                <Input
-                                                    placeholder="your@email.com"
-                                                    className="w-full rounded-lg p-3 pr-10 border-2 border-purple-100 focus:border-purple-500 transition-all"
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     {...field}
                                                 />
                                             </motion.div>
                                         </FormControl>
-<<<<<<< HEAD
+
                                         <FormMessage className="text-rose-200" />
-=======
-                                        <FormMessage />
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     </FormItem>
                                 )}
                             />
@@ -152,7 +112,7 @@ const LoginAdmin = () => {
                                 name="password"
                                 render={({ field }) => (
                                     <FormItem>
-<<<<<<< HEAD
+
                                         <FormLabel className="text-white/90">Password</FormLabel>
                                         <FormControl>
                                             <motion.div whileHover={{ scale: 1.01 }} className="relative">
@@ -161,40 +121,22 @@ const LoginAdmin = () => {
                                                     type="password"
                                                     placeholder="••••••••"
                                                     className="w-full rounded-xl p-3 pr-10 bg-white/10 border-white/20 text-white placeholder-white/60 focus-visible:ring-4 focus-visible:ring-white/30"
-=======
-                                        <FormLabel>Password</FormLabel>
-                                        <FormControl>
-                                            <motion.div whileHover={{ scale: 1.02 }} className="relative">
-                                                <Lock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-400" />
-                                                <Input
-                                                    type="password"
-                                                    placeholder="••••••••"
-                                                    className="w-full rounded-lg p-3 pr-10 border-2 border-purple-100 focus:border-purple-500 transition-all"
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     {...field}
                                                 />
                                             </motion.div>
                                         </FormControl>
-<<<<<<< HEAD
+
                                         <FormMessage className="text-rose-200" />
-=======
-                                        <FormMessage />
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     </FormItem>
                                 )}
                             />
 
                             <motion.button
                                 type="submit"
-<<<<<<< HEAD
+
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className={`w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold py-3 rounded-xl transition-all ${form.formState.isSubmitting ? "opacity-80" : "hover:shadow-lg"
-=======
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.98 }}
-                                className={`w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 rounded-lg transition-all ${form.formState.isSubmitting ? "opacity-80" : "hover:shadow-lg"
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     }`}
                                 disabled={form.formState.isSubmitting}
                             >
@@ -211,17 +153,11 @@ const LoginAdmin = () => {
                     </Form>
 
                     <div className="mt-6 text-center space-y-3">
-<<<<<<< HEAD
+
                         <motion.div whileHover={{ scale: 1.01 }}>
                             <Link
                                 href="/auth/reset-password"
                                 className="text-white/90 hover:underline text-sm"
-=======
-                        <motion.div whileHover={{ scale: 1.05 }}>
-                            <Link
-                                href="#"
-                                className="text-purple-600 hover:underline text-sm"
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             >
                                 Forgot password?
                             </Link>
@@ -229,11 +165,8 @@ const LoginAdmin = () => {
                     </div>
                 </motion.div>
             </motion.div>
-<<<<<<< HEAD
+
         </div>
-=======
-        </motion.div>
->>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     );
 }
 export default LoginAdmin;
