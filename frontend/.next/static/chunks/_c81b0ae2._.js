@@ -992,7 +992,11 @@ function AdminHallsPage() {
                         className: "w-full sm:w-1/3"
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 121,
+=======
+                        lineNumber: 126,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1003,20 +1007,32 @@ function AdminHallsPage() {
                                 className: "h-4 w-4"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 131,
+=======
+                                lineNumber: 136,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             " Add Hall"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 127,
+=======
+                        lineNumber: 132,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 120,
+=======
+                lineNumber: 125,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1025,12 +1041,20 @@ function AdminHallsPage() {
                     className: "animate-spin w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full"
                 }, void 0, false, {
                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 137,
+=======
+                    lineNumber: 142,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 136,
+=======
+                lineNumber: 141,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
@@ -1057,7 +1081,11 @@ function AdminHallsPage() {
                                             children: hall.name
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 151,
+=======
+                                            lineNumber: 156,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1067,7 +1095,11 @@ function AdminHallsPage() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 153,
+=======
+                                                    lineNumber: 158,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 23
                                                 }, this),
                                                 " ",
@@ -1075,7 +1107,11 @@ function AdminHallsPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 152,
+=======
+                                            lineNumber: 157,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1086,7 +1122,11 @@ function AdminHallsPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 155,
+=======
+                                            lineNumber: 160,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1097,7 +1137,11 @@ function AdminHallsPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 156,
+=======
+                                            lineNumber: 161,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1114,12 +1158,20 @@ function AdminHallsPage() {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 166,
+=======
+                                                        lineNumber: 171,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 158,
+=======
+                                                    lineNumber: 163,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1131,39 +1183,67 @@ function AdminHallsPage() {
                                                     children: "Update"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 168,
+=======
+                                                    lineNumber: 173,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 157,
+=======
+                                            lineNumber: 162,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 150,
+=======
+                                    lineNumber: 155,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 149,
+=======
+                                lineNumber: 154,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 17
                             }, this)
                         }, hall._id, false, {
                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 143,
+=======
+                            lineNumber: 148,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 141,
+=======
+                    lineNumber: 146,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 140,
+=======
+                lineNumber: 145,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this),
             filteredHalls.length > hallsPerPage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1179,12 +1259,20 @@ function AdminHallsPage() {
                                 className: "text-black"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 199,
+=======
+                                lineNumber: 204,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 190,
+=======
+                            lineNumber: 195,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this),
                         Array.from({
@@ -1196,7 +1284,11 @@ function AdminHallsPage() {
                                 children: index + 1
                             }, index, false, {
                                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 203,
+=======
+                                lineNumber: 208,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1207,23 +1299,39 @@ function AdminHallsPage() {
                                 className: "text-black"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 227,
+=======
+                                lineNumber: 232,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 218,
+=======
+                            lineNumber: 223,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 189,
+=======
+                    lineNumber: 194,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 188,
+=======
+                lineNumber: 193,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$dialog$2f$EditHallDialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1237,7 +1345,11 @@ function AdminHallsPage() {
                 }
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 232,
+=======
+                lineNumber: 237,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$dialog$2f$DeleteConfirmationDialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1248,7 +1360,11 @@ function AdminHallsPage() {
                 onConfirm: handleDelete
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 244,
+=======
+                lineNumber: 249,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$dialog$2f$AddHallDialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1257,13 +1373,21 @@ function AdminHallsPage() {
                 onSuccess: handleCreate
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 251,
+=======
+                lineNumber: 256,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(auth)/admin/hall/page.tsx",
+<<<<<<< HEAD
         lineNumber: 119,
+=======
+        lineNumber: 124,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 }

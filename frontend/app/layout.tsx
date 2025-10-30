@@ -4,8 +4,12 @@ import './globals.css';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/layout/Footer';
 import { AuthProvider } from '@/context/AuthContext';
+<<<<<<< HEAD
 import { ThemeProvider } from '@/context/ThemeContext';
 import Providers from './providers';
+=======
+import ClientHeader from '@/components/layout/ClientHeader';
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 
 export const metadata: Metadata = {
   title: 'UniJoy',
@@ -33,12 +37,17 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
+<<<<<<< HEAD
     <html lang='en' suppressHydrationWarning>
+=======
+    <html lang='en'>
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
       <head>
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1.0'
         />
+<<<<<<< HEAD
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -66,6 +75,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             </AuthProvider>
           </ThemeProvider>
         </Providers>
+=======
+      </head>
+      <body>
+        <AuthProvider>
+          <ClientHeader />
+          {children}
+          <Toaster />
+          <Footer />
+        </AuthProvider>
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
       </body>
     </html>
   );

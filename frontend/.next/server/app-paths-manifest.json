@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "/(auth)/admin/categories/page": "app/(auth)/admin/categories/page.js",
   "/(auth)/admin/events/page": "app/(auth)/admin/events/page.js",
   "/(auth)/admin/hall/page": "app/(auth)/admin/hall/page.js",
@@ -7,5 +8,7 @@
   "/auth/login/page": "app/auth/login/page.js",
   "/categories/page": "app/categories/page.js",
   "/halls/page": "app/halls/page.js",
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   "/page": "app/page.js"
 }

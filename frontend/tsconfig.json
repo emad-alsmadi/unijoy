@@ -22,6 +22,10 @@
       "@/*": ["./*"]
     }
   },
+<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "constants/FloatingBlobs.js"],
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
   "exclude": ["node_modules"]
 }

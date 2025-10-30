@@ -608,11 +608,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/select.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.tsx [app-client] (ecmascript)");
+<<<<<<< HEAD
 (()=>{
     const e = new Error("Cannot find module '@/constants/fetchCategories'");
     e.code = 'MODULE_NOT_FOUND';
     throw e;
 })();
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 ;
 ;
 var _s = __turbopack_context__.k.signature();
@@ -630,7 +633,10 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 const hostSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
     name: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().min(3, 'Name must contain at least 3 characters'),
     email: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().email('Invalid email address'),
@@ -643,7 +649,11 @@ const HostRegisterForm = ()=>{
     const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const { setUserId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+<<<<<<< HEAD
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+=======
+    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     const [isSubmitting, setIsSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [categories, setCategories] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])({
@@ -654,18 +664,55 @@ const HostRegisterForm = ()=>{
             profileInfo: ''
         }
     });
+<<<<<<< HEAD
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "HostRegisterForm.useEffect": ()=>{
             fetchCategories(setLoading).then({
                 "HostRegisterForm.useEffect": (data)=>setCategories(data)
             }["HostRegisterForm.useEffect"]);
+=======
+    const fetchHostCategories = async ()=>{
+        try {
+            const response = await fetch(`http://localhost:8080/host-categories`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            if (response.ok) {
+                toast({
+                    title: 'Fetch Host Categories Succussful',
+                    description: data.message
+                });
+            }
+            // Save categories
+            // تأكد أن response يحتوي على hostCategories array
+            setCategories(data.categories);
+            console.log("data.categories", data.categories);
+        } catch (error) {
+            toast({
+                title: 'Error',
+                description: error.message || 'Unexpected error occurred',
+                variant: 'destructive'
+            });
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "HostRegisterForm.useEffect": ()=>{
+            fetchHostCategories();
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         }
     }["HostRegisterForm.useEffect"], []);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "HostRegisterForm.useEffect": ()=>{
             const timer = setTimeout({
                 "HostRegisterForm.useEffect.timer": ()=>{
+<<<<<<< HEAD
                     setLoading(false);
+=======
+                    setIsLoading(false);
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 }
             }["HostRegisterForm.useEffect.timer"], 1000);
             return ({
@@ -710,7 +757,11 @@ const HostRegisterForm = ()=>{
             setIsSubmitting(false);
         }
     };
+<<<<<<< HEAD
     if (loading) {
+=======
+    if (isLoading) {
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-100",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -728,7 +779,11 @@ const HostRegisterForm = ()=>{
                         className: "h-16 w-16 text-blue-600"
                     }, void 0, false, {
                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 115,
+=======
+                        lineNumber: 139,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -736,18 +791,30 @@ const HostRegisterForm = ()=>{
                         children: "Loading registration form..."
                     }, void 0, false, {
                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 116,
+=======
+                        lineNumber: 140,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 110,
+=======
+                lineNumber: 134,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
             lineNumber: 109,
+=======
+            lineNumber: 133,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this);
     }
@@ -798,12 +865,20 @@ const HostRegisterForm = ()=>{
                                             className: "mx-auto h-16 w-16 text-blue-600 p-3 bg-blue-50 rounded-full"
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 146,
+=======
+                                            lineNumber: 170,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 141,
+=======
+                                        lineNumber: 165,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
@@ -820,7 +895,11 @@ const HostRegisterForm = ()=>{
                                         children: "Host Registration"
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 148,
+=======
+                                        lineNumber: 172,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -837,13 +916,21 @@ const HostRegisterForm = ()=>{
                                         children: "For universities, companies, and certified institutions"
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 156,
+=======
+                                        lineNumber: 180,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 135,
+=======
+                                lineNumber: 159,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Form"], {
@@ -880,7 +967,11 @@ const HostRegisterForm = ()=>{
                                                                     children: "Host Type"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 184,
+=======
+                                                                    lineNumber: 208,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -891,12 +982,20 @@ const HostRegisterForm = ()=>{
                                                                                 placeholder: "Select category"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 194,
+=======
+                                                                                lineNumber: 218,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 193,
+=======
+                                                                            lineNumber: 217,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -906,35 +1005,59 @@ const HostRegisterForm = ()=>{
                                                                                     value: categorie._id,
                                                                                     __source: {
                                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 199,
+=======
+                                                                                        lineNumber: 223,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 35
                                                                                     }
                                                                                 }, categorie.name))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 196,
+=======
+                                                                            lineNumber: 220,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 188,
+=======
+                                                                    lineNumber: 212,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 210,
+=======
+                                                                    lineNumber: 234,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 183,
+=======
+                                                            lineNumber: 207,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 25
                                                         }, void 0)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 179,
+=======
+                                                    lineNumber: 203,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -957,7 +1080,11 @@ const HostRegisterForm = ()=>{
                                                                         children: form.watch('hostCategory') === 'company' ? 'Company Name' : 'Department Name'
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 224,
+=======
+                                                                        lineNumber: 248,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 29
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -970,52 +1097,88 @@ const HostRegisterForm = ()=>{
                                                                                     className: "pl-10 h-12"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 231,
+=======
+                                                                                    lineNumber: 255,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 33
                                                                                 }, void 0),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"], {
                                                                                     className: "absolute left-3 top-3.5 h-5 w-5 text-gray-400"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 240,
+=======
+                                                                                    lineNumber: 264,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 33
                                                                                 }, void 0)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 230,
+=======
+                                                                            lineNumber: 254,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 229,
+=======
+                                                                        lineNumber: 253,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 29
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 243,
+=======
+                                                                        lineNumber: 267,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 29
                                                                     }, void 0)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 223,
+=======
+                                                                lineNumber: 247,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 27
                                                             }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 219,
+=======
+                                                        lineNumber: 243,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 214,
+=======
+                                                    lineNumber: 238,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, `${form.watch('hostCategory')}-${Date.now()}`, true, {
                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 171,
+=======
+                                            lineNumber: 195,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1056,7 +1219,11 @@ const HostRegisterForm = ()=>{
                                                                         children: fieldName === 'email' ? 'Host Email' : 'Password'
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 268,
+=======
+                                                                        lineNumber: 292,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 31
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1070,57 +1237,97 @@ const HostRegisterForm = ()=>{
                                                                                     className: "pl-10 h-12"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 275,
+=======
+                                                                                    lineNumber: 299,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 35
                                                                                 }, void 0),
                                                                                 fieldName === 'email' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
                                                                                     className: "absolute left-3 top-3.5 h-5 w-5 text-gray-400"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 290,
+=======
+                                                                                    lineNumber: 314,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 37
                                                                                 }, void 0) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Lock$3e$__["Lock"], {
                                                                                     className: "absolute left-3 top-3.5 h-5 w-5 text-gray-400"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 292,
+=======
+                                                                                    lineNumber: 316,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 37
                                                                                 }, void 0)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 274,
+=======
+                                                                            lineNumber: 298,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 33
                                                                         }, void 0)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 273,
+=======
+                                                                        lineNumber: 297,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 31
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 296,
+=======
+                                                                        lineNumber: 320,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 31
                                                                     }, void 0)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 267,
+=======
+                                                                lineNumber: 291,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 29
                                                             }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 263,
+=======
+                                                        lineNumber: 287,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 25
                                                     }, this)
                                                 }, fieldName, false, {
                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 257,
+=======
+                                                    lineNumber: 281,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 23
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 250,
+=======
+                                            lineNumber: 274,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1143,7 +1350,11 @@ const HostRegisterForm = ()=>{
                                                                 children: "Profile Info"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 314,
+=======
+                                                                lineNumber: 338,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 27
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1154,33 +1365,57 @@ const HostRegisterForm = ()=>{
                                                                     className: "h-12"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 318,
+=======
+                                                                    lineNumber: 342,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 29
                                                                 }, void 0)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 317,
+=======
+                                                                lineNumber: 341,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 27
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 325,
+=======
+                                                                lineNumber: 349,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 27
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 313,
+=======
+                                                        lineNumber: 337,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 25
                                                     }, void 0)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 309,
+=======
+                                                lineNumber: 333,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 304,
+=======
+                                            lineNumber: 328,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1211,7 +1446,11 @@ const HostRegisterForm = ()=>{
                                                         className: "h-5 w-5 mr-2 animate-spin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 479,
+=======
+                                                        lineNumber: 503,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1221,19 +1460,31 @@ const HostRegisterForm = ()=>{
                                                             className: "h-5 w-5 ml-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 484,
+=======
+                                                            lineNumber: 508,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 472,
+=======
+                                                lineNumber: 496,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 464,
+=======
+                                            lineNumber: 488,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1258,7 +1509,11 @@ const HostRegisterForm = ()=>{
                                                         children: "Terms of Service"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 498,
+=======
+                                                        lineNumber: 522,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this),
                                                     ' ',
@@ -1270,59 +1525,103 @@ const HostRegisterForm = ()=>{
                                                         children: "Privacy Policy"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 505,
+=======
+                                                        lineNumber: 529,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 496,
+=======
+                                                lineNumber: 520,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 490,
+=======
+                                            lineNumber: 514,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 167,
+=======
+                                    lineNumber: 191,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                                 lineNumber: 166,
+=======
+                                lineNumber: 190,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 134,
+=======
+                        lineNumber: 158,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 132,
+=======
+                    lineNumber: 156,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 131,
+=======
+                lineNumber: 155,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
             lineNumber: 125,
+=======
+            lineNumber: 149,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/auth/signup/host/page.tsx",
+<<<<<<< HEAD
         lineNumber: 124,
         columnNumber: 5
     }, this);
 };
 _s(HostRegisterForm, "ZYihl5D14tPngnBkLX99Nxiw+hs=", false, function() {
+=======
+        lineNumber: 148,
+        columnNumber: 5
+    }, this);
+};
+_s(HostRegisterForm, "2w0U1SX5W1H0fNHJ6Zb6YY+QCl0=", false, function() {
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],

@@ -24,7 +24,42 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
     _s();
     const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
     const [notifications, setNotifications] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+<<<<<<< HEAD
     const [hostUser, setHostUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+=======
+    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [hostUser, setHostUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    // useEffect(() => {
+    //     const fetchHostUser = async () => {
+    //         try {
+    //             const res = await fetch('http://localhost:5000/api/host/me', {
+    //                 method: 'GET',
+    //                 credentials: 'include', // ضروري لإرسال الكوكي
+    //             });
+    //             if (!res.ok) {
+    //                 throw new Error(`Error ${res.status}`);
+    //             }
+    //             const data = await res.json();
+    //             setHostUser(data);
+    //         } catch (error) {
+    //             toast({
+    //                 title: "Error",
+    //                 description: "Something went wrong. Please try again.",
+    //                 variant: "destructive",
+    //             });
+    //         }
+    //     };
+    //     fetchHostUser();
+    //     const timer = setTimeout(() => {
+    //         setIsLoading(false);
+    //         setNotifications([
+    //             { id: 1, message: 'New event needs approval', time: '2 mins ago', read: false },
+    //             { id: 2, message: '3 new users registered', time: '1 hour ago', read: true }
+    //         ]);
+    //     }, 1500);
+    //     return () => clearTimeout(timer);
+    // }, []);
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: "bg-white shadow-sm z-10 m-4",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -48,17 +83,29 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                     d: "M4 6h16M4 12h16M4 18h16"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 32,
+=======
+                                    lineNumber: 69,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 31,
+=======
+                                lineNumber: 68,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 27,
+=======
+                            lineNumber: 64,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -68,7 +115,11 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                     className: "absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 36,
+=======
+                                    lineNumber: 73,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -77,19 +128,31 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                     className: "pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 37,
+=======
+                                    lineNumber: 74,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 35,
+=======
+                            lineNumber: 72,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                     lineNumber: 26,
+=======
+                    lineNumber: 63,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -104,25 +167,41 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                         className: "text-gray-600 w-5 h-5"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                         lineNumber: 48,
+=======
+                                        lineNumber: 85,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 29
                                     }, this),
                                     notifications.some((n)=>!n.read) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                         lineNumber: 50,
+=======
+                                        lineNumber: 87,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 47,
+=======
+                                lineNumber: 84,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 46,
+=======
+                            lineNumber: 83,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -135,12 +214,20 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                         children: hostUser?.name?.[0] ?? 'H'
                                     }, void 0, false, {
                                         fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                         lineNumber: 55,
+=======
+                                        lineNumber: 92,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 54,
+=======
+                                    lineNumber: 91,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -150,7 +237,11 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                             children: hostUser?.name ?? 'Host'
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                             lineNumber: 60,
+=======
+                                            lineNumber: 97,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -158,47 +249,79 @@ const Header = ({ sidebarOpen, setSidebarOpen })=>{
                                             children: hostUser?.email ?? 'YARMOUK'
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                             lineNumber: 63,
+=======
+                                            lineNumber: 100,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 59,
+=======
+                                    lineNumber: 96,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                     className: "text-gray-500 w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 67,
+=======
+                                    lineNumber: 104,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 53,
+=======
+                            lineNumber: 90,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
                     lineNumber: 45,
+=======
+                    lineNumber: 82,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
             lineNumber: 25,
+=======
+            lineNumber: 62,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/(auth)/host/dashboard/Header.tsx",
+<<<<<<< HEAD
         lineNumber: 24,
         columnNumber: 9
     }, this);
 };
 _s(Header, "JKeHAHtBLKb8UeMFpDhvMtzRPD0=", false, function() {
+=======
+        lineNumber: 61,
+        columnNumber: 9
+    }, this);
+};
+_s(Header, "/uhpKoiAl/l3wlytVi8vfQb268A=", false, function() {
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"]
     ];
@@ -403,48 +526,82 @@ const HostLayout = ({ children })=>{
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/layout.tsx",
                         lineNumber: 22,
+<<<<<<< HEAD
                         columnNumber: 15
+=======
+                        columnNumber: 25
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/(auth)/host/layout.tsx",
                     lineNumber: 15,
+<<<<<<< HEAD
                     columnNumber: 13
+=======
+                    columnNumber: 21
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/layout.tsx",
                 lineNumber: 13,
+<<<<<<< HEAD
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex-1 overflow-y-auto scrollbar-hide",
+=======
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex-1 overflow-y-auto",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$auth$292f$host$2f$dashboard$2f$Header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         sidebarOpen: sidebarOpen,
                         setSidebarOpen: setSidebarOpen
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/layout.tsx",
+<<<<<<< HEAD
                         lineNumber: 32,
                         columnNumber: 11
+=======
+                        lineNumber: 29,
+                        columnNumber: 17
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                         className: "p-6",
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/layout.tsx",
+<<<<<<< HEAD
                         lineNumber: 36,
                         columnNumber: 11
+=======
+                        lineNumber: 30,
+                        columnNumber: 17
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(auth)/host/layout.tsx",
+<<<<<<< HEAD
                 lineNumber: 31,
                 columnNumber: 9
+=======
+                lineNumber: 28,
+                columnNumber: 13
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(auth)/host/layout.tsx",
         lineNumber: 11,
+<<<<<<< HEAD
         columnNumber: 7
+=======
+        columnNumber: 9
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     }, this);
 };
 _s(HostLayout, "fX/xBG9dqPCXDXt8dvZeCgFoxdw=");

@@ -438,7 +438,11 @@ const links = [
     {
         id: 4,
         title: 'Host Categories',
+<<<<<<< HEAD
         url: '/categories'
+=======
+        url: '/categoriesHost'
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     },
     {
         id: 5,
@@ -473,19 +477,31 @@ const HeaderMenu = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "hidden md:flex md:flex-row md:gap-3 md:text-base xl:gap-10 xl:text-xl lg:gap-6 lg:text-lg font-semibold items-center justify-center",
         children: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["links"].map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+<<<<<<< HEAD
                 className: `relative group text-center text-purple-900 hover:text-purple-700 transition-colors ${pathname === link?.url && "text-purple-800"}`,
+=======
+                className: `relative group text-center hover:text-darkColor hoverEffect ${pathname === link?.url && "text-darkColor"}`,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 href: link.url,
                 children: [
                     link?.title,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+<<<<<<< HEAD
                         className: `absolute -bottom-0.5 left-1/2 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 transition-all duration-300 group-hover:w-1/2 group-hover:left-0 ${pathname === link?.url && "w-1/2"}`
+=======
+                        className: `absolute -bottom-0.5 left-1/2 w-0 h-0.5 bg-black hoverEffect group-hover:w-1/2 group-hover:left-0 ${pathname === link?.url && "w-1/2"}`
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeaderMenu.tsx",
                         lineNumber: 12,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+<<<<<<< HEAD
                         className: `absolute -bottom-0.5 right-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-500 transition-all duration-300 group-hover:w-1/2 group-hover:right-0 ${pathname === link?.url && "w-1/2"}`
+=======
+                        className: `absolute -bottom-0.5 right-1/2 w-0 h-0.5 bg-black hoverEffect group-hover:w-1/2 group-hover:right-0 ${pathname === link?.url && "w-1/2"}`
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeaderMenu.tsx",
                         lineNumber: 13,
@@ -671,7 +687,10 @@ __turbopack_context__.s({
     "useAuth": (()=>useAuth)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+<<<<<<< HEAD
 var __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/hooks/use-toast.ts [app-ssr] (ecmascript)");
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/js-cookie/dist/js.cookie.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
@@ -680,6 +699,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
+<<<<<<< HEAD
 ;
 const AuthContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(null);
 const AuthProvider = ({ children })=>{
@@ -689,6 +709,14 @@ const AuthProvider = ({ children })=>{
     const [userRole, setUserRole] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [token, setToken] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [detailsProfile, setDetailsProfile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])();
+=======
+const AuthContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])(null);
+const AuthProvider = ({ children })=>{
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const [isAuthenticated, setIsAuthenticated] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [userRole, setUserRole] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [token, setToken] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     const setUserId = (userId)=>{
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].set('userId', userId);
     };
@@ -715,6 +743,7 @@ const AuthProvider = ({ children })=>{
             setUserRole(roleFromCookies);
         }
     }, []);
+<<<<<<< HEAD
     const fetchDetailsProfile = async ()=>{
         try {
             const res = await fetch(`http://localhost:8080/profile`, {
@@ -743,6 +772,8 @@ const AuthProvider = ({ children })=>{
     }, [
         token
     ]);
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     const logout = ()=>{
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].remove('token');
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].remove('userId');
@@ -759,13 +790,21 @@ const AuthProvider = ({ children })=>{
             token,
             login,
             logout,
+<<<<<<< HEAD
             setUserId,
             detailsProfile
+=======
+            setUserId
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         },
         children: children
     }, void 0, false, {
         fileName: "[project]/context/AuthContext.tsx",
+<<<<<<< HEAD
         lineNumber: 97,
+=======
+        lineNumber: 70,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };
@@ -875,7 +914,11 @@ const Sidebar = ({ isOpen, onClose })=>{
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
+<<<<<<< HEAD
                             (userRole === "host" || userRole === "user" || userRole === "admin") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+=======
+                            (userRole === "host" || userRole === "student" || userRole === "admin") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 href: "/auth/login",
                                 className: "px-4 py-2 text-base md:text-sm lg:text-lg hover:text-white hoverEffect",
                                 children: "Login"
@@ -1290,7 +1333,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navi
 ;
 function ProfileDropdown({ user, userRole }) {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+<<<<<<< HEAD
     const { logout, detailsProfile } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
+=======
+    const { logout } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
+    const handleLogout = ()=>{
+        logout();
+    };
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuTrigger"], {
@@ -1301,17 +1351,29 @@ function ProfileDropdown({ user, userRole }) {
                         className: "text-purple-600 w-full h-full p-2"
                     }, void 0, false, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 25,
+=======
+                        lineNumber: 28,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                     lineNumber: 24,
+=======
+                    lineNumber: 27,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                 lineNumber: 23,
+=======
+                lineNumber: 26,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -1321,20 +1383,35 @@ function ProfileDropdown({ user, userRole }) {
                         className: "px-3 py-2",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "font-medium text-gray-800",
+<<<<<<< HEAD
                             children: detailsProfile?.name
                         }, void 0, false, {
                             fileName: "[project]/components/ui/ProfileDropdown.tsx",
                             lineNumber: 31,
+=======
+                            children: user?.name || 'Guest'
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/ProfileDropdown.tsx",
+                            lineNumber: 34,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 30,
+=======
+                        lineNumber: 33,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 33,
+=======
+                        lineNumber: 36,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1345,14 +1422,22 @@ function ProfileDropdown({ user, userRole }) {
                                 className: "w-4 h-4 mr-2 text-purple-600"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                                 lineNumber: 38,
+=======
+                                lineNumber: 41,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             " Profile"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 34,
+=======
+                        lineNumber: 37,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1363,49 +1448,81 @@ function ProfileDropdown({ user, userRole }) {
                                 className: "w-4 h-4 mr-2 text-purple-600"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                                 lineNumber: 44,
+=======
+                                lineNumber: 47,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             " Dashboard"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 40,
+=======
+                        lineNumber: 43,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 46,
+=======
+                        lineNumber: 49,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
                         className: "cursor-pointer text-red-600 hover:bg-red-50",
+<<<<<<< HEAD
                         onClick: logout,
+=======
+                        onClick: handleLogout,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$log$2d$out$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LogOut$3e$__["LogOut"], {
                                 className: "w-4 h-4 mr-2"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                                 lineNumber: 51,
+=======
+                                lineNumber: 54,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 11
                             }, this),
                             " Logout"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                         lineNumber: 47,
+=======
+                        lineNumber: 50,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
                 lineNumber: 29,
+=======
+                lineNumber: 32,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/ProfileDropdown.tsx",
+<<<<<<< HEAD
         lineNumber: 22,
+=======
+        lineNumber: 25,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 }
@@ -1420,13 +1537,21 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+<<<<<<< HEAD
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Container$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/Container.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$HeaderMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/home/HeaderMenu.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$MobileMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/home/MobileMenu.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$logo$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$logo$2e$jpg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/public/images/logo.jpg.mjs { IMAGE => "[project]/public/images/logo.jpg (static in ecmascript)" } [app-ssr] (structured image object, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/search.js [app-ssr] (ecmascript) <export default as Search>");
+<<<<<<< HEAD
+=======
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/hooks/use-toast.ts [app-ssr] (ecmascript)");
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$ProfileDropdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/ProfileDropdown.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/AuthContext.tsx [app-ssr] (ecmascript)");
 'use client';
@@ -1441,6 +1566,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$ts
 ;
 ;
 ;
+<<<<<<< HEAD
 const Header = ()=>{
     const { token, userRole } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
@@ -1517,34 +1643,153 @@ const Header = ()=>{
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                             className: "text-sm md:text-base font-sans font-normal text-white/80 text-center md:text-start",
+=======
+;
+const Header = ()=>{
+    const [profileInfo, setProfileInfo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
+    const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useToast"])();
+    const { token, userRole } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
+    const fetchProfileInfo = async ()=>{
+        try {
+            const response = await fetch(`http://localhost:8080/profile`, {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            setProfileInfo(data);
+        } catch (error) {
+            toast({
+                title: 'Error',
+                description: error.message || 'An unexpected error occurred.',
+                variant: 'destructive'
+            });
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+    //fetchProfileInfo();
+    }, [
+        profileInfo
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "bg-white border-b border-b-gray-400 pb-2 relative z-999",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "px-4 md:px-11 p-2 h-auto md:h-18 bg-gradient-to-r from-purple-700 to-blue-600 text-black flex flex-wrap items-center justify-between gap-5",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                className: "w-5"
+                            }, void 0, false, {
+                                fileName: "[project]/components/ui/Header.tsx",
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/Header.tsx",
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, this),
+                        !token && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/auth/login",
+                            className: "p-3 font-sans font-semibold border-none outline-none rounded-sm hidden md:block",
+                            children: "Login"
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/Header.tsx",
+                            lineNumber: 51,
+                            columnNumber: 13
+                        }, this),
+                        userRole == 'admin' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/admin/dashboard",
+                            className: "p-3 text-base hover:duration-300 font-sans font-semibold hidden md:block",
+                            children: "Dashboard Admin"
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/Header.tsx",
+                            lineNumber: 59,
+                            columnNumber: 13
+                        }, this),
+                        userRole == 'host' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/host/dashboard",
+                            className: "p-3 text-base text-gray-400 hover:text-white hover:duration-300 font-sans font-semibold hidden md:block",
+                            children: "Dashboard Host"
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/Header.tsx",
+                            lineNumber: 67,
+                            columnNumber: 13
+                        }, this),
+                        userRole == 'user' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/user/dashboard",
+                            className: "p-3 text-base text-gray-400 hover:text-white hover:duration-300 font-sans font-semibold hidden md:block",
+                            children: "Dashboard User"
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/Header.tsx",
+                            lineNumber: 75,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-base font-sans font-normal text-gray-300 hover:text-white hover:duration-300 flex-1 text-center md:text-start",
+                            children: "Booke an event now"
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/Header.tsx",
+                            lineNumber: 82,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            className: "text-base font-sans font-normal text-gray-300 text-center md:text-start",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             children: [
                                 "Welcome to our platform ...",
                                 ' ',
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+<<<<<<< HEAD
                                     className: "hover:text-white transition-colors font-semibold",
+=======
+                                    className: "hover:text-white hover:duration-300 font-semibold",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     children: [
                                         ' ',
                                         "Do you want to know the latest events ?"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 75,
                                     columnNumber: 15
+=======
+                                    lineNumber: 87,
+                                    columnNumber: 13
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 73,
                             columnNumber: 13
+=======
+                            lineNumber: 85,
+                            columnNumber: 11
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                     lineNumber: 34,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Container$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     className: "flex flex-wrap items-center justify-between gap-5 text-lightColor bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 border-b border-black/5 shadow-[0_8px_20px_-12px_rgba(91,33,182,0.25)]",
+=======
+                    lineNumber: 46,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Container$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    className: "flex flex-wrap items-center justify-between gap-5 text-lightColor",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex justify-center md:justify-start items-center ms-2 lg:ms-4",
@@ -1556,52 +1801,88 @@ const Header = ()=>{
                                     alt: "logo"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 89,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                     className: "ml-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-500 font-bold text-xl lg:text-3xl text-center md:text-end",
+=======
+                                    lineNumber: 98,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                    className: "text-purple-800 font-bold text-xl lg:text-3xl text-center md:text-end",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     children: [
                                         "UniJoy",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                             lineNumber: 97,
+=======
+                                            lineNumber: 106,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                     lineNumber: 95,
+=======
+                                    lineNumber: 104,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 88,
+=======
+                            lineNumber: 97,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "w-full md:w-auto flex flex-1 justify-center md:justify-end lg:gap-4",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$HeaderMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 103,
+=======
+                                lineNumber: 112,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 102,
+=======
+                            lineNumber: 111,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "block md:hidden",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$MobileMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 108,
+=======
+                                lineNumber: 117,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 107,
+=======
+                            lineNumber: 116,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1613,45 +1894,77 @@ const Header = ()=>{
                                 userRole: `${userRole}`
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                                 lineNumber: 113,
+=======
+                                lineNumber: 122,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/auth/login",
+<<<<<<< HEAD
                                         className: "hidden md:block bg-gradient-to-r from-indigo-600 to-purple-600 text-white md:px-6 py-3 px-4 sm:py-2 text-base md:text-sm lg:text-lg rounded-full shadow-sm hover:shadow-md hover:from-indigo-500 hover:to-purple-500 transition-all duration-300",
                                         children: "Login"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/Header.tsx",
                                         lineNumber: 120,
+=======
+                                        className: " hidden md:block bg-gradient-to-r from-blue-500 to-purple-600 text-white md:px-6 py-3 px-4 sm:py-2 text-base md:text-sm lg:text-lg border-none rounded-lg transition-all duration-300",
+                                        children: "Login"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/Header.tsx",
+                                        lineNumber: 129,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/auth/signup/user",
+<<<<<<< HEAD
                                         className: "hidden md:block bg-white/90 px-4 py-2 text-base md:text-sm lg:text-lg font-semibold border border-black/10 rounded-full hover:bg-white shadow-sm hover:shadow-md text-black transition-all duration-300",
                                         children: "Register User"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ui/Header.tsx",
                                         lineNumber: 126,
+=======
+                                        className: " hidden md:block bg-white px-4 py-2 text-base md:text-sm lg:text-lg font-semibold border-2 rounded-lg hover:bg-gray-200 text-black/80 transition-all duration-300",
+                                        children: "Register User"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/Header.tsx",
+                                        lineNumber: 135,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true)
                         }, void 0, false, {
                             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                             lineNumber: 111,
+=======
+                            lineNumber: 120,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
                     lineNumber: 86,
+=======
+                    lineNumber: 95,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/ui/Header.tsx",
+<<<<<<< HEAD
             lineNumber: 28,
+=======
+            lineNumber: 45,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -1668,7 +1981,10 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+<<<<<<< HEAD
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/facebook.js [app-ssr] (ecmascript) <export default as Facebook>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/instagram.js [app-ssr] (ecmascript) <export default as Instagram>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/twitter.js [app-ssr] (ecmascript) <export default as Twitter>");
@@ -1684,12 +2000,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 ;
+<<<<<<< HEAD
 ;
 const Footer = ()=>{
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
     const isDashboard = pathname?.startsWith('/host') || pathname?.startsWith('/admin');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         className: `bg-purple-950 text-gray-100 py-10 px-4 sm:px-6 lg:px-8 ${isDashboard ? 'ml-0 md:ml-64' : ''}`,
+=======
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
+        className: "bg-gray-900 text-gray-100 py-10 px-4 sm:px-6 lg:px-8",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto",
             children: [
@@ -1706,7 +2028,11 @@ const Footer = ()=>{
                                             children: "Unilevents"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 18,
+=======
+                                            lineNumber: 15,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1714,13 +2040,21 @@ const Footer = ()=>{
                                             children: "EventsC is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives."
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 19,
+=======
+                                            lineNumber: 16,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 17,
+=======
+                                    lineNumber: 14,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1733,14 +2067,22 @@ const Footer = ()=>{
                                                     className: "mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 26,
+=======
+                                                    lineNumber: 23,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this),
                                                 " Our location is in Damascus, Syria"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 25,
+=======
+                                            lineNumber: 22,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1759,12 +2101,20 @@ const Footer = ()=>{
                                                 "aria-label": "خريطة دمشق، سوريا"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 30,
+=======
+                                                lineNumber: 27,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 29,
+=======
+                                            lineNumber: 26,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1772,19 +2122,31 @@ const Footer = ()=>{
                                             children: "The Syrian capital - the heart of the Middle East"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 42,
+=======
+                                            lineNumber: 39,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 24,
+=======
+                                    lineNumber: 21,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                             lineNumber: 16,
+=======
+                            lineNumber: 13,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1796,14 +2158,22 @@ const Footer = ()=>{
                                             className: "w-5 h-5 mr-2"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 54,
+=======
+                                            lineNumber: 51,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         "Plan Events"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 53,
+=======
+                                    lineNumber: 50,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1818,19 +2188,31 @@ const Footer = ()=>{
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 60,
+=======
+                                                        lineNumber: 57,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 19
                                                     }, this),
                                                     "Create and Set Up"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 59,
+=======
+                                                lineNumber: 56,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 58,
+=======
+                                            lineNumber: 55,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1842,19 +2224,31 @@ const Footer = ()=>{
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 66,
+=======
+                                                        lineNumber: 63,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 19
                                                     }, this),
                                                     "Sell Tickets"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 65,
+=======
+                                                lineNumber: 62,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 64,
+=======
+                                            lineNumber: 61,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1866,19 +2260,31 @@ const Footer = ()=>{
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 72,
+=======
+                                                        lineNumber: 69,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 19
                                                     }, this),
                                                     "Online RSVP"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 71,
+=======
+                                                lineNumber: 68,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 70,
+=======
+                                            lineNumber: 67,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1890,25 +2296,41 @@ const Footer = ()=>{
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 78,
+=======
+                                                        lineNumber: 75,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 19
                                                     }, this),
                                                     "Online Events"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 77,
+=======
+                                                lineNumber: 74,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 76,
+=======
+                                            lineNumber: 73,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 57,
+=======
+                                    lineNumber: 54,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1920,6 +2342,23 @@ const Footer = ()=>{
                                             rel: "noopener noreferrer",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__["Twitter"], {}, void 0, false, {
                                                 fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
+=======
+                                                lineNumber: 83,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/layout/Footer.tsx",
+                                            lineNumber: 82,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                            href: "https://facebook.com",
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__["Facebook"], {}, void 0, false, {
+                                                fileName: "[project]/components/layout/Footer.tsx",
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 lineNumber: 86,
                                                 columnNumber: 17
                                             }, this)
@@ -1929,10 +2368,17 @@ const Footer = ()=>{
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+<<<<<<< HEAD
                                             href: "https://facebook.com",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__["Facebook"], {}, void 0, false, {
+=======
+                                            href: "https://instagram.com",
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__["Instagram"], {}, void 0, false, {
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 fileName: "[project]/components/layout/Footer.tsx",
                                                 lineNumber: 89,
                                                 columnNumber: 17
@@ -1941,6 +2387,7 @@ const Footer = ()=>{
                                             fileName: "[project]/components/layout/Footer.tsx",
                                             lineNumber: 88,
                                             columnNumber: 15
+<<<<<<< HEAD
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "https://instagram.com",
@@ -1955,17 +2402,27 @@ const Footer = ()=>{
                                             fileName: "[project]/components/layout/Footer.tsx",
                                             lineNumber: 91,
                                             columnNumber: 15
+=======
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 84,
+=======
+                                    lineNumber: 81,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                             lineNumber: 52,
+=======
+                            lineNumber: 49,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1979,14 +2436,22 @@ const Footer = ()=>{
                                                     className: "w-5 h-5 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 101,
+=======
+                                                    lineNumber: 98,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 "Eventick"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 100,
+=======
+                                            lineNumber: 97,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1999,12 +2464,20 @@ const Footer = ()=>{
                                                         children: "About Us"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 106,
+=======
+                                                        lineNumber: 103,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 105,
+=======
+                                                    lineNumber: 102,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2014,12 +2487,20 @@ const Footer = ()=>{
                                                         children: "Press"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 111,
+=======
+                                                        lineNumber: 108,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 110,
+=======
+                                                    lineNumber: 107,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2029,12 +2510,20 @@ const Footer = ()=>{
                                                         children: "Contact Us"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 116,
+=======
+                                                        lineNumber: 113,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 115,
+=======
+                                                    lineNumber: 112,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2044,12 +2533,20 @@ const Footer = ()=>{
                                                         children: "Help Center"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 121,
+=======
+                                                        lineNumber: 118,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 120,
+=======
+                                                    lineNumber: 117,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2059,12 +2556,20 @@ const Footer = ()=>{
                                                         children: "How it Works"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 126,
+=======
+                                                        lineNumber: 123,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 125,
+=======
+                                                    lineNumber: 122,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2074,12 +2579,20 @@ const Footer = ()=>{
                                                         children: "Privacy"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 131,
+=======
+                                                        lineNumber: 128,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 130,
+=======
+                                                    lineNumber: 127,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2089,24 +2602,40 @@ const Footer = ()=>{
                                                         children: "Terms"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 136,
+=======
+                                                        lineNumber: 133,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 17
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 135,
+=======
+                                                    lineNumber: 132,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 104,
+=======
+                                            lineNumber: 101,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 99,
+=======
+                                    lineNumber: 96,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2119,14 +2648,22 @@ const Footer = ()=>{
                                                     className: "w-5 h-5 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 145,
+=======
+                                                    lineNumber: 142,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this),
                                                 "Stay In The Loop"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 144,
+=======
+                                            lineNumber: 141,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2134,7 +2671,11 @@ const Footer = ()=>{
                                             children: "Join our mailing list to stay in the loop with our newest for Event and concert."
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 148,
+=======
+                                            lineNumber: 145,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -2147,7 +2688,11 @@ const Footer = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 152,
+=======
+                                                    lineNumber: 149,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2156,31 +2701,51 @@ const Footer = ()=>{
                                                     children: "Subscribe"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 158,
+=======
+                                                    lineNumber: 155,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                             lineNumber: 151,
+=======
+                                            lineNumber: 148,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                                     lineNumber: 143,
+=======
+                                    lineNumber: 140,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                             lineNumber: 98,
+=======
+                            lineNumber: 95,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                     lineNumber: 14,
+=======
+                    lineNumber: 11,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2189,23 +2754,39 @@ const Footer = ()=>{
                         children: "Copyright © 2025 Uni Events"
                     }, void 0, false, {
                         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                         lineNumber: 170,
+=======
+                        lineNumber: 167,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
                     lineNumber: 169,
+=======
+                    lineNumber: 166,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
             lineNumber: 12,
+=======
+            lineNumber: 9,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/layout/Footer.tsx",
+<<<<<<< HEAD
         lineNumber: 11,
+=======
+        lineNumber: 8,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };

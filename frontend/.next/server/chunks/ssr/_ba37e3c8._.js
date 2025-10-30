@@ -858,7 +858,11 @@ const EditeEventPage = ()=>{
             form.setValue('hall', event.hall ? String(event.hall) : '');
             form.setValue('capacity', event.capacity);
             form.setValue('price', event.price);
+<<<<<<< HEAD
             form.setValue('category', event.category?._id ? String(event.category?._id) : '');
+=======
+            form.setValue('category', event.category?._id);
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         // ما بنحط image لأن ما في طريقة مباشرة لتمرير ملف File للنموذج، فخليه فاضي
         }
     }, [
@@ -932,7 +936,11 @@ const EditeEventPage = ()=>{
                 className: "absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] bg-repeat opacity-20"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 250,
+=======
+                lineNumber: 253,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -950,7 +958,11 @@ const EditeEventPage = ()=>{
                 className: "absolute w-64 h-64 bg-blue-600/20 rounded-full -top-32 -left-32 blur-xl"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 257,
+=======
+                lineNumber: 260,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -969,7 +981,11 @@ const EditeEventPage = ()=>{
                 className: "absolute w-72 h-72 bg-purple-600/20 rounded-full -bottom-32 -right-32 blur-xl"
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 264,
+=======
+                lineNumber: 267,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -1023,12 +1039,20 @@ const EditeEventPage = ()=>{
                                                 className: "h-8 w-8 text-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 297,
+=======
+                                                lineNumber: 300,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 293,
+=======
+                                            lineNumber: 296,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h1, {
@@ -1045,7 +1069,11 @@ const EditeEventPage = ()=>{
                                             children: "Create New Event"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 299,
+=======
+                                            lineNumber: 302,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1053,13 +1081,21 @@ const EditeEventPage = ()=>{
                                             children: "Fill in the details to organize your amazing event"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                             lineNumber: 307,
+=======
+                                            lineNumber: 310,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 288,
+=======
+                                    lineNumber: 291,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Form"], {
@@ -1095,7 +1131,11 @@ const EditeEventPage = ()=>{
                                                                             children: field === 'title' ? 'Event Title' : 'Description'
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 331,
+=======
+                                                                            lineNumber: 334,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1105,7 +1145,11 @@ const EditeEventPage = ()=>{
                                                                                 className: "bg-white/5 border-white/20 text-white placeholder-white/50"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 338,
+=======
+                                                                                lineNumber: 341,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 35
                                                                             }, void 0) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
                                                                                 placeholder: "Describe your event",
@@ -1113,40 +1157,68 @@ const EditeEventPage = ()=>{
                                                                                 className: "bg-white/5 border-white/20 text-white placeholder-white/50 min-h-[120px]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 344,
+=======
+                                                                                lineNumber: 347,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 35
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 336,
+=======
+                                                                            lineNumber: 339,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                                             className: "text-red-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 351,
+=======
+                                                                            lineNumber: 354,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 330,
+=======
+                                                                    lineNumber: 333,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 29
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 326,
+=======
+                                                            lineNumber: 329,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 25
                                                         }, this)
                                                     }, field, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 320,
+=======
+                                                        lineNumber: 323,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 318,
+=======
+                                                lineNumber: 321,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1179,7 +1251,11 @@ const EditeEventPage = ()=>{
                                                                             children: isStart ? 'Start Date' : 'End Date'
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 379,
+=======
+                                                                            lineNumber: 382,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Popover"], {
@@ -1202,35 +1278,59 @@ const EditeEventPage = ()=>{
                                                                                                         children: "Pick a date"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                                         lineNumber: 400,
+=======
+                                                                                                        lineNumber: 403,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                                         columnNumber: 43
                                                                                                     }, void 0),
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CalendarIcon$3e$__["CalendarIcon"], {
                                                                                                         className: "ml-auto h-4 w-4 opacity-70"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                                         lineNumber: 402,
+=======
+                                                                                                        lineNumber: 405,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                                         columnNumber: 41
                                                                                                     }, void 0)
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                                 lineNumber: 389,
+=======
+                                                                                                lineNumber: 392,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                                 columnNumber: 39
                                                                                             }, void 0)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                             lineNumber: 388,
+=======
+                                                                                            lineNumber: 391,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                             columnNumber: 37
                                                                                         }, void 0)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 387,
+=======
+                                                                                        lineNumber: 390,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 35
                                                                                     }, void 0)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 386,
+=======
+                                                                                    lineNumber: 389,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 33
                                                                                 }, void 0),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -1249,36 +1349,60 @@ const EditeEventPage = ()=>{
                                                                                         }
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 408,
+=======
+                                                                                        lineNumber: 411,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 35
                                                                                     }, void 0)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 407,
+=======
+                                                                                    lineNumber: 410,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 33
                                                                                 }, void 0)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 382,
+=======
+                                                                            lineNumber: 385,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                                             className: "text-red-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 424,
+=======
+                                                                            lineNumber: 427,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 31
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 378,
+=======
+                                                                    lineNumber: 381,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 29
                                                                 }, void 0)
                                                         }, dateField, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 373,
+=======
+                                                            lineNumber: 376,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 25
                                                         }, this);
                                                     }),
@@ -1293,7 +1417,11 @@ const EditeEventPage = ()=>{
                                                                             children: "Time"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 436,
+=======
+                                                                            lineNumber: 439,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1308,39 +1436,67 @@ const EditeEventPage = ()=>{
                                                                                 className: "bg-white/5 border-white/20 text-white placeholder-white/50"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 438,
+=======
+                                                                                lineNumber: 441,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 437,
+=======
+                                                                            lineNumber: 440,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 449,
+=======
+                                                                            lineNumber: 452,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 435,
+=======
+                                                                    lineNumber: 438,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 431,
+=======
+                                                            lineNumber: 434,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 430,
+=======
+                                                        lineNumber: 433,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 359,
+=======
+                                                lineNumber: 362,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1359,7 +1515,11 @@ const EditeEventPage = ()=>{
                                                                             children: fieldName === 'location' ? 'Location' : 'Capacity'
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 464,
+=======
+                                                                            lineNumber: 467,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1383,49 +1543,81 @@ const EditeEventPage = ()=>{
                                                                                         className: "bg-white/5 border-white/20 text-white placeholder-white/50 pl-10"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 471,
+=======
+                                                                                        lineNumber: 474,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 33
                                                                                     }, void 0),
                                                                                     fieldName === 'location' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"], {
                                                                                         className: "absolute left-3 top-3 h-4 w-4 text-white/50"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 496,
+=======
+                                                                                        lineNumber: 499,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 35
                                                                                     }, void 0) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
                                                                                         className: "absolute left-3 top-3 h-4 w-4 text-white/50"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 498,
+=======
+                                                                                        lineNumber: 501,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 35
                                                                                     }, void 0)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 470,
+=======
+                                                                                lineNumber: 473,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 469,
+=======
+                                                                            lineNumber: 472,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                                             className: "text-red-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 502,
+=======
+                                                                            lineNumber: 505,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 463,
+=======
+                                                                    lineNumber: 466,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, fieldName, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 458,
+=======
+                                                            lineNumber: 461,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, this)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
@@ -1439,7 +1631,11 @@ const EditeEventPage = ()=>{
                                                                         children: "Event Date"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 512,
+=======
+                                                                        lineNumber: 515,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Popover"], {
@@ -1455,30 +1651,50 @@ const EditeEventPage = ()=>{
                                                                                                 children: "Pick a date"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                                 lineNumber: 528,
+=======
+                                                                                                lineNumber: 531,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                                 columnNumber: 37
                                                                                             }, void 0),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CalendarIcon$3e$__["CalendarIcon"], {
                                                                                                 className: "ml-auto h-4 w-4 opacity-70"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                                 lineNumber: 530,
+=======
+                                                                                                lineNumber: 533,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                                 columnNumber: 35
                                                                                             }, void 0)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 518,
+=======
+                                                                                        lineNumber: 521,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 33
                                                                                     }, void 0)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 517,
+=======
+                                                                                    lineNumber: 520,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, void 0)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 516,
+=======
+                                                                                lineNumber: 519,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 29
                                                                             }, void 0),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -1494,42 +1710,70 @@ const EditeEventPage = ()=>{
                                                                                     }
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 535,
+=======
+                                                                                    lineNumber: 538,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, void 0)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 534,
+=======
+                                                                                lineNumber: 537,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 29
                                                                             }, void 0)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 515,
+=======
+                                                                        lineNumber: 518,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                                         className: "text-red-400"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                         lineNumber: 548,
+=======
+                                                                        lineNumber: 551,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                         columnNumber: 27
                                                                     }, void 0)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                 lineNumber: 511,
+=======
+                                                                lineNumber: 514,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                 columnNumber: 25
                                                             }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 507,
+=======
+                                                        lineNumber: 510,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 456,
+=======
+                                                lineNumber: 459,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1546,7 +1790,11 @@ const EditeEventPage = ()=>{
                                                                             children: "Category Type"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 562,
+=======
+                                                                            lineNumber: 565,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1559,12 +1807,20 @@ const EditeEventPage = ()=>{
                                                                                         placeholder: "Select a category"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 570,
+=======
+                                                                                        lineNumber: 573,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 33
                                                                                     }, void 0)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 569,
+=======
+                                                                                    lineNumber: 572,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, void 0),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1573,39 +1829,67 @@ const EditeEventPage = ()=>{
                                                                                             children: cat.name
                                                                                         }, cat._id, false, {
                                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                             lineNumber: 574,
+=======
+                                                                                            lineNumber: 577,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                             columnNumber: 35
                                                                                         }, void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 572,
+=======
+                                                                                    lineNumber: 575,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, void 0)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 565,
+=======
+                                                                            lineNumber: 568,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 583,
+=======
+                                                                            lineNumber: 586,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 561,
+=======
+                                                                    lineNumber: 564,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 557,
+=======
+                                                            lineNumber: 560,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 556,
+=======
+                                                        lineNumber: 559,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1619,7 +1903,11 @@ const EditeEventPage = ()=>{
                                                                             children: "Hall Type"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 595,
+=======
+                                                                            lineNumber: 598,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1632,12 +1920,20 @@ const EditeEventPage = ()=>{
                                                                                         placeholder: "Select a hall"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 603,
+=======
+                                                                                        lineNumber: 606,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 33
                                                                                     }, void 0)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 602,
+=======
+                                                                                    lineNumber: 605,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, void 0),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1646,39 +1942,67 @@ const EditeEventPage = ()=>{
                                                                                             children: hall.name
                                                                                         }, hall._id, false, {
                                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                             lineNumber: 607,
+=======
+                                                                                            lineNumber: 610,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                             columnNumber: 35
                                                                                         }, void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                     lineNumber: 605,
+=======
+                                                                                    lineNumber: 608,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                     columnNumber: 31
                                                                                 }, void 0)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 598,
+=======
+                                                                            lineNumber: 601,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 616,
+=======
+                                                                            lineNumber: 619,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 594,
+=======
+                                                                    lineNumber: 597,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 590,
+=======
+                                                            lineNumber: 593,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 589,
+=======
+                                                        lineNumber: 592,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1701,7 +2025,11 @@ const EditeEventPage = ()=>{
                                                                             children: "Ticket Price (Optional)"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 632,
+=======
+                                                                            lineNumber: 635,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1716,54 +2044,90 @@ const EditeEventPage = ()=>{
                                                                                         className: "bg-white/5 border-white/20 text-white placeholder-white/50 pl-10"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 637,
+=======
+                                                                                        lineNumber: 640,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 33
                                                                                     }, void 0),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$tag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Tag$3e$__["Tag"], {
                                                                                         className: "absolute left-3 top-3 h-4 w-4 text-white/50"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                         lineNumber: 646,
+=======
+                                                                                        lineNumber: 649,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                         columnNumber: 33
                                                                                     }, void 0)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                                 lineNumber: 636,
+=======
+                                                                                lineNumber: 639,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 635,
+=======
+                                                                            lineNumber: 638,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                                             className: "text-red-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                             lineNumber: 649,
+=======
+                                                                            lineNumber: 652,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 631,
+=======
+                                                                    lineNumber: 634,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 627,
+=======
+                                                            lineNumber: 630,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 622,
+=======
+                                                        lineNumber: 625,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 554,
+=======
+                                                lineNumber: 557,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1782,7 +2146,11 @@ const EditeEventPage = ()=>{
                                                         children: "Event Image"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 661,
+=======
+                                                        lineNumber: 664,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1797,14 +2165,22 @@ const EditeEventPage = ()=>{
                                                                     ...getInputProps()
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 671,
+=======
+                                                                    lineNumber: 674,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Image$3e$__["Image"], {
                                                                     className: `mx-auto h-12 w-12 mb-4 ${isDragActive ? 'text-blue-400' : 'text-white/50'}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 672,
+=======
+                                                                    lineNumber: 675,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1812,7 +2188,11 @@ const EditeEventPage = ()=>{
                                                                     children: isDragActive ? 'Drop the image here' : 'Drag & drop an image or click to select'
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 677,
+=======
+                                                                    lineNumber: 680,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1820,31 +2200,51 @@ const EditeEventPage = ()=>{
                                                                     children: "PNG, JPG (Max 5MB)"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                                     lineNumber: 686,
+=======
+                                                                    lineNumber: 689,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                             lineNumber: 663,
+=======
+                                                            lineNumber: 666,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 662,
+=======
+                                                        lineNumber: 665,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                         className: "text-red-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                         lineNumber: 691,
+=======
+                                                        lineNumber: 694,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 656,
+=======
+                                                lineNumber: 659,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1866,50 +2266,86 @@ const EditeEventPage = ()=>{
                                                     children: "Edit Event"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                     lineNumber: 701,
+=======
+                                                    lineNumber: 704,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                                 lineNumber: 695,
+=======
+                                                lineNumber: 698,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                         lineNumber: 313,
+=======
+                                        lineNumber: 316,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                                     lineNumber: 312,
+=======
+                                    lineNumber: 315,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                             lineNumber: 282,
+=======
+                            lineNumber: 285,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                         lineNumber: 278,
+=======
+                        lineNumber: 281,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                     lineNumber: 272,
+=======
+                    lineNumber: 275,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
                 lineNumber: 271,
+=======
+                lineNumber: 274,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(auth)/host/events/[eventId]/edit/page.tsx",
+<<<<<<< HEAD
         lineNumber: 248,
+=======
+        lineNumber: 251,
+>>>>>>> cade5efb6b5d303ace7c120f0dc181e942f52e40
         columnNumber: 5
     }, this);
 };
