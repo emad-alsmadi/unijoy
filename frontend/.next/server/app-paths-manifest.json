@@ -1,0 +1,11 @@
+{
+  "/(auth)/admin/categories/page": "app/(auth)/admin/categories/page.js",
+  "/(auth)/admin/events/page": "app/(auth)/admin/events/page.js",
+  "/(auth)/admin/hall/page": "app/(auth)/admin/hall/page.js",
+  "/(auth)/admin/settings/page": "app/(auth)/admin/settings/page.js",
+  "/(auth)/admin/users/page": "app/(auth)/admin/users/page.js",
+  "/auth/login/page": "app/auth/login/page.js",
+  "/categories/page": "app/categories/page.js",
+  "/halls/page": "app/halls/page.js",
+  "/page": "app/page.js"
+}

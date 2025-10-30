@@ -1,0 +1,74 @@
+{
+  "[project]/components/ui/Loading.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/Loading.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_ui_Loading_tsx_353ece46._.js",
+      "static/chunks/components_ui_Loading_tsx_dca0a6d2._.js"
+    ]
+  },
+  "[project]/components/dialog/DeleteConfirmationDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/dialog/DeleteConfirmationDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_9d6ee42f._.js",
+      "static/chunks/components_dialog_DeleteConfirmationDialog_tsx_dca0a6d2._.js"
+    ]
+  },
+  "[project]/components/ui/CategorieCard.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/CategorieCard.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_18830057._.js",
+      "static/chunks/components_ui_CategorieCard_tsx_dca0a6d2._.js"
+    ]
+  },
+  "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/Pagination.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_e4e10b5b._.js",
+      "static/chunks/components_ui_Pagination_tsx_dca0a6d2._.js"
+    ]
+  },
+  "[project]/components/dialog/EditCategoryDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/dialog/EditCategoryDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_06ae4071._.js",
+      "static/chunks/components_dialog_EditCategoryDialog_tsx_dca0a6d2._.js"
+    ]
+  },
+  "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/ProfileDropdown.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_bc6fa98d._.js",
+      "static/chunks/components_ui_e25e5df9._.js",
+      "static/chunks/components_ui_ProfileDropdown_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/home/HeaderMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_7a9afa78._.js",
+      "static/chunks/components_home_HeaderMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/home/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_3536744b._.js",
+      "static/chunks/_3b5268af._.js",
+      "static/chunks/components_home_MobileMenu_tsx_9a447c75._.js"
+    ]
+  },
+  "[project]/components/ui/SearchInput.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/ui/SearchInput.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_ui_0b7cbe6c._.js",
+      "static/chunks/components_ui_SearchInput_tsx_dca0a6d2._.js"
+    ]
+  },
+  "[project]/components/dialog/AddCategoryDialog.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/dialog/AddCategoryDialog.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_e8ae03bb._.js",
+      "static/chunks/components_dialog_AddCategoryDialog_tsx_dca0a6d2._.js"
+    ]
+  }
+}

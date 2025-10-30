@@ -1,0 +1,26 @@
+import dynamic from 'next/dynamic';
+import { headers } from 'next/headers';
+import { get } from '@/lib/api/base';
+
+const EventEditForm = dynamic(() => import('@/components/events/EventEditForm'), {
+  ssr: false,
+});
+
+export default async function EditEventPage({ params }: { params: { eventId: string } }) {
+  const { eventId } = params;
+  let initialEvent: any = null;
+  try {
+    const cookieHeader = ((headers() as unknown) as any)?.get?.('cookie') || '';
+    const token = cookieHeader
+      .split(';')
+      .map((c: string) => c.trim())
+      .find((c: string) => c.startsWith('token='))
+      ?.split('=')[1];
+    if (eventId) {
+      const res = await get<{ event: any }>(`/events/${eventId}`, { token });
+      initialEvent = res?.event || null;
+    }
+  } catch {}
+
+  return <EventEditForm initialEvent={initialEvent} eventId={eventId} />;
+}

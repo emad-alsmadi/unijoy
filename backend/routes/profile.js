@@ -31,8 +31,8 @@ router.put(
 
     body('hostCategory')
       .optional()
-      .isMongoId()
-      .withMessage('Invalid host category ID'),
+      .isString()
+      .trim(),
   ],
   profileController.updateProfile
 );

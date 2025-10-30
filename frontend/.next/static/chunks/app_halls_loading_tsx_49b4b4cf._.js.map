@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Abdalmoute/OneDrive/Desktop/unijoy-events/frontend/app/halls/loading.tsx"],"sourcesContent":["\"use client\";\n\nexport default function Loading() {\n  return (\n    <div className=\"flex items-center justify-center min-h-[60vh]\">\n      <div className=\"animate-spin rounded-full h-12 w-12 border-4 border-purple-500 border-t-transparent\" />\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEe,SAAS;IACtB,qBACE,6LAAC;QAAI,WAAU;kBACb,cAAA,6LAAC;YAAI,WAAU;;;;;;;;;;;AAGrB;KANwB","debugId":null}}]
+}
