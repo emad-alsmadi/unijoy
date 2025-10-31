@@ -1,15 +1,15 @@
 
 # Environment variables
 .env*.local
-
+.env
 # Next.js
 /.next
 /out
 /dist
+/next
 
 # Dependencies
 /node_modules
 
 # Production builds
 /.build
-/node_modules
