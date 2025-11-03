@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Abdalmoute/OneDrive/Desktop/unijoy-events/frontend/components/ui/Loading.tsx"],"sourcesContent":["export const Loading = () => {\r\n  return (\r\n    <div className='flex items-center justify-center h-[70vh]'>\r\n      <div className='animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500'></div>\r\n    </div>\r\n  );\r\n};\r\n"],"names":[],"mappings":";;;;;AAAO,MAAM,UAAU;IACrB,qBACE,6LAAC;QAAI,WAAU;kBACb,cAAA,6LAAC;YAAI,WAAU;;;;;;;;;;;AAGrB;KANa","debugId":null}}]
-}
