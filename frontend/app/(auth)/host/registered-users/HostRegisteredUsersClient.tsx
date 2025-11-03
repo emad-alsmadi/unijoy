@@ -14,7 +14,7 @@ import { Card } from '@/components/ui/Card';
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const Loading = dynamic(() => import('@/components/ui/Loading').then(m => m.Loading), { ssr: false });
 
-export default function HostRegisteredUsersClient({ initialEvents }: { initialEvents: EventCategory[] }) {
+export default function HostRegisteredUsersClient({ initialEvents, initialToken }: { initialEvents: EventCategory[]; initialToken?: string }) {
   const { token } = useAuth();
   const { toast } = useToast();
   const [search, setSearch] = useState('');
@@ -22,7 +22,7 @@ export default function HostRegisteredUsersClient({ initialEvents }: { initialEv
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['host-registered-users'],
     queryFn: () => get<{ events: EventCategory[] }>(`/host/events`, {
-      token,
+      token: token || initialToken,
       onError: (err) =>
         toast({
           title: 'Error',
@@ -30,7 +30,7 @@ export default function HostRegisteredUsersClient({ initialEvents }: { initialEv
           variant: 'destructive',
         }),
     }),
-    enabled: !!token,
+    enabled: !!(token || initialToken),
     staleTime: 60_000,
     refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,

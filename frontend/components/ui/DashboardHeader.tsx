@@ -1,15 +1,29 @@
 'use client';
-import { ChevronDown, Bell, Home } from 'lucide-react';
+import { ChevronDown, Bell, Home, Menu } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import Link from 'next/link';
 
-const DashboardHeader = () => {
+type DashboardHeaderProps = {
+  sidebarOpen?: boolean;
+  setSidebarOpen?: (open: boolean) => void;
+};
+
+const DashboardHeader = ({ sidebarOpen, setSidebarOpen }: DashboardHeaderProps) => {
   const { userRole, detailsProfile } = useAuth();
 
   return (
     <header className='bg-white shadow-sm z-10 m-4'>
       <div className='flex items-center justify-between py-4 px-8'>
-        <div>
+        <div className='flex items-center gap-2'>
+          {/* Mobile hamburger to open sidebar */}
+          <button
+            type='button'
+            aria-label='Open sidebar'
+            onClick={() => setSidebarOpen?.(true)}
+            className='lg:hidden p-2 rounded-md hover:bg-gray-100'
+          >
+            <Menu className='w-6 h-6 text-gray-600' />
+          </button>
           <Link
             href={`/`}
             className={` hover:bg-gray-100`}

@@ -58,12 +58,14 @@ export default function AdminCategoriesClient({
   initialTotalItems,
   initialPage,
   perPage,
+  initialToken,
 }: {
   initialCategories: HostCategory[];
   initialTotalPages: number;
   initialTotalItems: number;
   initialPage: number;
   perPage: number;
+  initialToken?: string;
 }) {
   const { toast } = useToast();
   const { token } = useAuth();
@@ -91,7 +93,7 @@ export default function AdminCategoriesClient({
         totalItems: number;
         totalPages: number;
       }>(`/host-categories?page=${currentPage}&perPage=${categoriesPerPage}`, {
-        token,
+        token: token || initialToken,
         onError: (err: any) => {
           toast({
             title: 'Error',
@@ -100,7 +102,7 @@ export default function AdminCategoriesClient({
           });
         },
       }),
-    enabled: !!token,
+    enabled: !!(token || initialToken),
     staleTime: 60_000,
     refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,

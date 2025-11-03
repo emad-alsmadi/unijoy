@@ -1,4 +1,3 @@
-﻿
 import AdminEventsClient from './AdminEventsClient';
 import { get } from '@/lib/api/base';
 import { headers } from 'next/headers';
@@ -6,19 +5,23 @@ import { headers } from 'next/headers';
 export default async function AllEventsPage() {
   const initialPage = 1;
   const perPage = 6;
-  let initial = { events: [], totalPages: 0, totalItems: 0 } as any;
-  try {
-    const cookieHeader = ((headers() as unknown) as any)?.get?.('cookie') || '';
-    const token = cookieHeader
+  const cookieHeader = (headers() as unknown as any)?.get?.('cookie') || '';
+  const initialToken =
+    cookieHeader
       .split(';')
       .map((c: string) => c.trim())
       .find((c: string) => c.startsWith('token='))
-      ?.split('=')[1];
-    if (token) {
-      initial = await get<{ events: any[]; totalPages: number; totalItems: number }>(
-        `/admin/events?page=${initialPage}&perPage=${perPage}`,
-        { token }
-      );
+      ?.split('=')[1] || '';
+  let initial = { events: [], totalPages: 0, totalItems: 0 } as any;
+  try {
+    if (initialToken) {
+      initial = await get<{
+        events: any[];
+        totalPages: number;
+        totalItems: number;
+      }>(`/admin/events?page=${initialPage}&perPage=${perPage}`, {
+        token: initialToken,
+      });
     }
   } catch {}
 
@@ -29,6 +32,7 @@ export default async function AllEventsPage() {
       initialTotalItems={initial?.totalItems || 0}
       initialPage={initialPage}
       perPage={perPage}
+      initialToken={initialToken}
     />
   );
 }

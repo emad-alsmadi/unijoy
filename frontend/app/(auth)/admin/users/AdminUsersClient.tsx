@@ -114,8 +114,10 @@ export type User = z.infer<typeof userSchema>;
 
 export default function AdminUsersClient({
   initialUsers,
+  initialToken,
 }: {
   initialUsers: User[];
+  initialToken?: string;
 }) {
   const { toast } = useToast();
   const { token } = useAuth();
@@ -159,7 +161,7 @@ export default function AdminUsersClient({
     ],
     queryFn: async () =>
       get<{ users: User[] }>(`/admin/users`, {
-        token,
+        token: token || initialToken,
         onError: (err) =>
           toast({
             title: 'Error',
@@ -167,7 +169,7 @@ export default function AdminUsersClient({
             variant: 'destructive',
           }),
       }),
-    enabled: !!token,
+    enabled: !!(token || initialToken),
     staleTime: 60_000,
     refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,

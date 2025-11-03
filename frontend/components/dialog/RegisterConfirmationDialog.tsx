@@ -8,7 +8,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { EventCategory } from '@/types/type';
+import { EventCategory } from '@/types';
 
 interface RegisterConfirmationDialog {
   open: boolean;

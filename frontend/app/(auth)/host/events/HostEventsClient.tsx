@@ -48,12 +48,14 @@ export default function HostEventsClient({
   initialTotalItems,
   initialPage,
   perPage,
+  initialToken,
 }: {
   initialEvents: EventCategory[];
   initialTotalPages: number;
   initialTotalItems: number;
   initialPage: number;
   perPage: number;
+  initialToken?: string;
 }) {
   const { toast } = useToast();
   const { token } = useAuth();
@@ -155,14 +157,14 @@ export default function HostEventsClient({
     queryKey: ['events', 'host', currentPage, eventsPerPage, activeFilter],
     queryFn: () =>
       fetchEvents({
-        token,
+        token: token || initialToken,
         currentPage,
         eventsPerPage,
         activeFilter,
         role: 'host',
         toast,
       }),
-    enabled: !!token,
+    enabled: !!(token || initialToken),
     staleTime: 60_000,
     refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,

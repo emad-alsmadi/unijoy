@@ -47,12 +47,14 @@ export default function AdminHallsClient({
   initialTotalItems,
   initialPage,
   perPage,
+  initialToken,
 }: {
   initialHalls: HallType[];
   initialTotalPages: number;
   initialTotalItems: number;
   initialPage: number;
   perPage: number;
+  initialToken?: string;
 }) {
   const { toast } = useToast();
   const { token } = useAuth();
@@ -84,7 +86,7 @@ export default function AdminHallsClient({
       get<{ halls: HallType[]; totalItems: number; totalPages: number }>(
         `/halls?page=${currentPage}&perPage=${hallsPerPage}`,
         {
-          token,
+          token: token || initialToken,
           onError: (err) =>
             toast({
               title: 'Error',
@@ -93,7 +95,7 @@ export default function AdminHallsClient({
             }),
         }
       ),
-    enabled: !!token,
+    enabled: !!(token || initialToken),
     staleTime: 60_000,
     refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,

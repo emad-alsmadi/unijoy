@@ -1,9 +1,8 @@
-﻿{
+{
   "pages": {
     "/unauthorized/page": [
       "static/chunks/node_modules_next_dist_1a6ee436._.js",
       "static/chunks/app_favicon_ico_mjs_659ce808._.js",
-
       "static/chunks/components_631e4eec._.js",
       "static/chunks/_162e5e81._.js",
       "static/chunks/node_modules_8c93d652._.js",

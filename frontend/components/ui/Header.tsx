@@ -33,7 +33,7 @@ const Header = () => {
     <>
       {!shouldhideHeader && (
         <header className={`relative pb-2 z-[999]  top-0`}>
-          <div className='px-4 md:px-11 p-2 h-auto md:h-18 flex flex-wrap items-center justify-between gap-5 bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-600 text-white/90 shadow-sm border-b border-white/10 backdrop-blur-md dark:from-slate-900 dark:via-slate-900 dark:to-slate-900'>
+          <div className='px-4 md:px-11 p-2 h-auto md:h-16 flex flex-wrap items-center justify-between gap-2 md:gap-5 bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-600 text-white/90 shadow-sm border-b border-white/10 backdrop-blur-md dark:from-slate-900 dark:via-slate-900 dark:to-slate-900'>
             <div className='flex items-center gap-2 text-white/80'>
               <Search className='w-5 h-5' />
             </div>
@@ -48,28 +48,28 @@ const Header = () => {
             {userRole && (
               <Link
                 href={`/${userRole}/events`}
-                className='p-3 text-base font-sans font-semibold hidden md:block text-white/80 hover:text-white transition-colors'
+                className='p-3 text-base font-sans font-semibold  text-white/80 hover:text-white transition-colors'
               >
                 Dashboard {userRole}
               </Link>
             )}
-            <p className='text-sm md:text-base font-sans font-normal text-white/70 hover:text-white transition-colors flex-1 text-center md:text-start'>
+            <p className='hidden md:block text-sm md:text-base font-sans font-normal text-white/70 hover:text-white transition-colors flex-1 text-center md:text-start'>
               Book an event now
             </p>
-            <h1 className='text-sm md:text-base font-sans font-normal text-white/80 text-center md:text-start'>
+            <h1 className='hidden md:block text-sm md:text-base font-sans font-normal text-white/80 text-center md:text-start'>
               Welcome to our platform ...{' '}
               <span className='hover:text-white transition-colors font-semibold'>
                 {' '}
                 Do you want to know the latest events ?
               </span>
             </h1>
-            <div className='flex items-center'>
+            <div className='hidden md:flex items-center ml-auto md:ml-0'>
               <ThemeToggle />
             </div>
           </div>
 
           {/* القائمة الرئيسية */}
-          <div className='flex flex-wrap items-center justify-between gap-5 text-lightColor bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 border-b border-black/5 shadow-[0_8px_20px_-12px_rgba(91,33,182,0.25)] dark:bg-slate-900/70 dark:supports-[backdrop-filter]:bg-slate-900/60 dark:border-white/10 px-6 mx-4'>
+          <div className='flex flex-wrap items-center justify-between gap-3 md:gap-5 text-lightColor bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 border-b border-black/5 shadow-[0_8px_20px_-12px_rgba(91,33,182,0.25)] dark:bg-slate-900/70 dark:supports-[backdrop-filter]:bg-slate-900/60 dark:border-white/10 px-3 md:px-6 mx-2 md:mx-4'>
             {/* Logo */}
             <div className='flex justify-center md:justify-start items-center ms-2 lg:ms-4'>
               <Image
@@ -83,23 +83,21 @@ const Header = () => {
                 <br />
               </h1>
             </div>
-
-            {/* قائمة التنقل الرئيسية */}
-            <div className='w-full md:w-auto flex flex-1 justify-center md:justify-end lg:gap-4'>
-              <HeaderMenu />
-            </div>
-
-            {/* القائمة الجانبية للجوال */}
-            <div className='block md:hidden'>
-              <MobileMenu />
-            </div>
             {/* Login and registration buttons based on role and login status */}
             <div className='w-auto flex items-center justify-end md:gap-5 lg:gap-6'>
+              {/* قائمة التنقل الرئيسية */}
+              <div className='hidden md:flex flex-1 justify-end lg:gap-4'>
+                <HeaderMenu />
+              </div>
+
+              {/* القائمة الجانبية للجوال */}
+              <div className='block md:hidden mr-4'>
+                <MobileMenu />
+              </div>
               {token ? (
                 <ProfileDropdown
-                  user={detailsProfile?.name}
+                  user={{ name: detailsProfile?.name }}
                   userRole={`${userRole}`}
-                  //user={{ name: profileInfo.name, profileImage: '/avatar.jpg' }}
                 />
               ) : (
                 <>
@@ -117,7 +115,6 @@ const Header = () => {
                   </Link>
                 </>
               )}
-              <ThemeToggle />
             </div>
           </div>
         </header>

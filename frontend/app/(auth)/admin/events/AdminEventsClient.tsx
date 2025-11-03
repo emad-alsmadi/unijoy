@@ -75,12 +75,14 @@ export default function AdminEventsClient({
   initialTotalItems,
   initialPage,
   perPage,
+  initialToken,
 }: {
   initialEvents: EventCategory[];
   initialTotalPages: number;
   initialTotalItems: number;
   initialPage: number;
   perPage: number;
+  initialToken?: string;
 }) {
   const { toast } = useToast();
   const { token } = useAuth();
@@ -129,19 +131,24 @@ export default function AdminEventsClient({
   });
 
   const { data, isLoading, isError, error } = useQuery({
+    //So any change in currentPage completely changes the key,
+    //  and this makes React Query treat it as a "new query" and call queryFn()
+    //  again inside queryFn(). ...
     queryKey: ['events', 'admin', currentPage, eventsPerPage, activeFilter],
     queryFn: () =>
       fetchEvents({
-        token,
+        token: token || initialToken,
         currentPage,
         eventsPerPage,
         activeFilter,
         role: 'admin',
         toast,
       }),
-    enabled: !!token,
+    //This pauses the query until the token is defined.
+    enabled: !!(token || initialToken),
     staleTime: 60_000,
     refetchOnWindowFocus: false,
+    //This makes React Query keep the previous page data while fetching the new page.
     placeholderData: keepPreviousData,
     initialData: {
       events: initialEvents || [],
@@ -170,7 +177,8 @@ export default function AdminEventsClient({
   };
 
   const deleteMutation = useMutation({
-    mutationFn: async (eventId: string) => del<{ message?: string }>(`/host/events/${eventId}`, { token }),
+    mutationFn: async (eventId: string) =>
+      del<{ message?: string }>(`/host/events/${eventId}`, { token }),
     onSuccess: (res) => {
       toast({
         title: 'Event Deleted',

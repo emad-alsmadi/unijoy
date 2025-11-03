@@ -70,7 +70,7 @@ export const eventSchema = z.object({
 
 const CreateEventPage = () => {
   const { toast } = useToast();
-  const { token } = useAuth();
+  const { token, userRole } = useAuth();
   const router = useRouter();
   const [categories, setCategories] = useState<HostCategory[]>();
 
@@ -126,7 +126,6 @@ const CreateEventPage = () => {
     console.log('Form errors:', form.formState.errors);
   }, [form.formState.errors]);
 
-
   // helper to build FormData cleanly
   const buildFormData = (values: z.infer<typeof eventSchema>) => {
     const fd = new FormData();
@@ -155,7 +154,7 @@ const CreateEventPage = () => {
       const response = await fetch(`http://localhost:8080/host/events`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`, 
+          Authorization: `Bearer ${token}`,
         },
         body: formData,
       });
@@ -165,7 +164,7 @@ const CreateEventPage = () => {
       const data = await response.json();
       console.log('response data', data);
 
-      router.push('/host/dashboard');
+      router.push(`/${userRole}/events`);
 
       if (!response.ok) {
         throw new Error(data.message);
@@ -176,7 +175,6 @@ const CreateEventPage = () => {
         className: 'bg-green-500 text-white',
       });
       console.log('host values', values);
-
     } catch (err: any) {
       toast({
         title: 'Fetch Error',
@@ -184,7 +182,6 @@ const CreateEventPage = () => {
         variant: 'destructive',
       });
     } finally {
-
       setLoading(false);
     }
   };
@@ -206,7 +203,6 @@ const CreateEventPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-
           className='mx-auto max-w-6xl'
         >
           <div className='text-center mb-6'>
@@ -371,7 +367,6 @@ const CreateEventPage = () => {
                           )}
                         />
                       </motion.div>
-
                     </motion.div>
                     {/* Location & Capacity */}
                     <div className='grid md:grid-cols-3 gap-6'>

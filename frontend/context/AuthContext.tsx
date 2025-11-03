@@ -1,7 +1,6 @@
 ﻿'use client';
-
 import { useToast } from '@/hooks/use-toast';
-import { UserProfile } from '@/types/type';
+import { UserProfile } from '@/types';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 import {
@@ -30,11 +29,10 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
 
-
   const { toast } = useToast();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userRole, setUserRole] = useState<UserRole>(null);
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState(Cookies.get('token') || '');
   const [detailsProfile, setDetailsProfile] = useState<UserProfile>();
 
   const setUserId = (userId: string) => {
@@ -60,7 +58,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-
   const fetchDetailsProfile = async () => {
     try {
       const res = await fetch(`http://localhost:8080/profile`, {
@@ -72,8 +69,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       });
       const data = await res.json();
       setDetailsProfile(data.user);
-      console.log("profial :", data.user);  
-      } catch (error: any) {
+      console.log('profial :', data.user);
+    } catch (error: any) {
       // Handle connection errors or unexpected errors.
       toast({
         title: 'Error loading profile',

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import DashboardSidebar from '@/components/ui/DashboardSidebar';
@@ -6,7 +6,9 @@ import DashboardHeader from '@/components/ui/DashboardHeader';
 import { motion } from 'framer-motion';
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches
+  );
 
   return (
     <div className='relative min-h-screen bg-gray-50'>
@@ -38,7 +40,10 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
                 : '0rem',
           }}
         >
-          <DashboardHeader />
+          <DashboardHeader
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+          />
           <main>{children}</main>
         </div>
       </motion.div>

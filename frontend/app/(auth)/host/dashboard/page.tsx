@@ -38,7 +38,7 @@ import { Calendar as CalendarComp } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useState } from 'react';
-import { EventCategory } from '@/types/type';
+ import { EventCategory } from '@/types';
 import Link from 'next/link';
 import { useDebounce } from 'use-debounce';
 import {
