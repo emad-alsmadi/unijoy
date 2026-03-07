@@ -22,25 +22,21 @@ import { useAuth } from '@/context/AuthContext';
 
 import { Loading } from '@/components/ui/Loading';
 import { apiLogin } from '@/lib/api/api';
-
-export const formSchema = z.object({
-  email: z.string().email('Invalid email address'),
-  password: z.string().min(8, 'Password must be at least 8 characters'),
-});
+import { loginFormSchema } from '@/lib/validation/loginSchema';
 
 const Login = () => {
   const { token, login } = useAuth();
   const { toast } = useToast();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof loginFormSchema>>({
+    resolver: zodResolver(loginFormSchema),
     defaultValues: {
       email: '',
       password: '',
     },
   });
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof loginFormSchema>) => {
     console.log('password', values.password);
     try {
       await apiLogin(values, {
