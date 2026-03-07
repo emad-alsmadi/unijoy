@@ -29,7 +29,6 @@ export const formSchema = z.object({
 });
 
 const Login = () => {
-
   const { token, login } = useAuth();
   const { toast } = useToast();
   const router = useRouter();
@@ -42,7 +41,7 @@ const Login = () => {
     },
   });
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-
+    console.log('password', values.password);
     try {
       await apiLogin(values, {
         token,

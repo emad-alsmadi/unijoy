@@ -46,6 +46,7 @@ import { useRouter } from 'next/navigation';
 import { fetchCategories } from '@/lib/api/hostCategories';
 import { fetchHalls } from '@/lib/api/halls';
 import { Loading } from '@/components/ui/Loading';
+import { API_BASE_URL } from '@/lib/api/base';
 
 export const eventSchema = z.object({
   title: z.string().min(5, 'Title must contain at minimum 5 characters'),
@@ -151,7 +152,7 @@ const CreateEventPage = () => {
     try {
       setLoading(true);
       const formData = buildFormData(values);
-      const response = await fetch(`http://localhost:8080/host/events`, {
+      const response = await fetch(`${API_BASE_URL}/host/events`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -304,7 +305,7 @@ const CreateEventPage = () => {
                                           tabIndex={0}
                                           className={cn(
                                             'pl-3 text-left font-normal bg-white border border-slate-200 hover:bg-slate-50 rounded-md py-2 px-4 cursor-pointer flex items-center gap-2 text-slate-800',
-                                            !field.value && 'text-slate-500'
+                                            !field.value && 'text-slate-500',
                                           )}
                                           onClick={() => setOpen(true)}
                                         >
@@ -401,7 +402,7 @@ const CreateEventPage = () => {
                                         // تحويل القيمة لرقم لحقل capacity فقط
                                         const value = e.target.value;
                                         field.onChange(
-                                          value === '' ? '' : Number(value)
+                                          value === '' ? '' : Number(value),
                                         );
                                       } else {
                                         // ترك القيمة كما هي للحقول الأخرى
@@ -437,7 +438,7 @@ const CreateEventPage = () => {
                                     variant='outline'
                                     className={cn(
                                       'pl-3 text-left font-normal bg-white border border-slate-200 hover:bg-slate-50 rounded-md py-2 px-4 text-slate-800',
-                                      !field.value && 'text-slate-500'
+                                      !field.value && 'text-slate-500',
                                     )}
                                   >
                                     {field.value ? (
@@ -499,7 +500,7 @@ const CreateEventPage = () => {
                                       >
                                         {categorie.name}
                                       </SelectItem>
-                                    )
+                                    ),
                                   )}
                                 </SelectContent>
                               </Select>

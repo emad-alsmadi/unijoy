@@ -19,6 +19,7 @@ import { Button } from './button';
 import { useAuth } from '@/context/AuthContext';
 import RegisterConfirmationDialog from '@/components/dialog/RegisterConfirmationDialog';
 import UnregisterConfirmationDialog from '@/components/dialog/UnregisterConfirmationDialog';
+import { API_BASE_URL } from '@/lib/api/base';
 
 const UpcomingEvents = () => {
   const [events, setEvents] = useState<EventCategory[]>([]);
@@ -30,13 +31,13 @@ const UpcomingEvents = () => {
   const [isUnregisterModalOpen, setIsUnregisterModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<EventCategory | null>(
-    null
+    null,
   );
 
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8080/events`, {
+      const res = await fetch(`${API_BASE_URL}/events`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -71,14 +72,14 @@ const UpcomingEvents = () => {
     if (!selectedEvent) return;
     try {
       const res = await fetch(
-        `http://localhost:8080/users/me/events/${selectedEvent._id}/register`,
+        `${API_BASE_URL}/users/me/events/${selectedEvent._id}/register`,
         {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-        }
+        },
       );
       const data = await res.json();
       toast({
@@ -90,8 +91,8 @@ const UpcomingEvents = () => {
         localStorage.setItem(`registered_${selectedEvent._id}`, 'true');
         setEvents((prev) =>
           prev.map((e) =>
-            e._id === selectedEvent._id ? { ...e, isRegistered: true } : e
-          )
+            e._id === selectedEvent._id ? { ...e, isRegistered: true } : e,
+          ),
         );
 
         console.log('data url ', data.url);
@@ -116,14 +117,14 @@ const UpcomingEvents = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8080/users/me/events/${selectedEvent._id}/unregister`,
+        `${API_BASE_URL}/users/me/events/${selectedEvent._id}/unregister`,
         {
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-        }
+        },
       );
 
       const data = await res.json();
@@ -136,8 +137,8 @@ const UpcomingEvents = () => {
       localStorage.removeItem(`registered_${selectedEvent._id}`);
       setEvents((prev) =>
         prev.map((e) =>
-          e._id === selectedEvent._id ? { ...e, isRegistered: false } : e
-        )
+          e._id === selectedEvent._id ? { ...e, isRegistered: false } : e,
+        ),
       );
     } catch (error: any) {
       toast({
@@ -152,7 +153,6 @@ const UpcomingEvents = () => {
   };
 
   return (
-
     <section className='relative py-16 bg-gray-50'>
       <div className='absolute inset-x-0 -top-[1px]'>
         <svg
@@ -223,7 +223,6 @@ const UpcomingEvents = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-
             className='bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md'
           >
             <Link href='/events'>See All Events</Link>

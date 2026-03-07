@@ -95,6 +95,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className='scrollbar-thin'>
+    
         <Providers>
           <ThemeProvider>
             <AuthProvider>

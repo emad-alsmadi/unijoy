@@ -1,7 +1,6 @@
 ﻿'use client';
 import {
   Dialog,
-
   DialogDescription,
   DialogContent,
   DialogFooter,
@@ -12,9 +11,11 @@ import { Input } from '@/components/ui/input';
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';import { useToast } from '@/hooks/use-toast';
+import { useEffect, useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 import { HallType } from '@/types';
 import { Loader2 } from 'lucide-react';
+import { API_BASE_URL } from '@/lib/api/base';
 interface EditHallDialogProps {
   open: boolean;
   onClose: () => void;
@@ -36,12 +37,11 @@ export default function EditHallDialog({
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
   const [capacity, setCapacity] = useState(1);
-  const [loading, setLoading] = useState(false);  
+  const [loading, setLoading] = useState(false);
 
   // تعبئة النموذج عند فتح الـ dialog
   useEffect(() => {
     if (hall) {
-
       setName(hall.name || '');
       setLocation(hall.location || '');
       setCapacity(hall.capacity || 0);
@@ -53,7 +53,7 @@ export default function EditHallDialog({
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8080/halls/${hall._id}`, {
+      const res = await fetch(`${API_BASE_URL}/halls/${hall._id}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -84,7 +84,6 @@ export default function EditHallDialog({
   };
 
   return (
-
     <>
       <Dialog
         open={open}

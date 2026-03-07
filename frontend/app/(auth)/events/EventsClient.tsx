@@ -69,7 +69,7 @@ export default function EventsClient({
   perPage: number;
 }) {
   const { toast } = useToast();
-  const { token } = useAuth();
+  const { token , userRole} = useAuth();
   const queryClient = useQueryClient();
 
   const [events, setEvents] = useState<EventCategory[]>(initialEvents || []);
@@ -422,28 +422,30 @@ export default function EventsClient({
                     className='transition-all duration-300 group-hover:shadow-xl group-hover:shadow-purple-500/20 group-hover:border-cyan-400/30'
                     footer={
                       <div className='flex items-center gap-3'>
-                        <Button
-                          variant='outline'
-                          className={`flex items-center gap-2 text-white ${
-                            localStorage.getItem(`registered_${event._id}`)
-                              ? 'bg-red-600'
-                              : 'bg-purple-500'
-                          }`}
-                          onClick={() => {
-                            setSelectedEvent(event);
-                            if (
+                        {userRole === 'user' && (
+                          <Button
+                            variant='outline'
+                            className={`flex items-center gap-2 text-white ${
                               localStorage.getItem(`registered_${event._id}`)
-                            ) {
-                              setIsUnregisterModalOpen(true);
-                            } else {
-                              setIsRegisterModalOpen(true);
-                            }
-                          }}
-                        >
-                          {localStorage.getItem(`registered_${event._id}`)
-                            ? 'Unregister'
-                            : 'Register'}
-                        </Button>
+                                ? 'bg-red-600'
+                                : 'bg-purple-500'
+                            }`}
+                            onClick={() => {
+                              setSelectedEvent(event);
+                              if (
+                                localStorage.getItem(`registered_${event._id}`)
+                              ) {
+                                setIsUnregisterModalOpen(true);
+                              } else {
+                                setIsRegisterModalOpen(true);
+                              }
+                            }}
+                          >
+                            {localStorage.getItem(`registered_${event._id}`)
+                              ? 'Unregister'
+                              : 'Register'}
+                          </Button>
+                        )}
                         {typeof event.price === 'number' && (
                           <span className='bg-purple-50 text-purple-800 font-medium px-3 py-1 rounded-full text-sm shadow-sm'>
                             {event.price === 0 ? 'FREE' : `${event.price} UE`}

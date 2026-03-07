@@ -1,6 +1,5 @@
 ﻿// components/EditCategoryDialog.tsx
 
-
 import {
   Dialog,
   DialogContent,
@@ -17,6 +16,7 @@ import { useEffect, useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { HostCategory } from '@/types';
 import { fetchCategories } from '@/lib/api/hostCategories';
+import { API_BASE_URL } from '@/lib/api/base';
 
 type EditCategoryDialogProps = {
   open: boolean;
@@ -54,7 +54,7 @@ export default function EditCategoryDialog({
 
     try {
       const res = await fetch(
-        `http://localhost:8080/host-categories/${category._id}`,
+        `${API_BASE_URL}/host-categories/${category._id}`,
         {
           method: 'PUT',
           headers: {
@@ -62,7 +62,7 @@ export default function EditCategoryDialog({
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ name, description }),
-        }
+        },
       );
 
       const data = await res.json();

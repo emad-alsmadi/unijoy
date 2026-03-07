@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/context/AuthContext';
+import { API_BASE_URL } from '@/lib/api/base';
 
 export default function ResetPasswordPage() {
   const { toast } = useToast();
@@ -16,16 +17,13 @@ export default function ResetPasswordPage() {
   const handleReset = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        `http://localhost:8080/auth/reset-password`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email }),
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/auth/reset-password`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
       const data = await response.json();
       if (response.ok) {
@@ -49,7 +47,6 @@ export default function ResetPasswordPage() {
   };
 
   return (
-
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 px-4 py-10'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -57,8 +54,12 @@ export default function ResetPasswordPage() {
         transition={{ duration: 0.5 }}
         className='w-full max-w-md p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl'
       >
-        <h1 className='text-2xl font-bold mb-2 text-center text-white'>Reset your password</h1>
-        <p className='text-center text-white/80 mb-6'>We'll send a reset link to your email</p>
+        <h1 className='text-2xl font-bold mb-2 text-center text-white'>
+          Reset your password
+        </h1>
+        <p className='text-center text-white/80 mb-6'>
+          We'll send a reset link to your email
+        </p>
         <Input
           type='email'
           placeholder='Enter your email'

@@ -1,5 +1,4 @@
-﻿
-"use client";
+﻿'use client';
 import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,8 +21,16 @@ import { EventCategory } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from '@/components/ui/dialog';
 import { useAuth, UserRole } from '@/context/AuthContext';
+import { API_BASE_URL } from '@/lib/api/base';
 
 const EventDetails = ({
   event,
@@ -31,10 +38,8 @@ const EventDetails = ({
 }: {
   event: EventCategory;
   userRole: UserRole;
-
 }) => {
-  const baseURL = 'http://localhost:8080';
-  const src = encodeURI(`${baseURL}/${event?.image?.replace(/\\/g, '/')}`);
+  const src = encodeURI(`${API_BASE_URL}/${event?.image?.replace(/\\/g, '/')}`);
 
   // Booking form state
   const [fullName, setFullName] = useState('');
@@ -48,15 +53,22 @@ const EventDetails = ({
     if (!token) return;
     setSubmitting(true);
     try {
-      const res = await fetch(`http://localhost:8080/users/me/events/${event._id}/register`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
+      const res = await fetch(
+        `${API_BASE_URL}/users/me/events/${event._id}/register`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+          // Note: backend register currently doesn't require body; UI fields are for UX
+          body: JSON.stringify({
+            name: fullName,
+            date: bookingDate,
+            attendees,
+          }),
         },
-        // Note: backend register currently doesn't require body; UI fields are for UX
-        body: JSON.stringify({ name: fullName, date: bookingDate, attendees }),
-      });
+      );
       const data = await res.json();
       if (res.ok) {
         if (event.price && Number(event.price) !== 0 && data?.url) {
@@ -91,7 +103,9 @@ const EventDetails = ({
               </div>
               <div className='w-full lg:w-1/2 p-6 lg:p-8'>
                 <h1 className='text-3xl font-bold mb-2'>{event.title}</h1>
-                <p className='mb-6 text-sm/relaxed opacity-90 line-clamp-3'>{event.description}</p>
+                <p className='mb-6 text-sm/relaxed opacity-90 line-clamp-3'>
+                  {event.description}
+                </p>
                 <ul className='space-y-3 text-sm'>
                   <li className='flex items-center'>
                     <Locate className='w-4 h-4 mr-2' />
@@ -99,11 +113,15 @@ const EventDetails = ({
                   </li>
                   <li className='flex items-center'>
                     <CalendarDays className='w-4 h-4 mr-2' />
-                    <span>{new Date(event.date).toLocaleDateString()} • {event.time}</span>
+                    <span>
+                      {new Date(event.date).toLocaleDateString()} • {event.time}
+                    </span>
                   </li>
                   <li className='flex items-center'>
                     <Ticket className='w-4 h-4 mr-2' />
-                    <span>{event.price === 0 ? 'FREE' : `${event.price} UE`}</span>
+                    <span>
+                      {event.price === 0 ? 'FREE' : `${event.price} UE`}
+                    </span>
                   </li>
                   <li className='flex items-center'>
                     <Users className='w-4 h-4 mr-2' />
@@ -121,27 +139,85 @@ const EventDetails = ({
         <div className='max-w-3xl mx-auto'>
           {userRole === 'user' && (
             <div className='bg-white rounded-2xl border border-purple-100 shadow-sm p-6 md:p-8'>
-              <h2 className='text-xl font-semibold text-purple-800'>Complete your booking</h2>
-              <p className='text-sm text-gray-600 mt-1'>We will use this to reserve your spot.</p>
+              <h2 className='text-xl font-semibold text-purple-800'>
+                Complete your booking
+              </h2>
+              <p className='text-sm text-gray-600 mt-1'>
+                We will use this to reserve your spot.
+              </p>
 
               <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-5'>
-                <motion.div initial={false} animate={{ scale: fullName ? 1.01 : 1, boxShadow: fullName ? '0 0 0 3px rgba(147,51,234,0.15)' : '0 0 0 0 rgba(0,0,0,0)' }} className='rounded-xl border border-gray-200 p-4 focus-within:border-purple-400 focus-within:ring-2 focus-within:ring-purple-200 transition-all'>
+                <motion.div
+                  initial={false}
+                  animate={{
+                    scale: fullName ? 1.01 : 1,
+                    boxShadow: fullName
+                      ? '0 0 0 3px rgba(147,51,234,0.15)'
+                      : '0 0 0 0 rgba(0,0,0,0)',
+                  }}
+                  className='rounded-xl border border-gray-200 p-4 focus-within:border-purple-400 focus-within:ring-2 focus-within:ring-purple-200 transition-all'
+                >
                   <Label htmlFor='fullName'>Full name</Label>
-                  <Input id='fullName' placeholder='Your name' value={fullName} onChange={(e) => setFullName(e.target.value)} className='mt-2' />
+                  <Input
+                    id='fullName'
+                    placeholder='Your name'
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    className='mt-2'
+                  />
                 </motion.div>
 
-                <motion.div initial={false} animate={{ scale: bookingDate ? 1.01 : 1, boxShadow: bookingDate ? '0 0 0 3px rgba(147,51,234,0.15)' : '0 0 0 0 rgba(0,0,0,0)' }} className='rounded-xl border border-gray-200 p-4 focus-within:border-purple-400 focus-within:ring-2 focus-within:ring-purple-200 transition-all'>
+                <motion.div
+                  initial={false}
+                  animate={{
+                    scale: bookingDate ? 1.01 : 1,
+                    boxShadow: bookingDate
+                      ? '0 0 0 3px rgba(147,51,234,0.15)'
+                      : '0 0 0 0 rgba(0,0,0,0)',
+                  }}
+                  className='rounded-xl border border-gray-200 p-4 focus-within:border-purple-400 focus-within:ring-2 focus-within:ring-purple-200 transition-all'
+                >
                   <Label htmlFor='date'>Preferred date</Label>
-                  <Input id='date' type='date' value={bookingDate} onChange={(e) => setBookingDate(e.target.value)} className='mt-2' />
+                  <Input
+                    id='date'
+                    type='date'
+                    value={bookingDate}
+                    onChange={(e) => setBookingDate(e.target.value)}
+                    className='mt-2'
+                  />
                 </motion.div>
 
-                <motion.div initial={false} animate={{ scale: attendees > 1 ? 1.01 : 1, boxShadow: attendees > 1 ? '0 0 0 3px rgba(147,51,234,0.15)' : '0 0 0 0 rgba(0,0,0,0)' }} className='rounded-xl border border-gray-200 p-4 focus-within:border-purple-400 focus-within:ring-2 focus-within:ring-purple-200 transition-all md:col-span-2'>
+                <motion.div
+                  initial={false}
+                  animate={{
+                    scale: attendees > 1 ? 1.01 : 1,
+                    boxShadow:
+                      attendees > 1
+                        ? '0 0 0 3px rgba(147,51,234,0.15)'
+                        : '0 0 0 0 rgba(0,0,0,0)',
+                  }}
+                  className='rounded-xl border border-gray-200 p-4 focus-within:border-purple-400 focus-within:ring-2 focus-within:ring-purple-200 transition-all md:col-span-2'
+                >
                   <Label htmlFor='attendees'>Attendees</Label>
                   <div className='mt-2 flex items-center gap-3'>
-                    <Input id='attendees' type='number' min={1} value={attendees} onChange={(e) => setAttendees(Math.max(1, Number(e.target.value || 1)))} className='w-32' />
+                    <Input
+                      id='attendees'
+                      type='number'
+                      min={1}
+                      value={attendees}
+                      onChange={(e) =>
+                        setAttendees(Math.max(1, Number(e.target.value || 1)))
+                      }
+                      className='w-32'
+                    />
                     <AnimatePresence>
                       {attendees > 0 && (
-                        <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 6 }} className='inline-flex items-center gap-1 text-sm text-green-700'>
+                        <motion.div
+                          initial={{ opacity: 0, y: 6 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 6 }}
+                          className='inline-flex items-center gap-1 text-sm text-green-700'
+                        >
                           <CheckCircle className='w-4 h-4' />
                           Looks good
                         </motion.div>
@@ -155,7 +231,11 @@ const EventDetails = ({
                 <div className='text-sm text-gray-600'>
                   <span>By booking you agree to the terms.</span>
                 </div>
-                <Button onClick={handleBook} disabled={submitting || !fullName || !bookingDate} className='bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow hover:brightness-110'>
+                <Button
+                  onClick={handleBook}
+                  disabled={submitting || !fullName || !bookingDate}
+                  className='bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow hover:brightness-110'
+                >
                   {submitting ? 'Booking...' : 'Book your spot'}
                 </Button>
               </div>
@@ -164,7 +244,9 @@ const EventDetails = ({
 
           {/* Additional event details for context */}
           <div className='mt-10 space-y-6'>
-            <h3 className='text-lg font-semibold text-purple-700'>More Details</h3>
+            <h3 className='text-lg font-semibold text-purple-700'>
+              More Details
+            </h3>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm'>
               <div className='flex items-center'>
                 <Building className='w-4 h-4 mr-2 text-purple-600' />
@@ -176,7 +258,12 @@ const EventDetails = ({
               </div>
               <div className='flex items-center'>
                 <UserCircle className='w-4 h-4 mr-2 text-purple-600' />
-                <span>Host: {event.host}</span>
+                <span>
+                  Host:{' '}
+                  {typeof event.host === 'string'
+                    ? event.host
+                    : event.host?.name || event.host?._id || '—'}
+                </span>
               </div>
               <div className='flex items-center'>
                 {event.status === 'approved' && (
@@ -192,11 +279,15 @@ const EventDetails = ({
               </div>
               <div className='flex items-center'>
                 <CalendarCheck2 className='w-4 h-4 mr-2 text-purple-600' />
-                <span>Starts: {new Date(event.startDate).toLocaleDateString()}</span>
+                <span>
+                  Starts: {new Date(event.startDate).toLocaleDateString()}
+                </span>
               </div>
               <div className='flex items-center'>
                 <CalendarCheck2 className='w-4 h-4 mr-2 text-purple-600' />
-                <span>Ends: {new Date(event.endDate).toLocaleDateString()}</span>
+                <span>
+                  Ends: {new Date(event.endDate).toLocaleDateString()}
+                </span>
               </div>
             </div>
             <div className='text-xs text-gray-500'>
@@ -208,22 +299,41 @@ const EventDetails = ({
       </section>
 
       {/* Success Confirmation Modal */}
-      <Dialog open={successOpen} onOpenChange={setSuccessOpen}>
+      <Dialog
+        open={successOpen}
+        onOpenChange={setSuccessOpen}
+      >
         <DialogContent className='sm:max-w-[420px]'>
           <DialogHeader>
             <DialogTitle>Booking Confirmed</DialogTitle>
-            <DialogDescription>Your seat has been reserved. See you at the event!</DialogDescription>
+            <DialogDescription>
+              Your seat has been reserved. See you at the event!
+            </DialogDescription>
           </DialogHeader>
           <div className='py-4 flex flex-col items-center justify-center'>
-            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 220, damping: 16 }} className='rounded-full bg-green-100 text-green-700 w-20 h-20 flex items-center justify-center shadow-inner'>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 16 }}
+              className='rounded-full bg-green-100 text-green-700 w-20 h-20 flex items-center justify-center shadow-inner'
+            >
               <CheckCircle className='w-12 h-12' />
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className='mt-4 text-center text-sm text-gray-600'>
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              className='mt-4 text-center text-sm text-gray-600'
+            >
               A confirmation was sent to your account.
             </motion.div>
           </div>
           <DialogFooter>
-            <Button className='bg-purple-600 text-white' onClick={() => setSuccessOpen(false)}>Done</Button>
+            <Button
+              className='bg-purple-600 text-white'
+              onClick={() => setSuccessOpen(false)}
+            >
+              Done
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

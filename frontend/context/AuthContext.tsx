@@ -10,6 +10,7 @@ import {
   ReactNode,
   useEffect,
 } from 'react';
+import { API_BASE_URL } from '@/lib/api/base';
 
 export type UserRole = 'user' | 'host' | 'admin' | null;
 
@@ -60,7 +61,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchDetailsProfile = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/profile`, {
+      const res = await fetch(`${API_BASE_URL}/profile`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,

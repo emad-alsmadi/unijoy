@@ -4,6 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { API_BASE_URL } from '@/lib/api/base';
 
 const PaymentSuccessPage = () => {
   const { token } = useAuth();
@@ -25,7 +26,7 @@ const PaymentSuccessPage = () => {
       }
       try {
         const response = await fetch(
-          `http://localhost:8080/users/me/events/${eventId}/confirm`,
+          `${API_BASE_URL}/users/me/events/${eventId}/confirm`,
           {
             method: 'POST',
             headers: {
@@ -33,7 +34,7 @@ const PaymentSuccessPage = () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ paymentIntentId: eventId }),
-          }
+          },
         );
         const data = await response.json();
         if (!response.ok) {
@@ -65,7 +66,7 @@ const PaymentSuccessPage = () => {
     if (token) {
       confirmPayment();
     }
-  }, [sessionId, eventId,token]);
+  }, [sessionId, eventId, token]);
 
   return (
     <div className='min-h-screen flex items-center justify-center flex-col text-center p-4'>

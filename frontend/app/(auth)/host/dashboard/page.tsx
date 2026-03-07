@@ -38,7 +38,7 @@ import { Calendar as CalendarComp } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useState } from 'react';
- import { EventCategory } from '@/types';
+import { EventCategory } from '@/types';
 import Link from 'next/link';
 import { useDebounce } from 'use-debounce';
 import {
@@ -47,6 +47,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useAuth } from '@/context/AuthContext';
+import { API_BASE_URL } from '@/lib/api/base';
 
 // تعريفات الحركات
 const containerVariants = {
@@ -103,12 +104,12 @@ const HostDashboard = () => {
   const [eventsPerPage] = useState(6);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<EventCategory | null>(
-    null
+    null,
   );
   const [loading, setLoading] = useState(false);
-  const [downloadingReportPdf, setdownloadingReportPdfPdf] = useState<string | null>(
-    null
-  );
+  const [downloadingReportPdf, setdownloadingReportPdfPdf] = useState<
+    string | null
+  >(null);
 
   // Function to download invoice
   const downloadingReport = async (eventId: string) => {
@@ -116,15 +117,12 @@ const HostDashboard = () => {
 
     setdownloadingReportPdfPdf(eventId);
     try {
-      const response = await fetch(
-        `http://localhost:8080/reports/event/${eventId}`,
-        {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/reports/event/${eventId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       if (!response.ok) {
         throw new Error(await response.text());
@@ -170,19 +168,19 @@ const HostDashboard = () => {
         activeFilter === 'all'
           ? ''
           : activeFilter === 'upcoming'
-          ? 'upcoming'
-          : activeFilter === 'past'
-          ? 'past'
-          : '';
+            ? 'upcoming'
+            : activeFilter === 'past'
+              ? 'past'
+              : '';
       const response = await fetch(
-        `http://localhost:8080/host/events?page=${currentPage}&perPage=${eventsPerPage}&type=${filterType}`,
+        `${API_BASE_URL}/host/events?page=${currentPage}&perPage=${eventsPerPage}&type=${filterType}`,
         {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-        }
+        },
       );
       const data = await response.json();
       setEvents(data.events);
@@ -255,14 +253,14 @@ const HostDashboard = () => {
     if (!selectedEvent) return;
     try {
       const response = await fetch(
-        `http://localhost:8080/host/events/${selectedEvent._id}`,
+        `${API_BASE_URL}/host/events/${selectedEvent._id}`,
         {
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-        }
+        },
       );
       const data = await response.json();
       setEvents(data.events);
@@ -477,8 +475,8 @@ const HostDashboard = () => {
                             event.status === 'approved'
                               ? 'bg-green-100 text-green-800'
                               : event.status === 'pending'
-                              ? 'bg-yellow-100 text-yellow-800'
-                              : 'bg-red-100 text-red-800'
+                                ? 'bg-yellow-100 text-yellow-800'
+                                : 'bg-red-100 text-red-800'
                           }`}
                         >
                           {event.status}
@@ -613,10 +611,10 @@ const HostDashboard = () => {
                       totalPages <= 5
                         ? index + 1
                         : currentPage <= 3
-                        ? index + 1
-                        : currentPage >= totalPages - 2
-                        ? totalPages - 4 + index
-                        : currentPage - 2 + index;
+                          ? index + 1
+                          : currentPage >= totalPages - 2
+                            ? totalPages - 4 + index
+                            : currentPage - 2 + index;
 
                     return (
                       <Button
@@ -630,7 +628,7 @@ const HostDashboard = () => {
                         {pageNumber}
                       </Button>
                     );
-                  }
+                  },
                 )}
 
                 {totalPages > 5 && currentPage < totalPages - 2 && (

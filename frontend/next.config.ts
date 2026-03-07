@@ -3,15 +3,22 @@ import type { NextConfig } from 'next';
 import { EventEmitter } from 'events';
 EventEmitter.defaultMaxListeners = 20;
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiHost = apiUrl ? new URL(apiUrl).hostname : 'localhost';
+const apiProtocol = apiUrl
+  ? (new URL(apiUrl).protocol.replace(':', '') as 'http' | 'https')
+  : 'http';
+const apiPort = apiUrl ? new URL(apiUrl).port || '' : '8080';
+
 const nextConfig: NextConfig = {
   images: {
-    domains: ['localhost'],
+    domains: [apiHost, 'localhost'],
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '8080',
+        protocol: apiProtocol,
+        hostname: apiHost,
+        port: apiPort,
         pathname: '/**',
       },
     ],
