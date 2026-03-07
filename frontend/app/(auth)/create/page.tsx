@@ -48,7 +48,7 @@ import { fetchHalls } from '@/lib/api/halls';
 import { Loading } from '@/components/ui/Loading';
 import { API_BASE_URL } from '@/lib/api/base';
 
-export const eventSchema = z.object({
+const eventSchema = z.object({
   title: z.string().min(5, 'Title must contain at minimum 5 characters'),
   description: z
     .string()
