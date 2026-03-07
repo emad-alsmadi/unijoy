@@ -1,7 +1,7 @@
 'use client';
 import { User2, UserCheck, UserX } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { User } from '@/app/(auth)/admin/users/page';
+import type { User } from '@/app/(auth)/admin/users/AdminUsersClient';
 
 type StatsProps = {
   users: User[];
