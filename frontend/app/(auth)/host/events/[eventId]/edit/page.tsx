@@ -1,17 +1,16 @@
-﻿
-import dynamic from 'next/dynamic';
-import { headers } from 'next/headers';
+﻿import { headers } from 'next/headers';
 import { get } from '@/lib/api/base';
+import EventEditForm from '@/components/events/EventEditForm';
 
-const EventEditForm = dynamic(() => import('@/components/events/EventEditForm'), {
-  ssr: false,
-});
-
-export default async function EditEventPage({ params }: { params: { eventId: string } }) {
+export default async function EditEventPage({
+  params,
+}: {
+  params: { eventId: string };
+}) {
   const { eventId } = params;
   let initialEvent: any = null;
   try {
-    const cookieHeader = ((headers() as unknown) as any)?.get?.('cookie') || '';
+    const cookieHeader = (headers() as unknown as any)?.get?.('cookie') || '';
     const token = cookieHeader
       .split(';')
       .map((c: string) => c.trim())
@@ -23,5 +22,10 @@ export default async function EditEventPage({ params }: { params: { eventId: str
     }
   } catch {}
 
-  return <EventEditForm initialEvent={initialEvent} eventId={eventId} />;
+  return (
+    <EventEditForm
+      initialEvent={initialEvent}
+      eventId={eventId}
+    />
+  );
 }
