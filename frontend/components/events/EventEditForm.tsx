@@ -38,7 +38,7 @@ import {
 } from '@/components/ui/form';
 import { fetchCategories } from '@/lib/api/hostCategories';
 import { fetchHalls } from '@/lib/api/halls';
-import { eventSchema } from '@/app/(auth)/create/page';
+import { eventSchema } from '@/lib/validation/eventSchema';
 import { updateEvent, updateEventMultipart } from '@/lib/api/events';
 
 export default function EventEditForm({
@@ -58,7 +58,7 @@ export default function EventEditForm({
 
   useEffect(() => {
     fetchCategories(setLoading, toast).then((data) =>
-      setCategories(data?.categories || [])
+      setCategories(data?.categories || []),
     );
     fetchHalls(setLoading, toast).then((data) => setHalls(data?.halls || []));
   }, []);
@@ -69,7 +69,7 @@ export default function EventEditForm({
   const hall = halls.map((h: HallType) => {
     (initialEvent as any)?.hall?._id === h._id ? String(h.name) : '';
   });
-  
+
   type FormValues = z.infer<typeof eventSchema>;
   const form = useForm<FormValues>({
     resolver: zodResolver(eventSchema),
@@ -138,7 +138,7 @@ export default function EventEditForm({
             startDate: (values as any).startDate?.toISOString(),
             endDate: (values as any).endDate?.toISOString(),
           } as any,
-          token
+          token,
         );
       }
       toast({
@@ -225,7 +225,7 @@ export default function EventEditForm({
                                     variant='outline'
                                     className={cn(
                                       'pl-3 w-full text-left font-normal bg-white border border-slate-200 hover:bg-slate-50 rounded-md py-2 px-4 text-slate-800',
-                                      !field.value && 'text-slate-500'
+                                      !field.value && 'text-slate-500',
                                     )}
                                   >
                                     {field.value ? (
@@ -311,7 +311,7 @@ export default function EventEditForm({
                                 variant='outline'
                                 className={cn(
                                   'pl-3 w-full text-left font-normal bg-white border border-slate-200 hover:bg-slate-50 rounded-md py-2 px-4 text-slate-800',
-                                  !field.value && 'text-slate-500'
+                                  !field.value && 'text-slate-500',
                                 )}
                               >
                                 {field.value ? (
@@ -362,7 +362,7 @@ export default function EventEditForm({
                                 variant='outline'
                                 className={cn(
                                   'pl-3 w-full text-left font-normal bg-white border border-slate-200 hover:bg-slate-50 rounded-md py-2 px-4 text-slate-800',
-                                  !field.value && 'text-slate-500'
+                                  !field.value && 'text-slate-500',
                                 )}
                               >
                                 {field.value ? (
