@@ -1,5 +1,4 @@
-﻿
-'use client';
+﻿'use client';
 import { motion } from 'framer-motion';
 import {
   Dialog,
@@ -11,7 +10,8 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { User } from '@/app/(auth)/admin/users/page';
+import type { UserProfile } from '@/types/user';
+
 interface DeleteConfirmationDialogProps {
   open: boolean;
   onClose: () => void;
@@ -20,7 +20,7 @@ interface DeleteConfirmationDialogProps {
   confirmLabel?: string;
   cancelLabel?: string;
   onConfirm: () => void;
-  user?: User;
+  user?: UserProfile;
 }
 
 export default function DeleteConfirmationDialog({
