@@ -20,7 +20,7 @@ interface DeleteConfirmationDialogProps {
   confirmLabel?: string;
   cancelLabel?: string;
   onConfirm: () => void;
-  user?: UserProfile;
+  user?: Pick<UserProfile, 'name' | 'email'>;
 }
 
 export default function DeleteConfirmationDialog({
