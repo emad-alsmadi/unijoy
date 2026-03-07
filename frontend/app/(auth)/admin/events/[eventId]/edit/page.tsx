@@ -1,13 +1,12 @@
-﻿
-import { headers } from 'next/headers';
+﻿import { headers } from 'next/headers';
 import { get } from '@/lib/api/base';
 import EventEditClient from '@/app/(auth)/admin/events/[eventId]/edit/EventEditClient';
 export default async function EditEventPage({
   params,
 }: {
-  params: { eventId: string };
+  params: Promise<{ eventId: string }>;
 }) {
-  const { eventId } = params;
+  const { eventId } = await params;
   let initialEvent: any = null;
   try {
     const cookieHeader = (headers() as unknown as any)?.get?.('cookie') || '';

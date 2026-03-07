@@ -24,7 +24,12 @@ const reportRoutes = require('./routes/report');
 
 const User = require('./models/user');
 
-const MONGODB_URI = 'mongodb://127.0.0.1:27017';
+const MONGODB_URI =
+  process.env.MONGODB_URI ||
+  process.env.MONGO_URL ||
+  'mongodb://127.0.0.1:27017';
+
+const PORT = Number(process.env.PORT) || 8080;
 
 const app = express();
 
@@ -60,15 +65,22 @@ const fileFilter = (req, file, cb) => {
 
 // CORS: place before any body parsers so headers are included even on parser errors
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const frontendOrigin =
+    process.env.FRONTEND_ORIGIN || process.env.FRONTEND_BASE_URL || '';
+
+  if (frontendOrigin) {
+    res.setHeader('Access-Control-Allow-Origin', frontendOrigin);
+    res.setHeader('Vary', 'Origin');
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  }
+
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, PATCH, DELETE, OPTIONS'
   );
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'Content-Type, Authorization'
-  );
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
   if (req.method === 'OPTIONS') {
     return res.sendStatus(204);
   }
@@ -148,7 +160,7 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(MONGODB_URI)
   .then((result) => {
-    app.listen(8080);
+    app.listen(PORT);
 
     require('./jobs/freeExpiredHalls');
   })
