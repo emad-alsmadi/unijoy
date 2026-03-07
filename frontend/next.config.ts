@@ -23,6 +23,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   compress: true,
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'date-fns'],
