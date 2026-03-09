@@ -17,5 +17,8 @@ export const eventSchema = z.object({
   category: z.string().min(1, 'Non Empty'),
   hall: z.string().optional(),
   capacity: z.number().min(1, 'Capacity must be at least 1'),
-  image: z.instanceof(File),
+  image: z.union([z.instanceof(File), z.string().url().optional()]).optional(),
 });
+
+// For updates where image might be optional
+export const eventUpdateSchema = eventSchema.partial();

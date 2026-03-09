@@ -4,13 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  CalendarIcon,
-  Image as ImageIcon,
-  MapPin,
-  Users,
-  Tag,
-} from 'lucide-react';
+import { CalendarIcon, MapPin, Users, Tag } from 'lucide-react';
 import {
   Form,
   FormControl,
@@ -36,10 +30,10 @@ import {
 } from '@/components/ui/popover';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
-import { useDropzone } from 'react-dropzone';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { Button } from '@/components/ui/button';
+import { ImageUploadComponent } from '@/components/ui/ImageUploadComponent';
 
 import { HallType, HostCategory } from '@/types';
 import { useRouter } from 'next/navigation';
@@ -76,16 +70,63 @@ const CreateEventPage = () => {
 
   const { isSubmitting } = form.formState;
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    accept: {
-      'image/*': ['.png', '.jpg', '.jpeg'],
-    },
-    maxFiles: 1,
-    onDrop: (acceptedFiles) => {
-      form.setValue('image', acceptedFiles[0]);
-    },
-  });
-  const rootProps = getRootProps();
+  const onSubmit = async (values: z.infer<typeof eventSchema>) => {
+    console.log('form values', values);
+    try {
+      setLoading(true);
+      const formData = new FormData();
+
+      // Add all form fields
+      formData.append('title', values.title);
+      formData.append('description', values.description);
+      formData.append('date', values.date?.toISOString());
+      formData.append('startDate', values.startDate?.toISOString());
+      formData.append('endDate', values.endDate?.toISOString());
+      formData.append('location', values.location);
+      formData.append('hall', values.hall ? String(values.hall) : '');
+      formData.append('capacity', String(values.capacity));
+      formData.append('time', values.time);
+      formData.append('category', values.category || '');
+      formData.append('price', String(values.price ?? 0));
+
+      // Add image if it's a File
+      if (values.image instanceof File) {
+        formData.append('image', values.image);
+      }
+
+      const response = await fetch(`${API_BASE_URL}/host/events`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
+
+      console.log('Response Status', response.status);
+      const data = await response.json();
+      console.log('response data', data);
+
+      if (!response.ok) {
+        throw new Error(data.message);
+      }
+
+      toast({
+        title: 'Success',
+        description: data.message || 'Event created successfully',
+        className: 'bg-green-500 text-white',
+      });
+
+      router.push(`/${userRole}/events`);
+    } catch (err: any) {
+      toast({
+        title: 'Error',
+        description: err.message,
+        variant: 'destructive',
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     fetchHalls(setLoading, toast).then((data) => {
@@ -107,65 +148,6 @@ const CreateEventPage = () => {
     console.log('Form errors:', form.formState.errors);
   }, [form.formState.errors]);
 
-  // helper to build FormData cleanly
-  const buildFormData = (values: z.infer<typeof eventSchema>) => {
-    const fd = new FormData();
-    fd.append('title', values.title);
-    fd.append('description', values.description);
-    fd.append('date', values.date?.toISOString());
-    fd.append('startDate', values.startDate?.toISOString());
-    fd.append('endDate', values.endDate?.toISOString());
-    fd.append('location', values.location);
-    fd.append('hall', values.hall ? String(values.hall) : '');
-    fd.append('capacity', String(values.capacity));
-    fd.append('time', values.time);
-    fd.append('category', values.category || '');
-    fd.append('price', String(values.price ?? 0));
-    if (values.image instanceof File) {
-      fd.append('image', values.image);
-    }
-    return fd;
-  };
-
-  const onSubmit = async (values: z.infer<typeof eventSchema>) => {
-    console.log('form values', values);
-    try {
-      setLoading(true);
-      const formData = buildFormData(values);
-      const response = await fetch(`${API_BASE_URL}/host/events`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      });
-      console.log(' valuses', values);
-      console.log(' Response Status', response.status);
-
-      const data = await response.json();
-      console.log('response data', data);
-
-      router.push(`/${userRole}/events`);
-
-      if (!response.ok) {
-        throw new Error(data.message);
-      }
-      toast({
-        title: 'Success',
-        description: data.message || 'Event created success',
-        className: 'bg-green-500 text-white',
-      });
-      console.log('host values', values);
-    } catch (err: any) {
-      toast({
-        title: 'Fetch Error',
-        description: err.message,
-        variant: 'destructive',
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
   if (loading) {
     return <Loading />;
   }
@@ -565,39 +547,25 @@ const CreateEventPage = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.4 }}
                     >
-                      <FormLabel className='text-slate-800'>
-                        Event Image
-                      </FormLabel>
-                      <div {...rootProps}>
-                        <motion.div
-                          whileHover={{ scale: 1.01 }}
-                          className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${
-                            isDragActive
-                              ? 'border-[#6C63FF] bg-[#E0E7FF]/40'
-                              : 'border-slate-200 hover:border-slate-300'
-                          }`}
-                        >
-                          <input {...getInputProps()} />
-                          <ImageIcon
-                            className={`mx-auto h-12 w-12 mb-4 ${
-                              isDragActive ? 'text-[#6C63FF]' : 'text-slate-400'
-                            }`}
-                          />
-                          <p
-                            className={`${
-                              isDragActive ? 'text-[#4F46E5]' : 'text-slate-600'
-                            }`}
-                          >
-                            {isDragActive
-                              ? 'Drop the image here'
-                              : 'Drag & drop an image or click to select'}
-                          </p>
-                          <p className='text-sm text-slate-500 mt-2'>
-                            PNG, JPG (Max 5MB)
-                          </p>
-                        </motion.div>
-                      </div>
-                      <FormMessage className='text-red-500' />
+                      <FormField
+                        control={form.control}
+                        name='image'
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className='text-slate-800'>
+                              Event Image
+                            </FormLabel>
+                            <FormControl>
+                              <ImageUploadComponent
+                                value={field.value}
+                                onChange={field.onChange}
+                                className='w-full'
+                              />
+                            </FormControl>
+                            <FormMessage className='text-red-500' />
+                          </FormItem>
+                        )}
+                      />
                     </motion.div>
 
                     {/* Submit Button */}

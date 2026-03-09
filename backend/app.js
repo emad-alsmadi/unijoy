@@ -9,7 +9,7 @@ const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const flash = require('connect-flash');
-const multer = require('multer');
+const multer = require('multer'); // Re-added for image upload to external services
 const cron = require('node-cron');
 
 const adminRoutes = require('./routes/admin');
@@ -39,17 +39,8 @@ const app = express();
 // });
 // const csrfProtection = csrf();
 
-const fileStorage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'images');
-  },
-  filename: (req, file, cb) => {
-    cb(
-      null,
-      new Date().toISOString().replace(/:/g, '-') + '-' + file.originalname
-    );
-  },
-});
+// File upload configuration for memory storage (will be uploaded to external services)
+const fileStorage = multer.memoryStorage();
 
 const fileFilter = (req, file, cb) => {
   if (
@@ -89,11 +80,12 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(bodyParser.json({ limit: '10mb' }));
+// Multer configuration for memory storage (files will be uploaded to external services)
 app.use(
   multer({
     storage: fileStorage,
     fileFilter: fileFilter,
-    limits: { fileSize: 10 * 1024 * 1024 },
+    limits: { fileSize: 10 * 1024 * 1024 }, // 10MB limit
   }).single('image')
 );
 // app.use(express.static(path.join(__dirname, 'public')));

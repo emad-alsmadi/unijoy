@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: unijoy-events-backend
+    env: node
+    repo: https://github.com/your-username/unijoy-events.git
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+    autoDeploy: true

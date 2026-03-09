@@ -27,7 +27,6 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
-import { useDropzone } from 'react-dropzone';
 import {
   Form,
   FormControl,
@@ -38,8 +37,9 @@ import {
 } from '@/components/ui/form';
 import { fetchCategories } from '@/lib/api/hostCategories';
 import { fetchHalls } from '@/lib/api/halls';
-import { eventSchema } from '@/lib/validation/eventSchema';
+import { eventUpdateSchema } from '@/lib/validation/eventSchema';
 import { updateEvent, updateEventMultipart } from '@/lib/api/events';
+import { ImageUploadComponent } from '@/components/ui/ImageUploadComponent';
 
 export default function EventEditForm({
   initialEvent,
@@ -70,9 +70,9 @@ export default function EventEditForm({
     (initialEvent as any)?.hall?._id === h._id ? String(h.name) : '';
   });
 
-  type FormValues = z.infer<typeof eventSchema>;
+  type FormValues = z.infer<typeof eventUpdateSchema>;
   const form = useForm<FormValues>({
-    resolver: zodResolver(eventSchema),
+    resolver: zodResolver(eventUpdateSchema),
     defaultValues: {
       title: (initialEvent as any)?.title || '',
       description: (initialEvent as any)?.description || '',
@@ -95,20 +95,11 @@ export default function EventEditForm({
         ? String((initialEvent as any)?.hall?._id)
         : '',
       capacity: (initialEvent as any)?.capacity ?? 1,
+      image: (initialEvent as any)?.image || undefined,
     },
   });
 
   const { isSubmitting } = form.formState;
-
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    accept: { 'image/*': ['.png', '.jpg', '.jpeg'] },
-    maxFiles: 1,
-    onDrop: (accepted) => {
-      // For now we ignore sending image in update because apiRequest forces JSON. Backend update may not require image.
-      form.setValue('image', accepted[0] as any);
-    },
-  });
-  const rootProps = getRootProps();
 
   const onSubmit: SubmitHandler<FormValues> = async (values) => {
     setLoading(true);

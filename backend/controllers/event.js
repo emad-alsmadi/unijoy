@@ -63,97 +63,143 @@ exports.getHostEvents = (req, res, next) => {
     });
 };
 
+const ImageUploadService = require('../services/imageUploadService');
+
 exports.createEvent = (req, res, next) => {
   console.log('Boday =>>>>>>>>>>', req.body);
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    if (req.file) {
-      clearImage(req.file.path);
-    }
     const error = new Error('Valdation failed, Entered data is incorrect');
     error.statusCode = 422;
     throw error;
   }
-  if (!req.file) {
-    const error = new Error('No Image Provided!');
-    error.statusCode = 422;
-    throw error;
+
+  // Handle image upload or URL
+  let imageUrlPromise;
+
+  if (req.file) {
+    // Convert uploaded file to base64 and upload to external service
+    const base64Image = `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}`;
+    imageUrlPromise = ImageUploadService.uploadImage(base64Image);
+  } else if (req.body.imageUrl) {
+    // Use provided URL directly
+    imageUrlPromise = Promise.resolve({
+      success: true,
+      url: req.body.imageUrl,
+    });
+  } else {
+    // Use default image
+    imageUrlPromise = Promise.resolve({
+      success: true,
+      url: ImageUploadService.getDefaultImageUrl(),
+      isDefault: true,
+    });
   }
 
-  const image = req.file.path;
-  const title = req.body.title;
-  const description = req.body.description;
-  const date = req.body.date;
-  const startDate = req.body.startDate;
-  const endDate = req.body.endDate;
-  const time = req.body.time;
-  const capacity = req.body.capacity;
-  let price = req.body.price || 0.0;
-  const location = req.body.location;
-  const hall = req.body.hall;
-  const category = req.body.category;
-
-  const host = req.userId;
-  User.findById(host)
-    .then((user) => {
-      if (!user || (user.role !== 'host' && user.role !== 'admin')) {
-        const error = new Error(
-          'Not authorized. Only hosts or admins can create events.'
-        );
-        error.statusCode = 403;
+  imageUrlPromise
+    .then((imageResult) => {
+      if (!imageResult.success) {
+        const error = new Error('Failed to upload image: ' + imageResult.error);
+        error.statusCode = 422;
         throw error;
       }
 
-      // If hall specified, check if there is any approved event conflicting for the same hall/time
-      if (hall) {
-        return Event.findOne({
-          hall: hall,
-          status: 'approved',
-          $or: [
-            {
-              startDate: { $lt: new Date(endDate), $gte: new Date(startDate) },
-            },
-            {
-              endDate: { $gt: new Date(startDate), $lte: new Date(endDate) },
-            },
-            {
-              startDate: { $lte: new Date(startDate) },
-              endDate: { $gte: new Date(endDate) },
-            },
-          ],
-        }).then((conflict) => {
-          if (conflict) {
-            const error = new Error(
-              'Hall is already reserved for the selected time.'
-            );
-            error.statusCode = 409; // Conflict
-            throw error;
-          }
-          return user;
-        });
-      }
-      // No hall or no conflicts, proceed
-      return user;
-    })
-    .then(() => {
-      const event = new Event({
-        title: title,
-        description: description,
-        date: date,
-        startDate: startDate,
-        endDate: endDate,
-        time: time,
-        image: image,
-        capacity: capacity,
-        price: price,
-        location: location,
-        host: host,
-        hall: hall || null, // only set if present
-        category: category,
-        status: 'pending',
-      });
+      const imageUrl = imageResult.url;
+      const title = req.body.title;
+      const description = req.body.description;
+      const date = req.body.date;
+      const startDate = req.body.startDate;
+      const endDate = req.body.endDate;
+      const time = req.body.time;
+      const capacity = req.body.capacity;
+      let price = req.body.price || 0.0;
+      const location = req.body.location;
+      const hall = req.body.hall;
+      const category = req.body.category;
 
-      return event.save();
+      const host = req.userId;
+      return User.findById(host).then((user) => {
+        if (!user || (user.role !== 'host' && user.role !== 'admin')) {
+          const error = new Error(
+            'Not authorized. Only hosts or admins can create events.'
+          );
+          error.statusCode = 403;
+          throw error;
+        }
+
+        // If hall specified, check if there is any approved event conflicting for the same hall/time
+        if (hall) {
+          return Event.findOne({
+            hall: hall,
+            status: 'approved',
+            $or: [
+              {
+                startDate: {
+                  $lt: new Date(endDate),
+                  $gte: new Date(startDate),
+                },
+              },
+              {
+                endDate: { $gt: new Date(startDate), $lte: new Date(endDate) },
+              },
+              {
+                startDate: { $lte: new Date(startDate) },
+                endDate: { $gte: new Date(endDate) },
+              },
+            ],
+          })
+            .then((conflictEvent) => {
+              if (conflictEvent) {
+                const error = new Error(
+                  'This hall is already reserved for the selected time period.'
+                );
+                error.statusCode = 409;
+                throw error;
+              }
+              return true;
+            })
+            .then(() => {
+              const event = new Event({
+                title: title,
+                description: description,
+                date: date,
+                startDate: startDate,
+                endDate: endDate,
+                time: time,
+                image: imageUrl,
+                capacity: capacity,
+                price: price,
+                location: location,
+                host: host,
+                hall: hall || null, // only set if present
+                category: category,
+                status: 'pending',
+              });
+
+              return event.save();
+            });
+        } else {
+          // No hall specified
+          const event = new Event({
+            title: title,
+            description: description,
+            date: date,
+            startDate: startDate,
+            endDate: endDate,
+            time: time,
+            image: imageUrl,
+            capacity: capacity,
+            price: price,
+            location: location,
+            host: host,
+            hall: null,
+            category: category,
+            status: 'pending',
+          });
+
+          return event.save();
+        }
+      });
     })
     .then((event) => {
       // Hall is NOT reserved on creation — reservation happens on admin approval
@@ -220,10 +266,7 @@ exports.updateEvent = (req, res, next) => {
   const price = req.body.price;
   const hall = req.body.hall;
   const category = req.body.category;
-  let image;
-  if (req.file) {
-    image = req.file.path;
-  }
+  const imageUrl = req.body.imageUrl || eventDoc.image; // Use new URL or keep existing
 
   let eventDoc;
   Event.findById(eventId)
@@ -233,8 +276,8 @@ exports.updateEvent = (req, res, next) => {
         error.statusCode = 404;
         throw error;
       }
-      if (!image && !event.image) {
-        const error = new Error('No file picked');
+      if (!imageUrl && !event.image) {
+        const error = new Error('No image URL provided');
         error.statusCode = 422;
         throw error;
       }
@@ -278,9 +321,8 @@ exports.updateEvent = (req, res, next) => {
     })
     .then(() => {
       // Update image if changed
-      if (image) {
-        clearImage(eventDoc.image);
-        eventDoc.image = image;
+      if (imageUrl && imageUrl !== eventDoc.image) {
+        eventDoc.image = imageUrl;
       }
       // Update fields
       eventDoc.title = title;
@@ -430,8 +472,7 @@ exports.deleteEvent = (req, res, next) => {
       }
     })
     .then(() => {
-      clearImage(eventDoc.image);
-
+      // No need to clear image since we're using URLs
       return Event.findByIdAndDelete(eventId);
     })
     .then(() => {
@@ -694,9 +735,22 @@ exports.getInvoice = (req, res, next) => {
     });
 };
 
-const clearImage = (filePath) => {
-  filePath = path.join(__dirname, '..', filePath);
-  fs.unlink(filePath, (err) => {
-    console.log(err);
-  });
+// Helper function to provide default image URLs based on category or random selection
+const getDefaultImageUrl = () => {
+  const defaultImages = [
+    'https://images.unsplash.com/photo-1492684228672-755b87908021?w=800&h=600&fit=crop',
+    'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop',
+    'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop',
+    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop',
+    'https://images.unsplash.com/photo-1479222724629-152724b6e765?w=800&h=600&fit=crop',
+  ];
+  return defaultImages[Math.floor(Math.random() * defaultImages.length)];
 };
+
+// Clear image function is no longer needed since we use URLs
+// const clearImage = (filePath) => {
+//   filePath = path.join(__dirname, '..', filePath);
+//   fs.unlink(filePath, (err) => {
+//     console.log(err);
+//   });
+// };
