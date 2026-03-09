@@ -10,9 +10,9 @@ export const apiLogin = async (
   deps: {
     token?: string;
     login: (role: string, token: string, userId: string) => void;
-    toast: (p: { title: string; description?: string; className?: string; variant?: string }) => void;
+    toast: typeof import('@/hooks/use-toast').toast;
     push: (path: string) => void;
-  }
+  },
 ) => {
   const data = await post<any>('/auth/login', values, { token: deps.token });
   deps.toast({
