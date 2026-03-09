@@ -40,7 +40,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     Cookies.set('userId', userId);
   };
 
-  const login = (role: UserRole, token: string, userId: string) => {
+  const login = (
+    role: Exclude<UserRole, null>,
+    token: string,
+    userId: string,
+  ) => {
     setToken(token);
     Cookies.set('token', token, { expires: 7 }); // expires after 7 days
     Cookies.set('userId', userId, { expires: 7 });
