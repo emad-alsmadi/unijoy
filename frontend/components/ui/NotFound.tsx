@@ -4,7 +4,7 @@ import { Frown } from 'lucide-react';
 
 const NotFound = ({ message }: { message: string }) => {
   return (
-    <div className='min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-100 to-white px-6'>
+    <div className='min-h-screen flex flex-col items-center justify-center px-6'>
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
