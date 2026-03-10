@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Stripe secret key
+// Initialize Stripe only if API key is available
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? require('stripe')(process.env.STRIPE_SECRET_KEY)
+  : null;
 const { validationResult } = require('express-validator');
 
 const Event = require('../models/event');
@@ -93,6 +96,14 @@ exports.registerForEvent = (req, res, next) => {
       }
 
       // PAID event: Create Stripe Checkout Session
+      if (!stripe) {
+        const error = new Error(
+          'Stripe is not configured. Payment functionality is unavailable.'
+        );
+        error.statusCode = 503;
+        throw error;
+      }
+
       return stripe.checkout.sessions
         .create({
           payment_method_types: ['card'],
@@ -321,6 +332,13 @@ exports.unregisterForEvent = async (req, res, next) => {
 
     // Issue refund via Stripe
     try {
+      if (!stripe) {
+        console.warn('Stripe is not configured. Skipping refund.');
+        return res
+          .status(200)
+          .json({ message: 'Registration cancelled (refund unavailable)' });
+      }
+
       await stripe.refunds.create({
         payment_intent: payment.stripePaymentIntentId,
         amount: payment.amount * 100,

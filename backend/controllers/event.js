@@ -4,7 +4,10 @@ const path = require('path');
 const PDFDocument = require('pdfkit');
 const { validationResult } = require('express-validator');
 const { checkReservationConflict } = require('../util/conflictChecker');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Stripe secret key
+// Initialize Stripe only if API key is available
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? require('stripe')(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 const Event = require('../models/event');
 const User = require('../models/user');
@@ -428,6 +431,15 @@ exports.deleteEvent = (req, res, next) => {
                 // Skip if no PaymentIntent ID
                 return Promise.resolve();
               }
+
+              if (!stripe) {
+                console.warn(
+                  'Stripe is not configured. Skipping refund for payment:',
+                  payment._id
+                );
+                return Promise.resolve();
+              }
+
               return stripe.refunds
                 .create({
                   payment_intent: payment.stripePaymentIntentId,

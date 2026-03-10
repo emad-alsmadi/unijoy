@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Stripe secret key
+// Initialize Stripe only if API key is available
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? require('stripe')(process.env.STRIPE_SECRET_KEY)
+  : null;
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 

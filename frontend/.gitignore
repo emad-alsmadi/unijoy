@@ -15,3 +15,4 @@
 
 # Production builds
 /.build
+.vercel
