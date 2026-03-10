@@ -27,6 +27,7 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
+import { useDropzone } from 'react-dropzone';
 import {
   Form,
   FormControl,
@@ -100,6 +101,16 @@ export default function EventEditForm({
   });
 
   const { isSubmitting } = form.formState;
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: (acceptedFiles) => {
+      if (acceptedFiles.length > 0) {
+        form.setValue('image', acceptedFiles[0]);
+      }
+    },
+    accept: { 'image/*': [] },
+    multiple: false,
+  });
 
   const onSubmit: SubmitHandler<FormValues> = async (values) => {
     setLoading(true);
@@ -460,7 +471,7 @@ export default function EventEditForm({
                 </div>
                 <div>
                   <FormLabel className='text-slate-700'>Event Image</FormLabel>
-                  <div {...rootProps}>
+                  <div {...getRootProps()}>
                     <motion.div
                       whileHover={{ scale: 1.01 }}
                       className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${
