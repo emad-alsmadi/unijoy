@@ -107,14 +107,14 @@ export default function EventEditForm({
       const image = (values as any).image;
       if (image instanceof File) {
         const fd = new FormData();
-        fd.append('title', values.title);
+        fd.append('title', values.title || '');
         fd.append('description', values.description as any);
-        fd.append('date', (values as any).date?.toISOString());
-        fd.append('startDate', (values as any).startDate?.toISOString());
-        fd.append('endDate', (values as any).endDate?.toISOString());
-        fd.append('location', (values as any).location);
-        fd.append('capacity', String((values as any).capacity));
-        fd.append('time', (values as any).time);
+        fd.append('date', (values as any).date?.toISOString() || '');
+        fd.append('startDate', (values as any).startDate?.toISOString() || '');
+        fd.append('endDate', (values as any).endDate?.toISOString() || '');
+        fd.append('location', (values as any).location || '');
+        fd.append('capacity', String((values as any).capacity || ''));
+        fd.append('time', (values as any).time || '');
         fd.append('category', (values as any).category._id || '');
         fd.append('hall', (values as any).hall._id || '');
         fd.append('price', String((values as any).price ?? 0));
