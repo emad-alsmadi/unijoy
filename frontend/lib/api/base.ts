@@ -1,6 +1,6 @@
 // Unified API base helpers
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+  process.env.NEXT_PUBLIC_API_URL || 'https://unijoy.onrender.com';
 
 export type ApiOptions = RequestInit & {
   token?: string;
@@ -10,7 +10,7 @@ export type ApiOptions = RequestInit & {
 
 export async function apiRequest<T = any>(
   endpoint: string,
-  options: ApiOptions = {}
+  options: ApiOptions = {},
 ): Promise<T> {
   const { token, headers, signal, onError, ...rest } = options;
   const url = `${API_BASE_URL}${endpoint}`;
@@ -61,7 +61,7 @@ export async function apiRequest<T = any>(
 export async function apiMultipart<T = any>(
   endpoint: string,
   formData: FormData,
-  options: ApiOptions = {}
+  options: ApiOptions = {},
 ) {
   // Intentionally do not set Content-Type so browser sets proper boundary
   const { token, headers, signal, ...rest } = options;
@@ -83,7 +83,7 @@ export const get = <T = any>(endpoint: string, options?: ApiOptions) =>
 export const post = <T = any>(
   endpoint: string,
   body?: any,
-  options?: ApiOptions
+  options?: ApiOptions,
 ) =>
   apiRequest<T>(endpoint, {
     ...(options || {}),
@@ -93,7 +93,7 @@ export const post = <T = any>(
 export const put = <T = any>(
   endpoint: string,
   body?: any,
-  options?: ApiOptions
+  options?: ApiOptions,
 ) =>
   apiRequest<T>(endpoint, {
     ...(options || {}),
