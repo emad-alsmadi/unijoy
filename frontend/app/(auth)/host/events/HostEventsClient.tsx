@@ -26,21 +26,25 @@ import { del } from '@/lib/api/base';
 
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
-  { ssr: false }
+  { ssr: false },
 );
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const EventCard = dynamic(() => import('@/components/ui/EventCard'));
 const Pagination = dynamic(() => import('@/components/ui/pagination'));
 const DeleteConfirmationDialog = dynamic(
   () => import('@/components/dialog/DeleteConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeOut' as const },
+  },
   hover: { scale: 1.02, transition: { duration: 0.3 } },
-};
+} as const;
 
 export default function HostEventsClient({
   initialEvents,
@@ -64,7 +68,7 @@ export default function HostEventsClient({
     'all' | 'upcoming' | 'past' | 'pending' | 'approved' | 'rejected'
   >('all');
   const [selectedEvent, setSelectedEvent] = useState<EventCategory | null>(
-    null
+    null,
   );
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [isPrice, setIsPrice] = useState(false);
@@ -108,7 +112,7 @@ export default function HostEventsClient({
         color: '#ef4444',
       },
     ],
-    [events]
+    [events],
   );
 
   const trendData = useMemo(() => {
@@ -120,12 +124,12 @@ export default function HostEventsClient({
       if (isNaN(d.getTime())) return;
       const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(
         2,
-        '0'
+        '0',
       )}`;
       map.set(key, (map.get(key) || 0) + 1);
     });
     const entries = Array.from(map.entries()).sort((a, b) =>
-      a[0] < b[0] ? -1 : 1
+      a[0] < b[0] ? -1 : 1,
     );
     return entries.map(([ym, count]) => {
       const [y, m] = ym.split('-');
@@ -190,7 +194,8 @@ export default function HostEventsClient({
   }, [activeFilter]);
 
   const deleteMutation = useMutation({
-    mutationFn: async (eventId: string) => del<{ message?: string }>(`/host/events/${eventId}`, { token }),
+    mutationFn: async (eventId: string) =>
+      del<{ message?: string }>(`/host/events/${eventId}`, { token }),
     onSuccess: (res) => {
       toast({
         title: 'Event Deleted',

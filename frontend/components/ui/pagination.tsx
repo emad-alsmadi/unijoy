@@ -1,7 +1,12 @@
-﻿
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+﻿import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Pagination = ({ currentPage, totalPages, paginate }:any) => {
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  paginate: (page: number) => void;
+}
+
+const Pagination = ({ currentPage, totalPages, paginate }: PaginationProps) => {
   return (
     <div className='flex justify-center mt-12'>
       <nav className='flex items-center gap-2'>

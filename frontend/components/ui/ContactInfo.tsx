@@ -25,7 +25,7 @@ export default function ContactPage() {
       >
         <h1 className='text-4xl md:text-5xl font-bold mb-2'>Get in Touch</h1>
         <p className='text-lg md:text-xl text-white/80'>
-          We'd love to hear from you!
+          We&apos;d love to hear from you!
         </p>
       </motion.div>
 

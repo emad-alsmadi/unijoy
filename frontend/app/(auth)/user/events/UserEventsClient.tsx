@@ -32,11 +32,11 @@ const Pagination = dynamic(() => import('@/components/ui/pagination'), {
 });
 const RegisterConfirmationDialog = dynamic(
   () => import('@/components/dialog/RegisterConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const UnregisterConfirmationDialog = dynamic(
   () => import('@/components/dialog/UnregisterConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const Loading = dynamic(
@@ -44,7 +44,7 @@ const Loading = dynamic(
   {
     ssr: false,
     loading: () => <div className='min-h-[40vh]' />,
-  }
+  },
 );
 
 export default function UserEventsClient({
@@ -66,12 +66,12 @@ export default function UserEventsClient({
   const { token } = useAuth();
   const [events, setEvents] = useState<EventCategory[]>(initialEvents || []);
   const [activeFilter, setActiveFilter] = useState<'all' | 'upcoming' | 'past'>(
-    'all'
+    'all',
   );
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedQuery] = useDebounce(searchQuery, 300);
   const [selectedEvent, setSelectedEvent] = useState<EventCategory | null>(
-    null
+    null,
   );
   const [isPrice, setIsPrice] = useState(false);
   const [isFree, setIsFree] = useState(false);
@@ -129,7 +129,7 @@ export default function UserEventsClient({
           isRegistered:
             typeof window !== 'undefined' &&
             localStorage.getItem(`registered_${event._id}`) === 'true',
-        }))
+        })),
       );
       setTotalPages(data.totalPages || 0);
       setTotalItems(data.totalItems || 0);
@@ -150,7 +150,7 @@ export default function UserEventsClient({
       post<{ message?: string; url?: string }>(
         `/users/me/events/${eventId}/register`,
         {},
-        { token }
+        { token },
       ),
     onSuccess: (data, eventId) => {
       toast({
@@ -160,7 +160,7 @@ export default function UserEventsClient({
       });
       localStorage.setItem(`registered_${eventId}`, 'true');
       setEvents((prev) =>
-        prev.map((e) => (e._id === eventId ? { ...e, isRegistered: true } : e))
+        prev.map((e) => (e._id === eventId ? { ...e, isRegistered: true } : e)),
       );
       const price = events.find((e) => e._id === eventId)?.price;
       if (data.url && data.url.length && price !== 0) {
@@ -181,10 +181,9 @@ export default function UserEventsClient({
 
   const unregisterMutation = useMutation({
     mutationFn: async (eventId: string) =>
-      del<{ message?: string }>(
-        `/users/me/events/${eventId}/unregister`,
-        { token }
-      ),
+      del<{ message?: string }>(`/users/me/events/${eventId}/unregister`, {
+        token,
+      }),
     onSuccess: (data, eventId) => {
       toast({
         title: 'Unregistration successful',
@@ -193,7 +192,9 @@ export default function UserEventsClient({
       });
       localStorage.removeItem(`registered_${eventId}`);
       setEvents((prev) =>
-        prev.map((e) => (e._id === eventId ? { ...e, isRegistered: false } : e))
+        prev.map((e) =>
+          e._id === eventId ? { ...e, isRegistered: false } : e,
+        ),
       );
       setIsUnregisterModalOpen(false);
       setSelectedEvent(null);
@@ -372,7 +373,6 @@ export default function UserEventsClient({
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
-          totalItems={totalItems}
           paginate={paginate}
         />
       )}

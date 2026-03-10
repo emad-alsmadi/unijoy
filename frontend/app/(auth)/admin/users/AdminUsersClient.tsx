@@ -75,7 +75,7 @@ const SignupTrendChart = dynamic(
     loading: () => (
       <div className='h-56 rounded-2xl bg-gray-200/50 animate-pulse' />
     ),
-  }
+  },
 );
 const Pagination = dynamic(() => import('@/components/ui/pagination'), {
   ssr: false,
@@ -85,22 +85,22 @@ const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
-  { ssr: false, loading: () => <div className='min-h-[30vh]' /> }
+  { ssr: false, loading: () => <div className='min-h-[30vh]' /> },
 );
 const Stats = dynamic(
   () => import('@/components/ui/Stats').then((m) => m.Stats),
-  { ssr: false }
+  { ssr: false },
 );
 const DeleteConfirmationDialog = dynamic(
   () => import('@/components/dialog/DeleteConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const StatusConfirmationDialog = dynamic(
   () =>
     import('@/components/ui/StatusConfirmationDialog').then(
-      (m) => m.StatusConfirmationDialog
+      (m) => m.StatusConfirmationDialog,
     ),
-  { ssr: false }
+  { ssr: false },
 );
 
 const userSchema = z.object({
@@ -123,16 +123,16 @@ export default function AdminUsersClient({
   const { token } = useAuth();
   const [users, setUsers] = useState<User[]>(initialUsers || []);
   const [filteredUsers, setFilteredUsers] = useState<User[]>(
-    initialUsers || []
+    initialUsers || [],
   );
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isStatusDialogOpen, setIsStatusDialogOpen] = useState(false);
   const [selectedStatusUser, setSelectedStatusUser] = useState<User | null>(
-    null
+    null,
   );
   const [nextStatus, setNextStatus] = useState<'approved' | 'rejected'>(
-    'approved'
+    'approved',
   );
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedQuery] = useDebounce(searchQuery, 300);
@@ -189,7 +189,7 @@ export default function AdminUsersClient({
   const totalHosts = users.filter((u) => u.role === 'host').length;
   const totalRegular = users.filter((u) => u.role === 'user').length;
   const rejectedHosts = users.filter(
-    (u) => u.role === 'host' && u.hostStatus === 'rejected'
+    (u) => u.role === 'host' && u.hostStatus === 'rejected',
   ).length;
   const activeUsers = totalUsers - rejectedHosts;
   const inactiveUsers = rejectedHosts;
@@ -203,7 +203,7 @@ export default function AdminUsersClient({
     label: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'][i] || `M${i + 1}`,
     value: Math.max(
       1,
-      Math.round((totalUsers || 10) * (0.5 + Math.sin((i + 1) * 0.8) * 0.3))
+      Math.round((totalUsers || 10) * (0.5 + Math.sin((i + 1) * 0.8) * 0.3)),
     ),
   }));
 
@@ -213,7 +213,7 @@ export default function AdminUsersClient({
       result = result.filter(
         (user) =>
           user.name.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-          user.email.toLowerCase().includes(debouncedQuery.toLowerCase())
+          user.email.toLowerCase().includes(debouncedQuery.toLowerCase()),
       );
     }
     if (roleFilter !== 'all')
@@ -254,11 +254,14 @@ export default function AdminUsersClient({
       userId: string;
       hostStatus: 'approved' | 'rejected' | 'pending';
     }) =>
-      apiRequest<{ message: string; user: User }>(`/admin/hosts/${userId}/status`, {
-        method: 'PATCH',
-        body: JSON.stringify({ hostStatus }),
-        token,
-      }),
+      apiRequest<{ message: string; user: User }>(
+        `/admin/hosts/${userId}/status`,
+        {
+          method: 'PATCH',
+          body: JSON.stringify({ hostStatus }),
+          token,
+        },
+      ),
     onSuccess: (resp) => {
       toast({
         title: 'Status Updated',
@@ -266,7 +269,7 @@ export default function AdminUsersClient({
         className: 'bg-blue-600 text-white border-0',
       });
       setUsers((prev) =>
-        prev.map((u) => (u._id === resp.user._id ? (resp.user as any) : u))
+        prev.map((u) => (u._id === resp.user._id ? (resp.user as any) : u)),
       );
       queryClient.invalidateQueries({ queryKey: ['admin-users'] });
     },
@@ -280,7 +283,7 @@ export default function AdminUsersClient({
   });
   const handleToggleStatus = (
     user: User,
-    newStatus: 'approved' | 'rejected' | 'pending'
+    newStatus: 'approved' | 'rejected' | 'pending',
   ) => {
     statusMutation.mutate({
       userId: user._id as string,
@@ -289,7 +292,8 @@ export default function AdminUsersClient({
   };
 
   const deleteMutation = useMutation({
-    mutationFn: async (userId: string) => del<{ message: string }>(`/admin/users/${userId}`, { token }),
+    mutationFn: async (userId: string) =>
+      del<{ message: string }>(`/admin/users/${userId}`, { token }),
     onSuccess: (resp, userId) => {
       toast({
         title: 'User Deleted',
@@ -328,13 +332,13 @@ export default function AdminUsersClient({
   const hostCount = users.filter((e) => e.role === 'host').length;
   const userCount = users.filter((e) => e.role === 'user').length;
   const pendingHostCount = users.filter(
-    (e) => e.hostStatus === 'pending'
+    (e) => e.hostStatus === 'pending',
   ).length;
   const aproveHostCount = users.filter(
-    (e) => e.hostStatus === 'aproved'
+    (e) => e.hostStatus === 'aproved',
   ).length;
   const rejectedHostCount = users.filter(
-    (e) => e.hostStatus === 'rejected'
+    (e) => e.hostStatus === 'rejected',
   ).length;
   const kpis = useMemo(() => {
     const total = users.length;
@@ -580,10 +584,10 @@ export default function AdminUsersClient({
                                 user.hostStatus === 'pending'
                                   ? 'default'
                                   : user.hostStatus === 'approved'
-                                  ? 'success'
-                                  : user.hostStatus === 'rejected'
-                                  ? 'destructive'
-                                  : 'secondary'
+                                    ? 'success'
+                                    : user.hostStatus === 'rejected'
+                                      ? 'destructive'
+                                      : 'secondary'
                               }
                               className='capitalize px-2.5 py-0.5 rounded-full text-xs'
                             >
@@ -724,7 +728,6 @@ export default function AdminUsersClient({
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
-            totalItems={totalItems}
             paginate={(p: number) => setCurrentPage(p)}
           />
         )}

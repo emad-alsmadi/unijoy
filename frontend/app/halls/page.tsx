@@ -10,7 +10,13 @@ const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const HallCard = dynamic(() => import('@/components/ui/HallCard'));
 import { get } from '@/lib/api/base';
 const Pagination = dynamic(() => import('@/components/ui/pagination'));
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { toast } from '@/hooks/use-toast';
 import { useQuery } from '@tanstack/react-query';
 
@@ -21,21 +27,25 @@ const HallsPage = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
   const [hallsPerPage] = useState(3); // عدد الأحداث في كل صفحة
-  const [statusFilter, setStatusFilter] = useState<'all' | 'available' | 'reserved'>('all');
-  const [capacityFilter, setCapacityFilter] = useState<'all' | 'lt100' | '100to300' | 'gt300'>('all');
+  const [statusFilter, setStatusFilter] = useState<
+    'all' | 'available' | 'reserved'
+  >('all');
+  const [capacityFilter, setCapacityFilter] = useState<
+    'all' | 'lt100' | '100to300' | 'gt300'
+  >('all');
 
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['halls', currentPage, hallsPerPage],
     queryFn: () =>
       get<{ halls: HallType[]; totalItems: number; totalPages: number }>(
-        `/halls?page=${currentPage}&perPage=${hallsPerPage}`
+        `/halls?page=${currentPage}&perPage=${hallsPerPage}`,
       ),
     staleTime: 30_000,
     refetchOnWindowFocus: false,
   });
 
   const halls = data?.halls || [];
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber); // change page 
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber); // change page
 
   useEffect(() => {
     setCurrentPage(1);
@@ -53,15 +63,19 @@ const HallsPage = () => {
     const byQuery = (halls || []).filter(
       (hall) =>
         hall.name.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-        hall.location.toLowerCase().includes(debouncedQuery.toLowerCase())
+        hall.location.toLowerCase().includes(debouncedQuery.toLowerCase()),
     );
 
-    const byStatus = statusFilter === 'all' ? byQuery : byQuery.filter((h) => (h.status || 'available') === statusFilter);
+    const byStatus =
+      statusFilter === 'all'
+        ? byQuery
+        : byQuery.filter((h) => (h.status || 'available') === statusFilter);
 
     const byCapacity = byStatus.filter((h) => {
       if (capacityFilter === 'all') return true;
       if (capacityFilter === 'lt100') return (h.capacity || 0) < 100;
-      if (capacityFilter === '100to300') return (h.capacity || 0) >= 100 && (h.capacity || 0) <= 300;
+      if (capacityFilter === '100to300')
+        return (h.capacity || 0) >= 100 && (h.capacity || 0) <= 300;
       if (capacityFilter === 'gt300') return (h.capacity || 0) > 300;
       return true;
     });
@@ -76,7 +90,9 @@ const HallsPage = () => {
           <div className='animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500'></div>
         </div>
       ) : isError ? (
-        <div className='p-6'><NotFound message={(error as Error)?.message || 'Error'} /></div>
+        <div className='p-6'>
+          <NotFound message={(error as Error)?.message || 'Error'} />
+        </div>
       ) : (
         <div className='p-6 space-y-6 bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen'>
           {/* Filters */}
@@ -88,7 +104,10 @@ const HallsPage = () => {
               setCurrentPage={() => setCurrentPage(1)}
             />
             <div className='flex gap-3'>
-              <Select value={statusFilter} onValueChange={(v) => setStatusFilter(v as any)}>
+              <Select
+                value={statusFilter}
+                onValueChange={(v) => setStatusFilter(v as any)}
+              >
                 <SelectTrigger className='w-full md:w-[180px] bg-white/60 backdrop-blur border-purple-200'>
                   <SelectValue placeholder='Status' />
                 </SelectTrigger>
@@ -99,7 +118,10 @@ const HallsPage = () => {
                 </SelectContent>
               </Select>
 
-              <Select value={capacityFilter} onValueChange={(v) => setCapacityFilter(v as any)}>
+              <Select
+                value={capacityFilter}
+                onValueChange={(v) => setCapacityFilter(v as any)}
+              >
                 <SelectTrigger className='w-full md:w-[200px] bg-white/60 backdrop-blur border-purple-200'>
                   <SelectValue placeholder='Capacity' />
                 </SelectTrigger>
@@ -115,16 +137,22 @@ const HallsPage = () => {
           {currentHall?.length > 0 ? (
             <>
               {/* Cards (reduced animation to avoid layout thrash) */}
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6'>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6'
+              >
                 {currentHall?.map((hall, index) => (
-                  <HallCard key={hall._id || index} hall={hall} />
+                  <HallCard
+                    key={hall._id || index}
+                    hall={hall}
+                  />
                 ))}
               </motion.div>
               {/* Pagination Controls */}
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                totalItems={totalItems}
                 paginate={paginate}
               />
             </>

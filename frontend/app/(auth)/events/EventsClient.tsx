@@ -33,24 +33,24 @@ const Pagination = dynamic(() => import('@/components/ui/pagination'), {
 });
 const RegisterConfirmationDialog = dynamic(
   () => import('@/components/dialog/RegisterConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const UnregisterConfirmationDialog = dynamic(
   () => import('@/components/dialog/UnregisterConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const FloatingBlobs = dynamic(
   () => import('@/constants/FloatingBlobs').then((m) => m.FloatingBlobs),
   {
     ssr: false,
-  }
+  },
 );
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
   {
     ssr: false,
     loading: () => <div className='min-h-[50vh]' />,
-  }
+  },
 );
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
@@ -69,12 +69,12 @@ export default function EventsClient({
   perPage: number;
 }) {
   const { toast } = useToast();
-  const { token , userRole} = useAuth();
+  const { token, userRole } = useAuth();
   const queryClient = useQueryClient();
 
   const [events, setEvents] = useState<EventCategory[]>(initialEvents || []);
   const [activeFilter, setActiveFilter] = useState<'all' | 'upcoming' | 'past'>(
-    'all'
+    'all',
   );
   const [isPrice, setIsPrice] = useState(false);
   const [isFree, setIsFree] = useState(false);
@@ -82,7 +82,7 @@ export default function EventsClient({
   const [debouncedQuery] = useDebounce(searchQuery, 300);
 
   const [selectedEvent, setSelectedEvent] = useState<EventCategory | null>(
-    null
+    null,
   );
   const [isUnregisterModalOpen, setIsUnregisterModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -153,7 +153,7 @@ export default function EventsClient({
       post<{ message?: string; url?: string }>(
         `/users/me/events/${eventId}/register`,
         {},
-        { token }
+        { token },
       ),
     onSuccess: (data, eventId) => {
       toast({
@@ -163,7 +163,7 @@ export default function EventsClient({
       });
       localStorage.setItem(`registered_${eventId}`, 'true');
       setEvents((prev) =>
-        prev.map((e) => (e._id === eventId ? { ...e, isRegistered: true } : e))
+        prev.map((e) => (e._id === eventId ? { ...e, isRegistered: true } : e)),
       );
       if (
         data.url &&
@@ -198,7 +198,9 @@ export default function EventsClient({
       });
       localStorage.removeItem(`registered_${eventId}`);
       setEvents((prev) =>
-        prev.map((e) => (e._id === eventId ? { ...e, isRegistered: false } : e))
+        prev.map((e) =>
+          e._id === eventId ? { ...e, isRegistered: false } : e,
+        ),
       );
       setIsUnregisterModalOpen(false);
       setSelectedEvent(null);
@@ -473,7 +475,6 @@ export default function EventsClient({
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
-          totalItems={totalItems}
           paginate={paginate}
         />
       )}

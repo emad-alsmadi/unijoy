@@ -1,6 +1,6 @@
 'use client';
 import { useCallback, useState } from 'react';
-import { useDropzone } from 'react-dropzone';
+import { useDropzone, FileRejection } from 'react-dropzone';
 import { Image as ImageIcon, Upload, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -40,14 +40,22 @@ export function ImageUploadComponent({
   }, [value]);
 
   const onDrop = useCallback(
-    (acceptedFiles: File[], fileRejections: any[]) => {
+    (acceptedFiles: File[], fileRejections: FileRejection[]) => {
       setError(null);
-      
+
       if (fileRejections.length > 0) {
         const rejection = fileRejections[0];
-        if (rejection.errors.some((e: any) => e.code === 'file-too-large')) {
+        if (
+          rejection.errors.some(
+            (e: { code: string }) => e.code === 'file-too-large',
+          )
+        ) {
           setError('File size must be less than 10MB');
-        } else if (rejection.errors.some((e: any) => e.code === 'file-invalid-type')) {
+        } else if (
+          rejection.errors.some(
+            (e: { code: string }) => e.code === 'file-invalid-type',
+          )
+        ) {
           setError('Only PNG, JPG, and JPEG files are allowed');
         } else {
           setError('Invalid file');
@@ -60,15 +68,18 @@ export function ImageUploadComponent({
         onChange(file);
       }
     },
-    [onChange]
+    [onChange],
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: accept.reduce((acc, type) => {
-      acc[type] = ['.' + type.split('/')[1]];
-      return acc;
-    }, {} as Record<string, string[]>),
+    accept: accept.reduce(
+      (acc, type) => {
+        acc[type] = ['.' + type.split('/')[1]];
+        return acc;
+      },
+      {} as Record<string, string[]>,
+    ),
     maxFiles: 1,
     maxSize,
     disabled,
@@ -114,7 +125,7 @@ export function ImageUploadComponent({
             isDragActive
               ? 'border-blue-500 bg-blue-50'
               : 'border-slate-300 hover:border-slate-400',
-            disabled && 'opacity-50 cursor-not-allowed'
+            disabled && 'opacity-50 cursor-not-allowed',
           )}
         >
           <input {...getInputProps()} />
@@ -122,9 +133,7 @@ export function ImageUploadComponent({
             {isDragActive ? (
               <>
                 <Upload className='h-8 w-8 text-blue-500' />
-                <p className='text-sm text-blue-600'>
-                  Drop the image here...
-                </p>
+                <p className='text-sm text-blue-600'>Drop the image here...</p>
               </>
             ) : (
               <>
@@ -140,12 +149,8 @@ export function ImageUploadComponent({
           </div>
         </div>
       )}
-      
-      {error && (
-        <div className='mt-2 text-sm text-red-600'>
-          {error}
-        </div>
-      )}
+
+      {error && <div className='mt-2 text-sm text-red-600'>{error}</div>}
     </div>
   );
 }

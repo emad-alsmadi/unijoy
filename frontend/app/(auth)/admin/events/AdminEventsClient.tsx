@@ -47,22 +47,22 @@ const Pagination = dynamic(() => import('@/components/ui/pagination'), {
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
 const DeleteConfirmationDialog = dynamic(
   () => import('@/components/dialog/DeleteConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const EventStatusDialog = dynamic(
   () => import('@/components/dialog/EventStatusDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const CalendarComp = dynamic(
   () => import('@/components/ui/calendar').then((m) => m.Calendar),
-  { ssr: false }
+  { ssr: false },
 );
 const RoleChart = dynamic(() => import('@/components/admin/users/RoleChart'), {
   ssr: false,
 });
 const SignupTrendChart = dynamic(
   () => import('@/components/admin/users/SignupTrendChart'),
-  { ssr: false }
+  { ssr: false },
 );
 const { Tabs, TabsList, TabsTrigger } = await import('@/components/ui/tabs');
 import { StatCard } from '@/components/ui/StatCard';
@@ -101,10 +101,10 @@ export default function AdminEventsClient({
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [isStatusDialogOpen, setIsStatusDialogOpen] = useState(false);
   const [statusAction, setStatusAction] = useState<'approve' | 'reject' | null>(
-    null
+    null,
   );
   const [selectedEvent, setSelectedEvent] = useState<EventCategory | null>(
-    null
+    null,
   );
 
   const [currentPage, setCurrentPage] = useState(initialPage || 1);
@@ -225,12 +225,12 @@ export default function AdminEventsClient({
       if (isNaN(d.getTime())) return;
       const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(
         2,
-        '0'
+        '0',
       )}`;
       map.set(key, (map.get(key) || 0) + 1);
     });
     const entries = Array.from(map.entries()).sort((a, b) =>
-      a[0] < b[0] ? -1 : 1
+      a[0] < b[0] ? -1 : 1,
     );
     return entries.map(([ym, count]) => {
       const [y, m] = ym.split('-');
@@ -482,7 +482,6 @@ export default function AdminEventsClient({
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
-          totalItems={totalItems}
           paginate={(p: number) => setCurrentPage(p)}
         />
       )}
@@ -502,7 +501,7 @@ export default function AdminEventsClient({
         action={statusAction}
         onSuccess={(updatedEvent) => {
           setEvents((prev) =>
-            prev.map((e) => (e._id === updatedEvent._id ? updatedEvent : e))
+            prev.map((e) => (e._id === updatedEvent._id ? updatedEvent : e)),
           );
           setIsStatusDialogOpen(false);
           setSelectedEvent(null);
