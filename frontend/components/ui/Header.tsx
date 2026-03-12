@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
 const HeaderMenu = dynamic(() =>
-  import('@/components/home/HeaderMenu').then((m) => m.default)
+  import('@/components/home/HeaderMenu').then((m) => m.default),
 );
 const MobileMenu = dynamic(() =>
-  import('@/components/home/MobileMenu').then((m) => m.default)
+  import('@/components/home/MobileMenu').then((m) => m.default),
 );
 import srcImage from '@/public/images/logo.jpg';
 import { Search } from 'lucide-react';
@@ -15,18 +16,23 @@ const ProfileDropdown = dynamic(
   () => import('./ProfileDropdown').then((m) => m.ProfileDropdown),
   {
     ssr: false,
-  }
+  },
 );
 import { useAuth } from '@/context/AuthContext';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const Header = () => {
   const { token, userRole, detailsProfile } = useAuth();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const pathname = usePathname();
   const hiddeHeaderPaths = ['/admin', '/host'];
   const shouldhideHeader = hiddeHeaderPaths.some((path) =>
-    pathname.startsWith(path)
+    pathname.startsWith(path),
   );
 
   return (
@@ -37,7 +43,7 @@ const Header = () => {
             <div className='flex items-center gap-2 text-white/80'>
               <Search className='w-5 h-5' />
             </div>
-            {!token && (
+            {mounted && !token && (
               <Link
                 href='/auth/login'
                 className='hidden md:block px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200'
@@ -45,7 +51,7 @@ const Header = () => {
                 Login
               </Link>
             )}
-            {userRole && (
+            {mounted && userRole && (
               <Link
                 href={`/${userRole}/events`}
                 className='p-3 text-base font-sans font-semibold  text-white/80 hover:text-white transition-colors'
@@ -94,12 +100,12 @@ const Header = () => {
               <div className='block md:hidden mr-4'>
                 <MobileMenu />
               </div>
-              {token ? (
+              {mounted && token ? (
                 <ProfileDropdown
                   user={{ name: detailsProfile?.name }}
                   userRole={`${userRole}`}
                 />
-              ) : (
+              ) : mounted ? (
                 <>
                   <Link
                     href='/auth/login'
@@ -114,7 +120,7 @@ const Header = () => {
                     Register User
                   </Link>
                 </>
-              )}
+              ) : null}
             </div>
           </div>
         </header>
