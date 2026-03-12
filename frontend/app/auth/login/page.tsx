@@ -37,7 +37,6 @@ const Login = () => {
     },
   });
   const onSubmit = async (values: z.infer<typeof loginFormSchema>) => {
-    console.log('password', values.password);
     try {
       await apiLogin(values, {
         token,

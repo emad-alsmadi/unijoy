@@ -7,7 +7,8 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "start-server": "node app.js",
-    "build": "echo 'No build step required for Node.js'"
+    "build": "echo 'No build step required for Node.js'",
+    "create-admin": "node scripts/create-admin.js"
   },
   "author": "",
   "license": "ISC",

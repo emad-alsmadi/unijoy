@@ -3,13 +3,31 @@ import type { NextConfig } from 'next';
 import { EventEmitter } from 'events';
 EventEmitter.defaultMaxListeners = 20;
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-const apiHost = apiUrl ? new URL(apiUrl).hostname : 'localhost';
-const apiProtocol = apiUrl
-  ? (new URL(apiUrl).protocol.replace(':', '') as 'http' | 'https')
+const backendOrigin =
+  process.env.BACKEND_ORIGIN || process.env.NEXT_PUBLIC_API_URL || '';
+
+const isProd = process.env.NODE_ENV === 'production';
+
+const apiOrigin = backendOrigin
+  ? backendOrigin
+  : isProd
+    ? ''
+    : `http://localhost:${process.env.NEXT_PUBLIC_API_PORT || '8080'}`;
+
+if (isProd && !apiOrigin) {
+  // In production (e.g. Vercel), proxying to localhost/private hosts will fail.
+  // Ensure BACKEND_ORIGIN is set to a publicly reachable backend base URL.
+  // eslint-disable-next-line no-console
+  console.warn(
+    'Missing BACKEND_ORIGIN (or NEXT_PUBLIC_API_URL). Production rewrites to the backend will not work without it.',
+  );
+}
+
+const apiHost = apiOrigin ? new URL(apiOrigin).hostname : 'localhost';
+const apiProtocol = apiOrigin
+  ? (new URL(apiOrigin).protocol.replace(':', '') as 'http' | 'https')
   : 'http';
-const apiPort = apiUrl ? new URL(apiUrl).port || '' : '8080';
-const apiOrigin = apiUrl || `http://localhost:${apiPort}`;
+const apiPort = apiOrigin ? new URL(apiOrigin).port || '' : '8080';
 
 const nextConfig: NextConfig = {
   images: {
@@ -32,6 +50,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'date-fns'],
   },
   async rewrites() {
+    if (!apiOrigin) return [];
     return [
       {
         source: '/api/backend/:path*',
