@@ -9,6 +9,7 @@ const apiProtocol = apiUrl
   ? (new URL(apiUrl).protocol.replace(':', '') as 'http' | 'https')
   : 'http';
 const apiPort = apiUrl ? new URL(apiUrl).port || '' : '8080';
+const apiOrigin = apiUrl || `http://localhost:${apiPort}`;
 
 const nextConfig: NextConfig = {
   images: {
@@ -29,6 +30,14 @@ const nextConfig: NextConfig = {
   compress: true,
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'date-fns'],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/backend/:path*',
+        destination: `${apiOrigin}/:path*`,
+      },
+    ];
   },
   async headers() {
     if (process.env.NODE_ENV === 'production') {

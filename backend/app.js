@@ -57,23 +57,26 @@ const fileFilter = (req, file, cb) => {
 // CORS: place before any body parsers so headers are included even on parser errors
 app.use((req, res, next) => {
   const frontendOrigin =
-    process.env.FRONTEND_ORIGIN || process.env.FRONTEND_BASE_URL || '';
+    process.env.FRONTEND_ORIGIN ||
+    process.env.FRONTEND_BASE_URL ||
+    'http://localhost:3000';
 
-  if (frontendOrigin) {
-    res.setHeader('Access-Control-Allow-Origin', frontendOrigin);
-    res.setHeader('Vary', 'Origin');
-  } else {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-  }
-
+  // Set CORS headers for all responses
+  res.setHeader('Access-Control-Allow-Origin', frontendOrigin);
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Vary', 'Origin');
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, PATCH, DELETE, OPTIONS'
   );
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'Content-Type, Authorization, X-Requested-With'
+  );
 
+  // Handle preflight requests
   if (req.method === 'OPTIONS') {
-    return res.sendStatus(204);
+    return res.status(204).end();
   }
   next();
 });

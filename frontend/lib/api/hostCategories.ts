@@ -5,13 +5,14 @@ export const fetchCategories = async (
   toast?: any,
   currentPage = 1,
   categoriesPerPage = 3,
-  paginate?: boolean
+  paginate?: boolean,
+  token?: string,
 ) => {
   const urlWithPagentaion = `/host-categories?page=${currentPage}&perPage=${categoriesPerPage}`;
   const url = `/host-categories`;
   try {
     setLoading(true);
-    const data = await get<any>(paginate ? urlWithPagentaion : url);
+    const data = await get<any>(paginate ? urlWithPagentaion : url, { token });
     return {
       categories: data.categories || [],
       totalItems: data.totalItems || 0,

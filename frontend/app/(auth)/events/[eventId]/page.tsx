@@ -10,7 +10,8 @@ export default async function EventDetailsPage({
   const { eventId } = await params;
   let initialEvent: any = null;
   try {
-    const cookieHeader = (headers() as unknown as any)?.get?.('cookie') || '';
+    const headersList = await headers();
+    const cookieHeader = headersList.get('cookie') || '';
     const token = cookieHeader
       .split(';')
       .map((c: string) => c.trim())

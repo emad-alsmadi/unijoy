@@ -4,25 +4,21 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import EventCard from './EventCard';
-
 import { EventCategory } from '@/types';
-import {
-  Building,
-  Calendar1,
-  MapPin,
-  Rocket,
-  Type,
-  University,
-  User,
-} from 'lucide-react';
+import { Building, Calendar, MapPin, Users, Plus, X } from 'lucide-react';
+import { get } from '@/lib/api/base';
 import { Button } from './button';
 import { useAuth } from '@/context/AuthContext';
 import RegisterConfirmationDialog from '@/components/dialog/RegisterConfirmationDialog';
 import UnregisterConfirmationDialog from '@/components/dialog/UnregisterConfirmationDialog';
 import { API_BASE_URL } from '@/lib/api/base';
 
-const UpcomingEvents = () => {
-  const [events, setEvents] = useState<EventCategory[]>([]);
+const UpcomingEvents = ({
+  initialEvents,
+}: {
+  initialEvents?: EventCategory[];
+}) => {
+  const [events, setEvents] = useState<EventCategory[]>(initialEvents || []);
 
   const { userRole } = useAuth();
   const { token } = useAuth();
@@ -37,14 +33,8 @@ const UpcomingEvents = () => {
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/events`, {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      });
-      const data = await res.json();
+      const response = await get('/events', { token });
+      const data = response as any;
       // تحديث isRegistered من localStorage
       const updatedEvents = data.events.map((event: EventCategory) => ({
         ...event,
@@ -66,8 +56,10 @@ const UpcomingEvents = () => {
   };
 
   useEffect(() => {
-    fetchEvents();
-  }, []);
+    if (!initialEvents || initialEvents.length === 0) {
+      fetchEvents();
+    }
+  }, [token]);
   const RegisterUser = async () => {
     if (!selectedEvent) return;
     try {

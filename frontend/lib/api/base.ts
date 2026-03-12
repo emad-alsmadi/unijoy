@@ -1,9 +1,14 @@
 // Unified API base helpers
-export const API_BASE_URL =
+const REAL_BACKEND_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ||
   (process.env.NODE_ENV === 'development'
     ? 'http://localhost:8080'
     : 'https://unijoy.onrender.com');
+
+// In the browser, go through Next.js rewrites (same-origin) to avoid CORS.
+// On the server, call the backend directly.
+export const API_BASE_URL =
+  typeof window === 'undefined' ? REAL_BACKEND_BASE_URL : '/api/backend';
 
 export type ApiOptions = RequestInit & {
   token?: string;
@@ -42,7 +47,13 @@ export async function apiRequest<T = any>(
     if (!res.ok) {
       let message = res.statusText;
       try {
-        message = await res.text();
+        const text = await res.text();
+        // Handle HTML error pages
+        if (text.includes('<!DOCTYPE html>')) {
+          message = `Server error: ${res.status} ${res.statusText}`;
+        } else {
+          message = text;
+        }
       } catch {}
       const err = new Error(message || 'Request failed');
       onError?.(err);
