@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export const adminSidbarItems = [
-  { href: '/', icon: Home, label: 'Home' },
+  { href: '/admin/events', icon: Home, label: 'Home' },
   { href: '/admin/events', icon: CalendarCheck, label: 'Events' },
   {
     href: '/admin/categories',
