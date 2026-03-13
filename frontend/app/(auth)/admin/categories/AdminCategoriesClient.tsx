@@ -14,6 +14,7 @@ import { useAuth } from '@/context/AuthContext';
 import { HostCategory } from '@/types';
 import NotFound from '@/components/ui/NotFound';
 import { get, post, del } from '@/lib/api/base';
+import ErrorState from '@/components/ui/ErrorState';
 import {
   useMutation,
   useQuery,
@@ -28,7 +29,7 @@ const Pagination = dynamic(() => import('@/components/ui/pagination'), {
 });
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
-  { ssr: false, loading: () => <div className='min-h-[30vh]' /> }
+  { ssr: false, loading: () => <div className='min-h-[30vh]' /> },
 );
 const CategorieCard = dynamic(() => import('@/components/ui/CategorieCard'), {
   ssr: false,
@@ -39,17 +40,17 @@ const CategorieCard = dynamic(() => import('@/components/ui/CategorieCard'), {
 const AddCategoryDialog = dynamic(
   () =>
     import('@/components/dialog/AddCategoryDialog').then(
-      (m) => m.AddCategoryDialog
+      (m) => m.AddCategoryDialog,
     ),
-  { ssr: false }
+  { ssr: false },
 );
 const EditCategoryDialog = dynamic(
   () => import('@/components/dialog/EditCategoryDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const DeleteConfirmationDialog = dynamic(
   () => import('@/components/dialog/DeleteConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 
 export default function AdminCategoriesClient({
@@ -71,7 +72,7 @@ export default function AdminCategoriesClient({
   const { token } = useAuth();
   const queryClient = useQueryClient();
   const [selectedCategory, setSelectedCategory] = useState<HostCategory | null>(
-    null
+    null,
   );
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
@@ -85,7 +86,7 @@ export default function AdminCategoriesClient({
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState(initialPage || 1);
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['admin-categories', currentPage, categoriesPerPage],
     queryFn: () =>
       get<{
@@ -124,7 +125,7 @@ export default function AdminCategoriesClient({
       temp = temp.filter(
         (c) =>
           c.name.toLowerCase().includes(q) ||
-          c.description.toLowerCase().includes(q)
+          c.description.toLowerCase().includes(q),
       );
     }
     return temp;
@@ -160,7 +161,7 @@ export default function AdminCategoriesClient({
       post<{ category: HostCategory; message?: string }>(
         `/host-categories`,
         payload,
-        { token }
+        { token },
       ),
     onSuccess: (res) => {
       toast({
@@ -199,7 +200,15 @@ export default function AdminCategoriesClient({
 
   if (isLoading && (initialCategories || []).length === 0) return <Loading />;
   if (isError)
-    return <NotFound message={(error as Error)?.message || 'Error'} />;
+    return (
+      <div className='p-6'>
+        <ErrorState
+          title='Could not load categories'
+          error={error}
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
 
   return (
     <div className='p-6 space-y-6'>

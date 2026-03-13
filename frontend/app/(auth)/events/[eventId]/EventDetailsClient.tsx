@@ -8,19 +8,30 @@ import { EventCategory } from '@/types';
 import NotFound from '@/components/ui/NotFound';
 import { Loading } from '@/components/ui/Loading';
 import { useToast } from '@/hooks/use-toast';
+import ErrorState from '@/components/ui/ErrorState';
 
-export default function EventDetailsClient({ initialEvent, eventId }: { initialEvent: EventCategory | null; eventId: string; }) {
+export default function EventDetailsClient({
+  initialEvent,
+  eventId,
+}: {
+  initialEvent: EventCategory | null;
+  eventId: string;
+}) {
   const { token, userRole } = useAuth();
   const [event, setEvent] = useState<EventCategory | null>(initialEvent);
   const { toast } = useToast();
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['event', 'public', eventId],
     queryFn: async () => {
       const res = await get<{ event: EventCategory }>(`/events/${eventId}`, {
         token,
         onError: (err) =>
-          toast({ title: 'Error', description: err.message, variant: 'destructive' }),
+          toast({
+            title: 'Error',
+            description: err.message,
+            variant: 'destructive',
+          }),
       });
       return res.event;
     },
@@ -33,7 +44,23 @@ export default function EventDetailsClient({ initialEvent, eventId }: { initialE
   if (!event && data) setEvent(data);
 
   if (isLoading && !event) return <Loading />;
-  if (isError) return <NotFound message={(error as Error)?.message || 'Error'} />;
+  if (isError)
+    return (
+      <div className='p-6'>
+        <ErrorState
+          title='Could not load event details'
+          error={error}
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
 
-  return event ? <EventDetails event={event} userRole={userRole} /> : <NotFound message='Event not found' />;
+  return event ? (
+    <EventDetails
+      event={event}
+      userRole={userRole}
+    />
+  ) : (
+    <NotFound message='Event not found' />
+  );
 }

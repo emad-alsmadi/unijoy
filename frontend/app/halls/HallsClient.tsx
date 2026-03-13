@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/select';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import { useAuth } from '@/context/AuthContext';
+import ErrorState from '@/components/ui/ErrorState';
 
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
@@ -51,7 +52,7 @@ export default function HallsClient({
     'all' | 'lt100' | '100to300' | 'gt300'
   >('all');
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['halls', currentPage, hallsPerPage, token],
     queryFn: () =>
       get<{ halls: HallType[]; totalItems: number; totalPages: number }>(
@@ -117,7 +118,11 @@ export default function HallsClient({
         </div>
       ) : isError ? (
         <div className='p-6'>
-          <NotFound message={(error as Error)?.message || 'Error'} />
+          <ErrorState
+            title='Could not load halls'
+            error={error}
+            onRetry={() => refetch()}
+          />
         </div>
       ) : (
         <div className='p-6 space-y-6 bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen'>

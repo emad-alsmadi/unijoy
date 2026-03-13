@@ -61,6 +61,8 @@ import {
 } from '@tanstack/react-query';
 import { get, del, apiRequest } from '@/lib/api/base';
 import StatCard from '@/components/admin/users/StatCard';
+import ErrorState from '@/components/ui/ErrorState';
+import NotFound from '@/components/ui/NotFound';
 
 const RoleChart = dynamic(() => import('@/components/admin/users/RoleChart'), {
   ssr: false,
@@ -82,7 +84,6 @@ const Pagination = dynamic(() => import('@/components/ui/pagination'), {
   loading: () => <div className='h-10' />,
 });
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
-const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
   { ssr: false, loading: () => <div className='min-h-[30vh]' /> },
@@ -151,7 +152,7 @@ export default function AdminUsersClient({
     defaultValues: { name: '', email: '', role: '', hostStatus: '' },
   });
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: [
       'admin-users',
       currentPage,
@@ -378,7 +379,15 @@ export default function AdminUsersClient({
     return <Loading />;
   }
   if (isError)
-    return <NotFound message={(error as Error)?.message || 'Error'} />;
+    return (
+      <div className='p-6'>
+        <ErrorState
+          title='Could not load users'
+          error={error}
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 p-6'>

@@ -10,7 +10,7 @@ import {
   ReactNode,
   useEffect,
 } from 'react';
-import { API_BASE_URL } from '@/lib/api/base';
+import { get } from '@/lib/api/base';
 
 export type UserRole = 'user' | 'host' | 'admin' | null;
 
@@ -65,16 +65,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchDetailsProfile = async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/profile`, {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
+      const data = await get<{ user: UserProfile }>(`/profile`, {
+        token,
       });
-      const data = await res.json();
       setDetailsProfile(data.user);
-      console.log('profial :', data.user);
     } catch (error: any) {
       // Handle connection errors or unexpected errors.
       toast({

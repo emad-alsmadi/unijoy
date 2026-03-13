@@ -16,6 +16,50 @@ export type ApiOptions = RequestInit & {
   onError?: (error: Error) => void;
 };
 
+export class ApiError extends Error {
+  status?: number;
+
+  constructor(message: string, status?: number) {
+    super(message);
+    this.name = 'ApiError';
+    this.status = status;
+  }
+}
+
+function extractBackendMessage(text: string): string {
+  const trimmed = (text || '').trim();
+  if (!trimmed) return 'Request failed';
+
+  const looksLikeJson = trimmed.startsWith('{') || trimmed.startsWith('[');
+  if (!looksLikeJson) return trimmed;
+
+  try {
+    const parsed: any = JSON.parse(trimmed);
+
+    if (typeof parsed === 'string') return parsed;
+
+    if (parsed?.message && typeof parsed.message === 'string') {
+      return parsed.message;
+    }
+
+    if (Array.isArray(parsed?.data) && parsed.data.length > 0) {
+      const msgs = parsed.data
+        .map((e: any) => e?.msg)
+        .filter(Boolean)
+        .map(String);
+      if (msgs.length) return msgs.join('\n');
+    }
+
+    if (parsed?.error && typeof parsed.error === 'string') return parsed.error;
+    if (parsed?.errors && typeof parsed.errors === 'string')
+      return parsed.errors;
+
+    return trimmed;
+  } catch {
+    return trimmed;
+  }
+}
+
 export async function apiRequest<T = any>(
   endpoint: string,
   options: ApiOptions = {},
@@ -48,14 +92,13 @@ export async function apiRequest<T = any>(
       let message = res.statusText;
       try {
         const text = await res.text();
-        // Handle HTML error pages
         if (text.includes('<!DOCTYPE html>')) {
           message = `Server error: ${res.status} ${res.statusText}`;
         } else {
-          message = text;
+          message = extractBackendMessage(text);
         }
       } catch {}
-      const err = new Error(message || 'Request failed');
+      const err = new ApiError(message || 'Request failed', res.status);
       onError?.(err);
       throw err;
     }
@@ -66,7 +109,12 @@ export async function apiRequest<T = any>(
       return undefined as unknown as T;
     }
   } catch (e: any) {
-    const err = e instanceof Error ? e : new Error('Network error');
+    const err =
+      e instanceof ApiError
+        ? e
+        : e instanceof Error
+          ? new ApiError(e.message || 'Network error', 0)
+          : new ApiError('Network error', 0);
     onError?.(err);
     throw err;
   }

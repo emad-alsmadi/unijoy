@@ -15,20 +15,21 @@ import {
   keepPreviousData,
 } from '@tanstack/react-query';
 import { get, post, del } from '@/lib/api/base';
+import ErrorState from '@/components/ui/ErrorState';
 
 const DeleteConfirmationDialog = dynamic(
   () => import('@/components/dialog/DeleteConfirmationDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const EditHallDialog = dynamic(
   () => import('@/components/dialog/EditHallDialog'),
-  { ssr: false }
+  { ssr: false },
 );
 const SearchInput = dynamic(() => import('@/components/ui/SearchInput'));
 const Pagination = dynamic(() => import('@/components/ui/pagination'));
 const Loading = dynamic(
   () => import('@/components/ui/Loading').then((m) => m.Loading),
-  { ssr: false }
+  { ssr: false },
 );
 const NotFound = dynamic(() => import('@/components/ui/NotFound'));
 const HallCard = dynamic(() => import('@/components/ui/HallCard'));
@@ -80,7 +81,7 @@ export default function AdminHallsClient({
   const [currentPage, setCurrentPage] = useState(initialPage || 1);
   const [hallsPerPage] = useState(perPage || 6);
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['halls', 'admin', currentPage, hallsPerPage],
     queryFn: () =>
       get<{ halls: HallType[]; totalItems: number; totalPages: number }>(
@@ -93,7 +94,7 @@ export default function AdminHallsClient({
               description: err.message,
               variant: 'destructive',
             }),
-        }
+        },
       ),
     enabled: !!(token || initialToken),
     staleTime: 60_000,
@@ -190,10 +191,18 @@ export default function AdminHallsClient({
 
   if (isLoading && (initialHalls || []).length === 0) return <Loading />;
   if (isError)
-    return <NotFound message={(error as Error)?.message || 'Error'} />;
+    return (
+      <div className='p-6'>
+        <ErrorState
+          title='Could not load halls'
+          error={error}
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
 
   return (
-    <div className='p-6 space-y-6'>
+    <div className='max-w-7xl mx-auto p-6 space-y-6'>
       <div className='flex justify-between items-center gap-4 flex-wrap'>
         <SearchInput
           name='Hall'
@@ -286,7 +295,7 @@ export default function AdminHallsClient({
         token={token}
         onSuccess={(updatedHall) => {
           setHalls((prev) =>
-            prev.map((h) => (h?._id === updatedHall?._id ? updatedHall : h))
+            prev.map((h) => (h?._id === updatedHall?._id ? updatedHall : h)),
           );
           setIsEditDialogOpen(false);
         }}

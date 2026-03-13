@@ -19,6 +19,7 @@ import { post, del } from '@/lib/api/base';
 import bgImage from '@/public/bg-events.png';
 import { Gift, DollarSign, Sparkles } from 'lucide-react';
 import { filters } from '@/constants/filters';
+import ErrorState from '@/components/ui/ErrorState';
 
 // Dynamic UI parts
 const EventCard = dynamic(() => import('@/components/ui/EventCard'), {
@@ -107,7 +108,7 @@ export default function EventsClient({
     return matchesSearch && matchesBasicFilter && matchesPriceFilter;
   });
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['events', 'public', currentPage, eventsPerPage, activeFilter],
     queryFn: () =>
       fetchEvents({
@@ -227,7 +228,15 @@ export default function EventsClient({
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   if (isError) {
-    return <NotFound message={(error as Error)?.message || 'Error'} />;
+    return (
+      <div className='p-6'>
+        <ErrorState
+          title='Could not load events'
+          error={error}
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
   }
 
   return (
