@@ -1,9 +1,10 @@
 {
   "name": "application",
   "version": "1.0.0",
+  "type": "module",
   "main": "app.js",
   "scripts": {
-    "test": "node --test --test-concurrency=4 || echo 'No test files found'",
+    "test": "node --test --test-concurrency=4 'tests/*.test.js'",
     "start": "node app.js",
     "dev": "nodemon app.js",
     "start-server": "node app.js",
