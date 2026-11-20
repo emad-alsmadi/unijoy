@@ -6,7 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
-const MongoDBStore = require('connect-mongodb-session')(session);
+const MongoDBStore = require('connect-mongodb-store')(session);
 const csrf = require('csurf');
 const flash = require('connect-flash');
 const multer = require('multer'); // Re-added for image upload to external services
@@ -32,6 +32,18 @@ const MONGODB_URI =
 const PORT = Number(process.env.PORT) || 8080;
 
 const app = express();
+
+// OpenAPI documentation — served only in non-production to avoid exposing
+// the API surface in production. Set API_DOCS_ENABLED=true to override.
+if (
+  process.env.NODE_ENV !== 'production' ||
+  process.env.API_DOCS_ENABLED === 'true'
+) {
+  const swaggerUi = require('swagger-ui-express');
+  const YAML = require('yamljs');
+  const swaggerDocument = YAML.load(path.join(__dirname, 'openapi.yaml'));
+  app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+}
 
 // const store = new MongoDBStore({
 //   uri: MONGODB_URI,
