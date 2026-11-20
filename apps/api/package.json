@@ -1,13 +1,12 @@
 {
   "name": "application",
   "version": "1.0.0",
-  "type": "module",
-  "main": "app.js",
+  "main": "app.cjs",
   "scripts": {
     "test": "node --test --test-concurrency=4 'tests/*.test.js'",
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "start-server": "node app.js",
+    "start": "node app.cjs",
+    "dev": "nodemon app.cjs",
+    "start-server": "node app.cjs",
     "build": "echo 'No build step required for Node.js'",
     "create-admin": "node scripts/create-admin.js"
   },
